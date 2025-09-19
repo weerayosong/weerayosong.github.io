@@ -7589,7 +7589,7 @@ ul.u-text li:last-child {
   margin-right: 0 !important;
   margin-bottom: 0px;
 }
-/*.u-backlink {
+.u-backlink {
   position: relative;
   text-align: center;
   padding: 1em;
@@ -7610,7 +7610,7 @@ ul.u-text li:last-child {
 .u-backlink span,
 .u-backlink .u-link:hover {
   text-decoration: none;
-}*/
+}
 .u-hidden {
   display: none !important;
 }
@@ -46145,8 +46145,23 @@ a.u-link.u-text-hover-color-var:hover {
 .u-header .u-btn-1 {
   background-image: none;
   font-size: 1.25rem;
-  margin: -30px auto 24px 0;
+  font-family: NotoSansThai-VariableFont_wdthwght;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: -30px auto 0 0;
   padding: 0;
+}
+
+.u-header .u-language-1 {
+  margin: -35px auto 9px;
+}
+
+.u-header .u-icon-1 {
+  height: 24px;
+}
+
+.u-header .u-icon-2 {
+  height: 24px;
 }
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
@@ -46157,10 +46172,18 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-btn-1 {
     margin-top: -30px;
   }
+
+  .u-header .u-language-1 {
+    margin-top: -35px;
+  }
 }
 
 
-
+@media (max-width: 575px) {
+  .u-header .u-btn-1 {
+    font-weight: 700;
+  }
+}
  .u-footer {
   background-image: none;
 }
