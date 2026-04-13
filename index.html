@@ -29,6 +29,16 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
+            /* overlay images - css fo guide tailwind*/
+            .card-overlay-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+                z-index: 0;
+            }
         </style>
     </head>
     <body
@@ -370,6 +380,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-500 to-slate-700',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -382,6 +394,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-600 to-slate-800',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -394,6 +408,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-700 to-slate-900',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -406,6 +422,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-900 to-slate-700',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -418,6 +436,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-800 to-slate-600',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -430,6 +450,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-700 to-slate-500',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -442,6 +464,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-500 to-slate-700',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -454,6 +478,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-600 to-slate-800',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -466,6 +492,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-700 to-slate-900',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
                 {
                     title: 'Cool Capz E-commerce',
@@ -478,6 +506,8 @@
                         'Tailwind CSS',
                     ],
                     color: 'from-slate-900 to-slate-700',
+                    githubLink: 'https://github.com/weerayosong/',
+                    previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
             ];
 
@@ -539,27 +569,60 @@
                     const card = document.createElement('div');
                     card.className = `bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group flex flex-col h-full`;
 
+                    // 1. ใส่ ID ให้แท็ก img เพื่อให้เราหาเจอเวลาดึงรูปเสร็จ >> id="img-project-1"
+                    // และยังไม่ต้องใส่ src หรือจะใส่เป็นรูปลูกศรหมุนๆ loading ก็ได้
                     card.innerHTML = `
-                    <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
-                        <div class="absolute inset-0 flex items-center justify-center p-4">
-                            <h4 class="text-white text-xl font-black text-center drop-shadow-md tracking-wide">${project.title}</h4>
+                        <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
+                            
+                            <img id="img-project-${currentIndex}" src="" class="absolute inset-0 w-full h-full object-cover opacity-50 z-0 mix-blend-overlay group-hover:scale-110 transition-transform duration-700" alt="Project image">
+
+                            <div class="absolute inset-0 flex items-center justify-center p-4 z-10">
+                                <h4 class="text-white text-xl font-black text-center drop-shadow-md tracking-wide">${project.title}</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="text-xs text-gray-500 font-normal ml-1">( Project ${currentIndex} / ${totalProjects} )</span></h3>
+                        
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 font-normal ml-1">( Project ${currentIndex} / ${totalProjects} )</span></h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                ${tagsHTML}
+                            </div>
+                            <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
+                                <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                                <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                            ${tagsHTML}
-                        </div>
-                        <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
-                            <a href="https://github.com/weerayosong" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://github.com/weerayosong" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
-                        </div>
-                    </div>
-                `;
+                        `;
+
+                    // make all card first, before fetch API ------
                     projectsGrid.appendChild(card);
+
+                    // 2. Fetch API initiate
+                    // https://dog.ceo/api/breeds/image/random << ส่งเป็น message { "message": "https://...img.jpg", "status": "success" }
+                    // https://api.thecatapi.com/v1/images/search << ส่งเป็น Array ที่มี Object อยู่ข้างใน data[0].url; // ต้องระบุ index [0] เพราะมันส่งมาเป็น Array
+                    // https://randomfox.ca/floof/ << ส่งเป็นรูป message
+                    fetch('https://dog.ceo/api/breeds/image/random')
+                        .then((response) => response.json())
+                        .then((data) => {
+                            // goto #img-project-${currentIndex}
+                            const imgElement = document.getElementById(
+                                `img-project-${currentIndex}`,
+                            );
+
+                            // lookup for <img /> (random URL from API) | src << (data.message)
+                            if (imgElement) {
+                                imgElement.src = data.message;
+                            }
+                        })
+                        .catch((error) => {
+                            console.error(
+                                `Error, can't fetch the images: `,
+                                error,
+                            );
+                        });
+                    // ---------------------------------------------
                 });
                 renderPagination();
             }
@@ -589,6 +652,7 @@
             function renderMobileSlider() {
                 const totalProjects = projectsData.length;
                 projectsSlider.innerHTML = '';
+
                 projectsData.forEach((project, index) => {
                     const currentIndex = index + 1;
                     const tagsHTML = project.tags
@@ -602,26 +666,48 @@
                     card.className = `bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 flex-shrink-0 w-[85vw] snap-center flex flex-col`;
 
                     card.innerHTML = `
-                    <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
-                        <div class="absolute inset-0 flex items-center justify-center p-4">
-                            <h4 class="text-white text-xl font-black text-center drop-shadow-md tracking-wide">${project.title}</h4>
-                        </div>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="text-xs text-gray-500 font-normal ml-1">( Project ${currentIndex} / ${totalProjects} )</span></h3>
-                        </div>
-                        <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                            ${tagsHTML}
-                        </div>
-                        <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
-                            <a href="https://github.com/weerayosong" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://github.com/weerayosong" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
-                        </div>
-                    </div>
-                `;
+                            <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
+                                
+                                <img id="img-project-mobile-${currentIndex}" src="" class="absolute inset-0 w-full h-full object-cover opacity-50 z-0 mix-blend-overlay" alt="Project image">
+
+                                <div class="absolute inset-0 flex items-center justify-center p-4 z-10">
+                                    <h4 class="text-white text-xl font-black text-center drop-shadow-md tracking-wide">${project.title}</h4>
+                                </div>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 font-normal ml-1">( Project ${currentIndex} / ${totalProjects} )</span></h3>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
+                                <div class="flex flex-wrap gap-1.5 mb-4">
+                                    ${tagsHTML}
+                                </div>
+                                <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
+                                    <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                                    <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                                </div>
+                            </div>
+                            `;
                     projectsSlider.appendChild(card);
+
+                    fetch('https://dog.ceo/api/breeds/image/random')
+                        .then((response) => response.json())
+                        .then((data) => {
+                            // #(ใส่ -mobile- เข้าไป)
+                            const imgElement = document.getElementById(
+                                `img-project-mobile-${currentIndex}`,
+                            );
+
+                            if (imgElement) {
+                                imgElement.src = data.message;
+                            }
+                        })
+                        .catch((error) => {
+                            console.error(
+                                `Error, can't fetch the mobile images: `,
+                                error,
+                            );
+                        });
                 });
 
                 // Update progress bar
