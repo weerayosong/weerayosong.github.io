@@ -35,3 +35,11 @@
     - Pagination logic is engineered for desktop viewport rendering, regulating data display intervals via `currentPage` and `itemsPerPageDesktop` variables.
     - A horizontal scrolling mechanism is developed for mobile viewports, integrated with scroll ratio calculation logic to scale a visual progress bar dynamically.
     - The Fetch API is deployed to execute asynchronous HTTP requests to an external endpoint (`https://dog.ceo/api/breeds/image/random`), dynamically allocating the resolved response URLs to the source attributes of the generated project image elements.
+
+- **Dark Mode Implementation ◽️/◾️**
+
+    The theme control for this website is built using Vanilla JavaScript, without relying on any external libraries. It operates on 4 main principles:
+    - **Theme Toggling (Class Strategy):** When the user clicks the toggle button, the function adds or removes (toggles) the `dark` class on the `<html>` tag. Tailwind CSS then immediately applies the corresponding dark variant styles.
+    - **Local Storage Persistence:** The system saves the current theme state (`dark` or `light`) into the browser's `localStorage`. This ensures that the user's preferred theme remains active even after refreshing the page or closing the browser.
+    - **UI Synchronization:** The script automatically updates all theme toggle buttons across the interface (both on the Desktop Navbar and the Mobile Menu) to synchronously switch their icons to match the active theme.
+    - **System Preference Detection (Smart Default):** On the initial load, the system checks `localStorage` first. If no user preference is found, it uses `window.matchMedia` to detect the operating system's default preference (Dark or Light mode) and applies it automatically.
