@@ -507,31 +507,49 @@
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-react fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
                 {
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-github fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
                 {
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-react fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
                 {
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-github fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
                 {
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-react fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
                 {
                     title: 'Junior Software Developer Bootcamp',
                     issuer: 'Generation TH',
                     icon: 'fa-github fab',
+                    bgImage:
+                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
+                    link: 'https://example.com/certificate-gen-th',
                 },
             ];
 
@@ -712,20 +730,37 @@
 
             // --- 5. Render Certificates ---
             const certsContainer = document.getElementById('certs-container');
+
             function renderCertificates() {
+                certsContainer.innerHTML = '';
+
                 certsData.forEach((cert, index) => {
-                    const card = document.createElement('div');
-                    card.className = `bg-slate-800/50 backdrop-blur-sm p-4 rounded-xl border border-slate-700/50 flex items-center gap-4 hover:border-secondary transition-colors`;
+                    const card = document.createElement('a');
+
+                    card.href = cert.link;
+                    card.target = '_blank';
+
+                    card.className = `relative overflow-hidden rounded-xl border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block`;
 
                     card.innerHTML = `
-                    <div class="w-12 h-12 bg-slate-800 border border-slate-600 rounded-full flex items-center justify-center shrink-0 shadow-inner">
-                        <i class="${cert.icon} text-secondary text-lg"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-100 leading-tight">${cert.title}</h3>
-                        <p class="text-secondary text-xs font-semibold uppercase tracking-wider mt-1">${cert.issuer}</p>
-                    </div>
-                `;
+                        <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500 z-0" alt="Certificate Background">
+                        
+                        <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
+
+                        <div class="relative z-10 p-4 flex items-center gap-4 w-full h-full">
+                            <div class="w-12 h-12 bg-slate-800/80 border border-slate-600 rounded-full flex items-center justify-center shrink-0 shadow-inner backdrop-blur-sm group-hover:border-secondary transition-colors">
+                                <i class="${cert.icon} text-secondary text-lg group-hover:scale-110 transition-transform"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-slate-100 leading-tight drop-shadow-md group-hover:text-white transition-colors">${cert.title}</h3>
+                                <p class="text-secondary text-xs font-semibold uppercase tracking-wider mt-1 drop-shadow-md">${cert.issuer}</p>
+                            </div>
+                            
+                            <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-external-link-alt text-secondary text-sm"></i>
+                            </div>
+                        </div>
+                    `;
                     certsContainer.appendChild(card);
                 });
             }
