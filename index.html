@@ -7,6 +7,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
+                darkMode: 'class',
                 theme: {
                     extend: {
                         colors: {
@@ -29,29 +30,19 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
-            /* overlay images - css fo guide tailwind*/
-            .card-overlay-img-css {
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                opacity: 0.5;
-                z-index: 0;
-            }
         </style>
     </head>
     <body
-        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white"
+        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300"
     >
         <nav
-            class="sticky top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300"
+            class="sticky top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 transition-all duration-300"
         >
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <a
                         href="#"
-                        class="text-2xl font-bold text-primary tracking-tight"
+                        class="text-2xl font-bold text-primary dark:text-white tracking-tight"
                     >
                         yosong<span class="text-secondary">.dev</span>
                     </a>
@@ -59,32 +50,44 @@
                     <div class="hidden md:flex space-x-8 items-center">
                         <a
                             href="#about"
-                            class="text-sm font-semibold text-gray-600 hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
                             >About</a
                         >
                         <a
                             href="#projects"
-                            class="text-sm font-semibold text-gray-600 hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
                             >Projects</a
                         >
                         <a
                             href="#certificates"
-                            class="text-sm font-semibold text-gray-600 hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
                             >Certificates</a
                         >
                         <a
                             href="https://github.com/weerayosong"
                             target="_blank"
-                            class="text-gray-600 hover:text-primary transition-colors text-xl"
+                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors text-xl"
                         >
                             <i class="fab fa-github"></i>
                         </a>
+                        <button
+                            id="theme-toggle-desktop"
+                            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2.5 transition-colors"
+                        >
+                            <span class="theme-icon text-xl">◾️</span>
+                        </button>
                     </div>
 
-                    <div class="md:hidden flex items-center">
+                    <div class="md:hidden flex items-center gap-2">
+                        <button
+                            id="theme-toggle-mobile"
+                            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-lg text-sm p-2 transition-colors"
+                        >
+                            <span class="theme-icon text-xl">◾️</span>
+                        </button>
                         <button
                             id="mobile-menu-btn"
-                            class="text-gray-600 hover:text-primary focus:outline-none p-2"
+                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white focus:outline-none p-2"
                         >
                             <i class="fas fa-bars text-2xl" id="menu-icon"></i>
                         </button>
@@ -94,28 +97,28 @@
 
             <div
                 id="mobile-menu"
-                class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full shadow-lg"
+                class="hidden md:hidden bg-white border-b dark:bg-slate-900 border-gray-100 dark:border-slate-800 absolute w-full shadow-lg"
             >
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a
                         href="#about"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
                         >About</a
                     >
                     <a
                         href="#projects"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
                         >Projects</a
                     >
                     <a
                         href="#certificates"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
                         >Certificates</a
                     >
                     <a
                         href="https://github.com/weerayosong"
                         target="_blank"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
                     >
                         <i class="fab fa-github mr-2"></i> GitHub
                     </a>
@@ -123,7 +126,10 @@
             </div>
         </nav>
 
-        <section id="home" class="px-4 py-16 min-h-[60vh] flex items-center">
+        <section
+            id="home"
+            class="px-4 py-16 min-h-[60vh] flex items-center dark:bg-slate-800 transition-colors duration-300"
+        >
             <div class="max-w-4xl mx-auto text-center">
                 <p
                     class="text-secondary font-bold tracking-widest text-sm mb-2"
@@ -143,21 +149,23 @@
                     Now, WEERAYOSONG's training hard to be a great
                 </p>
                 <h1
-                    class="text-5xl md:text-7xl font-extrabold text-primary mb-6 leading-tight"
+                    class="text-5xl md:text-7xl font-extrabold text-primary dark:text-gray-300 mb-6 leading-tight transition-colors duration-300"
                 >
                     Full Stack<br />
                     Developer
                 </h1>
-                <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                <p
+                    class="text-lg text-gray-500 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
+                >
                     Passionate about building responsive, full-stack web
                     applications. Skilled in modern frontend tools
-                    <strike>and solid backend architectures</strike
-                    ><i> (not yet, lol)</i>, ready to tackle complex problems.
+                    <strike>and solid backend architectures</strike>
+                    <i> (not yet, lol)</i>, ready to tackle complex problems.
                 </p>
                 <div class="flex justify-center gap-4 flex-col sm:flex-row">
                     <a
                         href="#projects"
-                        class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors shadow-md"
+                        class="bg-primary dark:bg-slate-700 text-white dark:text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors shadow-md"
                     >
                         Explore My Work
                     </a>
@@ -265,19 +273,24 @@
             </div>
         </section>
 
-        <section id="projects" class="py-20 px-4 bg-white">
+        <section
+            id="projects"
+            class="py-20 px-4 bg-white dark:bg-slate-800 transition-colors duration-300"
+        >
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
                     <h2
-                        class="text-3xl md:text-4xl font-bold text-primary mb-4"
+                        class="text-3xl md:text-4xl font-bold text-primary dark:text-gray-300 mb-4 transition-colors duration-300"
                     >
                         Featured Projects
                     </h2>
                     <div
                         class="w-20 h-1.5 bg-secondary mx-auto rounded-full"
                     ></div>
-                    <p class="mt-4 text-gray-500">
-                        A collection of projects demonstrating my full-stack
+                    <p
+                        class="mt-4 text-gray-500 dark:text-gray-300 transition-colors duration-300"
+                    >
+                        A collection of projects demonstrating my full stack
                         capabilities.
                     </p>
                 </div>
@@ -330,9 +343,13 @@
             </div>
         </section>
 
-        <footer class="bg-white border-t border-gray-200 py-8 px-4 text-center">
+        <footer
+            class="bg-white dark:bg-slate-800 border-t border-gray-200 py-8 px-4 text-center transition-colors duration-300"
+        >
             <div class="max-w-7xl mx-auto">
-                <p class="text-gray-500 text-sm font-medium">
+                <p
+                    class="text-gray-500 dark:text-gray-300 text-sm font-medium transition-colors duration-300"
+                >
                     &copy; <span id="year"></span> yosong.dev | All rights
                     reserved. <br />
                     Built with Vanilla JS & Tailwind CSS in 1 HTML File 😎
@@ -371,34 +388,6 @@
 
             // --- 2. Data Arrays ---
             const projectsData = [
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
                 {
                     title: 'Cool Capz E-commerce',
                     desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
@@ -564,15 +553,13 @@
                     const tagsHTML = project.tags
                         .map(
                             (tag) =>
-                                `<span class="px-2 py-1 bg-white border border-gray-200 rounded text-[10px] font-bold text-gray-600 uppercase tracking-wider">${tag}</span>`,
+                                `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
                         )
                         .join('');
 
                     const card = document.createElement('div');
-                    card.className = `bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 group flex flex-col h-full`;
+                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-slate-900 transition-all duration-300 group flex flex-col h-full`;
 
-                    // 1. ใส่ ID ให้แท็ก img เพื่อให้เราหาเจอเวลาดึงรูปเสร็จ >> id="img-project-1"
-                    // และยังไม่ต้องใส่ src หรือจะใส่เป็นรูปลูกศรหมุนๆ loading ก็ได้
                     card.innerHTML = `
                         <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
                             
@@ -585,35 +572,28 @@
                         
                         <div class="p-5 flex flex-col flex-grow">
                             <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 font-normal ml-1">[ Project ${currentIndex} / ${totalProjects} ]</span></h3>
+                                <h3 class="text-lg font-bold text-primary dark:text-white leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">[ Project ${currentIndex} / ${totalProjects} ]</span></h3>
                             </div>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
                             <div class="flex flex-wrap gap-1.5 mb-4">
                                 ${tagsHTML}
                             </div>
-                            <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
-                                <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                                <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                            <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200 dark:border-slate-700">
+                                <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                                <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
                         `;
 
-                    // make all card first, before fetch API ------
                     projectsGrid.appendChild(card);
 
-                    // 2. Fetch API initiate
-                    // https://dog.ceo/api/breeds/image/random << ส่งเป็น message { "message": "https://...img.jpg", "status": "success" }
-                    // https://api.thecatapi.com/v1/images/search << ส่งเป็น Array ที่มี Object อยู่ข้างใน data[0].url; // ต้องระบุ index [0] เพราะมันส่งมาเป็น Array
-                    // https://randomfox.ca/floof/ << ส่งเป็นรูป message
                     fetch('https://dog.ceo/api/breeds/image/random')
                         .then((response) => response.json())
                         .then((data) => {
-                            // goto #img-project-${currentIndex}
                             const imgElement = document.getElementById(
                                 `img-project-${currentIndex}`,
                             );
 
-                            // lookup for <img /> (random URL from API) | src << (data.message)
                             if (imgElement) {
                                 imgElement.src = data.message;
                             }
@@ -624,7 +604,6 @@
                                 error,
                             );
                         });
-                    // ---------------------------------------------
                 });
                 renderPagination();
             }
@@ -638,7 +617,11 @@
                 for (let i = 1; i <= totalPages; i++) {
                     const btn = document.createElement('button');
                     btn.textContent = i;
-                    btn.className = `w-10 h-10 rounded-lg font-bold transition-all ${i === currentPage ? 'bg-primary text-white' : 'text-gray-500 hover:bg-gray-200'}`;
+                    btn.className = `w-10 h-10 rounded-lg font-bold transition-all ${
+                        i === currentPage
+                            ? 'bg-primary dark:bg-slate-600 text-white'
+                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
+                    }`;
                     btn.onclick = () => {
                         currentPage = i;
                         renderDesktopProjects();
@@ -660,12 +643,12 @@
                     const tagsHTML = project.tags
                         .map(
                             (tag) =>
-                                `<span class="px-2 py-1 bg-white border border-gray-200 rounded text-[10px] font-bold text-gray-600 uppercase tracking-wider">${tag}</span>`,
+                                `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
                         )
                         .join('');
 
                     const card = document.createElement('div');
-                    card.className = `bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 flex-shrink-0 w-[85vw] snap-center flex flex-col`;
+                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-2xl overflow-hidden border border-gray-200 dark:border-slate-700 flex-shrink-0 w-[85vw] snap-center flex flex-col`;
 
                     card.innerHTML = `
                             <div class="h-40 bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
@@ -676,17 +659,17 @@
                                     <h4 class="text-white text-xl font-black text-center drop-shadow-md tracking-wide">${project.title}</h4>
                                 </div>
                             </div>
-                            <div class="p-5 flex flex-col flex-grow">
+                            <div class="p-5 flex flex-col flex-grow bg-slate-50 dark:bg-slate-800/50">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-lg font-bold text-primary leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 font-normal ml-1">[ Project ${currentIndex} / ${totalProjects} ]</span></h3>
+                                    <h3 class="text-lg font-bold text-primary dark:text-white leading-tight">${project.title} <span class="whitespace-nowrap text-xs text-gray-500 dark:text-gray-400 font-normal ml-1">[ Project ${currentIndex} / ${totalProjects} ]</span></h3>
                                 </div>
-                                <p class="text-gray-600 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
                                 <div class="flex flex-wrap gap-1.5 mb-4">
                                     ${tagsHTML}
                                 </div>
-                                <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200">
-                                    <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-primary transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                                    <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                                <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200 dark:border-slate-700">
+                                    <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                                    <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                                 </div>
                             </div>
                             `;
@@ -695,7 +678,6 @@
                     fetch('https://dog.ceo/api/breeds/image/random')
                         .then((response) => response.json())
                         .then((data) => {
-                            // #(ใส่ -mobile- เข้าไป)
                             const imgElement = document.getElementById(
                                 `img-project-mobile-${currentIndex}`,
                             );
@@ -719,9 +701,11 @@
                     if (maxScrollLeft > 0) {
                         const scrollPercentage =
                             (projectsSlider.scrollLeft / maxScrollLeft) * 100;
-                        // Ensure it's at least proportional to 1 item
                         const baseWidth = (1 / projectsData.length) * 100;
-                        scrollProgress.style.width = `${Math.max(baseWidth, scrollPercentage)}%`;
+                        scrollProgress.style.width = `${Math.max(
+                            baseWidth,
+                            scrollPercentage,
+                        )}%`;
                     }
                 });
             }
@@ -750,6 +734,45 @@
             renderDesktopProjects();
             renderMobileSlider();
             renderCertificates();
+
+            // ฟังก์ชันสำหรับสลับธีม
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+
+                const isDark =
+                    document.documentElement.classList.contains('dark');
+
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+                document.querySelectorAll('.theme-icon').forEach((icon) => {
+                    icon.textContent = isDark ? '◽️' : '◾️';
+                });
+            }
+
+            // ผูก Event ให้ปุ่มกดทั้งสองปุ่ม
+            document
+                .getElementById('theme-toggle-desktop')
+                .addEventListener('click', toggleTheme);
+            document
+                .getElementById('theme-toggle-mobile')
+                .addEventListener('click', toggleTheme);
+
+            // เช็คค่าเริ่มต้นเมื่อโหลดหน้าเว็บ
+            if (
+                localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                document.documentElement.classList.add('dark');
+                document
+                    .querySelectorAll('.theme-icon')
+                    .forEach((icon) => (icon.textContent = '◽️'));
+            } else {
+                document.documentElement.classList.remove('dark');
+                document
+                    .querySelectorAll('.theme-icon')
+                    .forEach((icon) => (icon.textContent = '◾️'));
+            }
         </script>
     </body>
 </html>
