@@ -1,10 +1,8 @@
-# https://www.yosong.dev | 1 File 1 Page Portfolio
+# https://www.yosong.dev
 
-## Mini Project #1
+## Mini Project #1 | One File One Page Portfolio
 
-## 1 File 1 Page Portfolio นี่คือ มินิโปรเจคท์เล็ก ๆ โปรเจคท์แรก
-
-### เป็นเว็บเพจ portfolio หน้าเดียวและถูกสร้างขึ้นด้วย ไฟล์ html ไฟล์เดียว ด้วย VanillaJS และ TailwindCSS
+### 1 File 1 Page Portfolio นี่คือ มินิโปรเจคท์เล็ก ๆ โปรเจคท์แรก เป็นเว็บเพจ portfolio หน้าเดียวและถูกสร้างขึ้นด้วย ไฟล์ html ไฟล์เดียว ด้วย VanillaJS และ TailwindCSS
 
 ## จุดประสงค์
 
@@ -13,9 +11,7 @@
 โดยใช้ความรู้ที่เรียนจาก Junior Software Developer Program ซึ่งเป็น Bootcamp ที่ทาง Generation Thailand ได้จัดขึ้น
 ตัวเว็บทั้งหมดใช้เพียงบทเรียน ที่สอนภายใน 1 เดือนแรกของบูทแคมป์เท่านั้น คือเรื่องพื้นฐานคอมทั่วไป HPPT/IP DNS Response Request รวมไปถึง การพัฒนาเว็บไซต์ด้วย HTML CSS JS.
 
-## สิ่งที่นำมาใช้ ก็จะมีประมาณนี้:
-
-**Technical Analysis of the Source Code Configuration:**
+**สิ่งที่นำมาใช้ ก็จะมีประมาณนี้:**
 
 - **Document Architecture**
     - The source code utilizes a single-file architecture, consolidating document structure, formatting, and operational logic into one HTML file.
