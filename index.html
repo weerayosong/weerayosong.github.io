@@ -16,7 +16,7 @@
                         },
                     },
                 },
-            };
+            }
         </script>
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -449,31 +449,31 @@
         <script>
             // --- 1. UI Interactions ---
             document.getElementById('year').textContent =
-                new Date().getFullYear();
+                new Date().getFullYear()
 
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
+            const menuBtn = document.getElementById('mobile-menu-btn')
+            const mobileMenu = document.getElementById('mobile-menu')
+            const menuIcon = document.getElementById('menu-icon')
 
             menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('hidden')
                 if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
+                    menuIcon.classList.remove('fa-times')
+                    menuIcon.classList.add('fa-bars')
                 } else {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
+                    menuIcon.classList.remove('fa-bars')
+                    menuIcon.classList.add('fa-times')
                 }
-            });
+            })
 
             // Close menu on link click
             document.querySelectorAll('#mobile-menu a').forEach((link) => {
                 link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
-                });
-            });
+                    mobileMenu.classList.add('hidden')
+                    menuIcon.classList.remove('fa-times')
+                    menuIcon.classList.add('fa-bars')
+                })
+            })
 
             // --- 2. Data Arrays ---
             const projectsData = [
@@ -589,7 +589,7 @@
                     githubLink: 'https://github.com/weerayosong/',
                     previewLink: 'https://42-ong-colmar.vercel.app/',
                 },
-            ];
+            ]
 
             // --- Mini Projects Data ---
             const miniProjectsData = [
@@ -646,13 +646,13 @@
                     previewLink: 'https://pokemon-simple.vercel.app/',
                 },
                 {
-                    title: `Mini #5: Space Castle Dooms | JS Browser-based Rogue-like game - React Game Project`,
+                    title: `[WIP] Mini #5: Space Castle Dooms | JS Browser-based Rogue-like game - React Game Project`,
                     desc: `Practice myself by make game with REACT!, Inspire by Instructor Neeti's The 'React Castle Rooms'`,
                     image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini5.png?raw=true',
                     tags: ['React', 'JavaScript', 'Tailwind CSS'],
                     githubLink:
                         'https://github.com/weerayosong/space-castle-dooms.git',
-                    previewLink: '#',
+                    previewLink: 'https://space-castle-dooms.vercel.app/',
                 },
                 {
                     title: 'Weather App',
@@ -694,7 +694,7 @@
                     githubLink: '#',
                     previewLink: '#',
                 },
-            ];
+            ]
 
             const certsData = [
                 {
@@ -742,16 +742,16 @@
                     issuer: 'Jonas Schmedtmann',
                     icon: 'fa-js fab',
                     bgImage:
-                        'https://img-c.udemycdn.com/course/480x270/851712_fc61_6.jpg',
+                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/ud1.png?raw=true',
                     link: 'https://www.udemy.com/certificate/UC-f0e171d2-8c7b-4ac8-8fba-0732aea0b2fa/',
                 },
                 {
-                    title: 'Coming Soon',
-                    issuer: 'yosong.dev',
-                    icon: 'fa-css3-alt fab',
+                    title: 'The Ultimate React Course 2025: React, Next.js, Redux & More',
+                    issuer: 'Jonas Schmedtmann',
+                    icon: 'fa-react fab',
                     bgImage:
-                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
-                    link: 'https://example.com/certificate-gen-th',
+                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/ud2.png?raw=true',
+                    link: 'https://www.udemy.com/certificate/UC-3ef70702-3c40-4e21-9c93-67af3477b4c9/',
                 },
                 {
                     title: 'Coming Soon',
@@ -769,32 +769,32 @@
                         'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
                     link: 'https://example.com/certificate-gen-th',
                 },
-            ];
+            ]
 
             // --- 3. Desktop Pagination Logic ---
-            const totalProjects = projectsData.length;
-            const projectsGrid = document.getElementById('projects-grid');
-            const paginationContainer = document.getElementById('pagination');
-            const itemsPerPageDesktop = 3;
-            let currentPage = 1;
+            const totalProjects = projectsData.length
+            const projectsGrid = document.getElementById('projects-grid')
+            const paginationContainer = document.getElementById('pagination')
+            const itemsPerPageDesktop = 3
+            let currentPage = 1
 
             function renderDesktopProjects() {
-                projectsGrid.innerHTML = '';
-                const start = (currentPage - 1) * itemsPerPageDesktop;
-                const end = start + itemsPerPageDesktop;
-                const paginatedItems = projectsData.slice(start, end);
+                projectsGrid.innerHTML = ''
+                const start = (currentPage - 1) * itemsPerPageDesktop
+                const end = start + itemsPerPageDesktop
+                const paginatedItems = projectsData.slice(start, end)
 
                 paginatedItems.forEach((project, index) => {
-                    const currentIndex = start + index + 1;
+                    const currentIndex = start + index + 1
                     const tagsHTML = project.tags
                         .map(
                             (tag) =>
                                 `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
                         )
-                        .join('');
+                        .join('')
 
-                    const card = document.createElement('div');
-                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-slate-900 transition-all duration-1000 group flex flex-col h-full`;
+                    const card = document.createElement('div')
+                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-slate-900 transition-all duration-1000 group flex flex-col h-full`
 
                     card.innerHTML = `
                         <div class="aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
@@ -821,83 +821,83 @@
                                 <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
-                        `;
+                        `
 
-                    projectsGrid.appendChild(card);
+                    projectsGrid.appendChild(card)
 
                     fetch('https://dog.ceo/api/breeds/image/random')
                         .then((response) => response.json())
                         .then((data) => {
                             const imgElement = document.getElementById(
                                 `img-project-${currentIndex}`,
-                            );
+                            )
 
                             if (imgElement) {
-                                imgElement.src = data.message;
+                                imgElement.src = data.message
                             }
                         })
                         .catch((error) => {
                             console.error(
                                 `Error, can't fetch the images: `,
                                 error,
-                            );
-                        });
-                });
-                renderPagination();
+                            )
+                        })
+                })
+                renderPagination()
             }
 
             function renderPagination() {
-                paginationContainer.innerHTML = '';
+                paginationContainer.innerHTML = ''
                 const totalPages = Math.ceil(
                     projectsData.length / itemsPerPageDesktop,
-                );
+                )
 
                 for (let i = 1; i <= totalPages; i++) {
-                    const btn = document.createElement('button');
-                    btn.textContent = i;
+                    const btn = document.createElement('button')
+                    btn.textContent = i
                     btn.className = `w-10 h-10 rounded-lg font-bold transition-all ${
                         i === currentPage
                             ? 'bg-primary dark:bg-slate-600 text-white'
                             : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
-                    }`;
+                    }`
                     btn.onclick = () => {
-                        currentPage = i;
-                        renderDesktopProjects();
-                        renderPagination(); // call for update active:btn color
+                        currentPage = i
+                        renderDesktopProjects()
+                        renderPagination() // call for update active:btn color
 
                         const projectSection =
-                            document.getElementById('projects');
+                            document.getElementById('projects')
                         if (projectSection) {
                             // smooth scroll back when change page
                             projectSection.scrollIntoView({
                                 behavior: 'smooth',
                                 block: 'start',
-                            });
+                            })
                         }
-                    };
-                    paginationContainer.appendChild(btn);
+                    }
+                    paginationContainer.appendChild(btn)
                 }
             }
 
             // --- 4. Mobile Slider Logic ---
-            const projectsSlider = document.getElementById('projects-slider');
-            const scrollProgress = document.getElementById('scroll-progress');
+            const projectsSlider = document.getElementById('projects-slider')
+            const scrollProgress = document.getElementById('scroll-progress')
 
             function renderMobileSlider() {
-                const totalProjects = projectsData.length;
-                projectsSlider.innerHTML = '';
+                const totalProjects = projectsData.length
+                projectsSlider.innerHTML = ''
 
                 projectsData.forEach((project, index) => {
-                    const currentIndex = index + 1;
+                    const currentIndex = index + 1
                     const tagsHTML = project.tags
                         .map(
                             (tag) =>
                                 `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
                         )
-                        .join('');
+                        .join('')
 
-                    const card = document.createElement('div');
-                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 flex-shrink-0 w-[85vw] snap-center flex flex-col`;
+                    const card = document.createElement('div')
+                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 flex-shrink-0 w-[85vw] snap-center flex flex-col`
 
                     card.innerHTML = `
                             <div class="w-full aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
@@ -923,57 +923,57 @@
                                     <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                                 </div>
                             </div>
-                            `;
-                    projectsSlider.appendChild(card);
+                            `
+                    projectsSlider.appendChild(card)
 
                     fetch('https://dog.ceo/api/breeds/image/random')
                         .then((response) => response.json())
                         .then((data) => {
                             const imgElement = document.getElementById(
                                 `img-project-mobile-${currentIndex}`,
-                            );
+                            )
 
                             if (imgElement) {
-                                imgElement.src = data.message;
+                                imgElement.src = data.message
                             }
                         })
                         .catch((error) => {
                             console.error(
                                 `Error, can't fetch the mobile images: `,
                                 error,
-                            );
-                        });
-                });
+                            )
+                        })
+                })
 
                 // Update progress bar
                 projectsSlider.addEventListener('scroll', () => {
                     const maxScrollLeft =
-                        projectsSlider.scrollWidth - projectsSlider.clientWidth;
+                        projectsSlider.scrollWidth - projectsSlider.clientWidth
                     if (maxScrollLeft > 0) {
                         const scrollPercentage =
-                            (projectsSlider.scrollLeft / maxScrollLeft) * 100;
-                        const baseWidth = (1 / projectsData.length) * 100;
+                            (projectsSlider.scrollLeft / maxScrollLeft) * 100
+                        const baseWidth = (1 / projectsData.length) * 100
                         scrollProgress.style.width = `${Math.max(
                             baseWidth,
                             scrollPercentage,
-                        )}%`;
+                        )}%`
                     }
-                });
+                })
             }
 
             // --- 5. Render Certificates ---
-            const certsContainer = document.getElementById('certs-container');
+            const certsContainer = document.getElementById('certs-container')
 
             function renderCertificates() {
-                certsContainer.innerHTML = '';
+                certsContainer.innerHTML = ''
 
                 certsData.forEach((cert, index) => {
-                    const card = document.createElement('a');
+                    const card = document.createElement('a')
 
-                    card.href = cert.link;
-                    card.target = '_blank';
+                    card.href = cert.link
+                    card.target = '_blank'
 
-                    card.className = `relative overflow-hidden rounded-xl border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block`;
+                    card.className = `relative overflow-hidden rounded-xl border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block`
 
                     card.innerHTML = `
                         <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 z-0" alt="Certificate Background">
@@ -993,62 +993,62 @@
                                 <i class="fas fa-link text-sm"></i>
                             </div>
                         </div>
-                    `;
-                    certsContainer.appendChild(card);
-                });
+                    `
+                    certsContainer.appendChild(card)
+                })
             }
 
             // 6. Dark/Light Mode
             function toggleTheme() {
-                document.documentElement.classList.toggle('dark');
+                document.documentElement.classList.toggle('dark')
 
                 const isDark =
-                    document.documentElement.classList.contains('dark');
+                    document.documentElement.classList.contains('dark')
 
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light')
 
                 document.querySelectorAll('.theme-icon').forEach((icon) => {
-                    icon.textContent = isDark ? '◽️' : '◾️';
-                });
+                    icon.textContent = isDark ? '◽️' : '◾️'
+                })
             }
 
             document
                 .getElementById('theme-toggle-desktop')
-                .addEventListener('click', toggleTheme);
+                .addEventListener('click', toggleTheme)
             document
                 .getElementById('theme-toggle-mobile')
-                .addEventListener('click', toggleTheme);
+                .addEventListener('click', toggleTheme)
 
             if (
                 localStorage.theme === 'dark' ||
                 (!('theme' in localStorage) &&
                     window.matchMedia('(prefers-color-scheme: dark)').matches)
             ) {
-                document.documentElement.classList.add('dark');
+                document.documentElement.classList.add('dark')
                 document
                     .querySelectorAll('.theme-icon')
-                    .forEach((icon) => (icon.textContent = '◽️'));
+                    .forEach((icon) => (icon.textContent = '◽️'))
             } else {
-                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.remove('dark')
                 document
                     .querySelectorAll('.theme-icon')
-                    .forEach((icon) => (icon.textContent = '◾️'));
+                    .forEach((icon) => (icon.textContent = '◾️'))
             }
 
             // 7. --- Render Mini Projects Section---
             function renderMiniProjects() {
                 const desktopContainer = document.getElementById(
                     'mini-projects-desktop',
-                );
+                )
                 const mobileContainer = document.getElementById(
                     'mini-projects-mobile',
-                );
+                )
                 const scrollProgress = document.getElementById(
                     'mini-scroll-progress',
-                );
+                )
 
-                desktopContainer.innerHTML = '';
-                mobileContainer.innerHTML = '';
+                desktopContainer.innerHTML = ''
+                mobileContainer.innerHTML = ''
 
                 miniProjectsData.forEach((project) => {
                     // Tags HTML
@@ -1057,11 +1057,11 @@
                             (tag) =>
                                 `<span class="px-2 py-0.5 bg-slate-600/50 text-secondary text-[10px] font-semibold rounded uppercase tracking-wider">${tag}</span>`,
                         )
-                        .join('');
+                        .join('')
 
                     // 7a. Desktop card (2col row card)
-                    const desktopCard = document.createElement('div');
-                    desktopCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-secondary hover:shadow-lg transition-all duration-300 group h-40`;
+                    const desktopCard = document.createElement('div')
+                    desktopCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-secondary hover:shadow-lg transition-all duration-300 group h-40`
 
                     desktopCard.innerHTML = `
                         <div class="w-40 shrink-0 relative overflow-hidden bg-grey-800">
@@ -1081,13 +1081,13 @@
                                 <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
-                    `;
-                    desktopContainer.appendChild(desktopCard);
+                    `
+                    desktopContainer.appendChild(desktopCard)
 
                     // 7b. Mobile Card (1col simple swipe-next)
-                    const mobileCard = document.createElement('div');
+                    const mobileCard = document.createElement('div')
                     // fixed w-[75vw] and snap-center
-                    mobileCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group`;
+                    mobileCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group`
 
                     mobileCard.innerHTML = `
                         <div class="w-full relative overflow-hidden bg-grey-800 pt-[100%]"> <img src="${project.image}" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
@@ -1104,75 +1104,75 @@
                                 <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
-                    `;
-                    mobileContainer.appendChild(mobileCard);
-                });
+                    `
+                    mobileContainer.appendChild(mobileCard)
+                })
 
                 // 7c. add simple Progress Bar for Mobile Slider
                 if (mobileContainer && scrollProgress) {
                     mobileContainer.addEventListener('scroll', () => {
                         const maxScrollLeft =
                             mobileContainer.scrollWidth -
-                            mobileContainer.clientWidth;
+                            mobileContainer.clientWidth
                         if (maxScrollLeft > 0) {
                             const scrollPercentage =
                                 (mobileContainer.scrollLeft / maxScrollLeft) *
-                                100;
+                                100
 
                             const baseWidth =
-                                (1 / miniProjectsData.length) * 100;
-                            scrollProgress.style.width = `${Math.max(baseWidth, scrollPercentage)}%`;
+                                (1 / miniProjectsData.length) * 100
+                            scrollProgress.style.width = `${Math.max(baseWidth, scrollPercentage)}%`
                         }
-                    });
+                    })
 
-                    const baseWidth = (1 / miniProjectsData.length) * 100;
-                    scrollProgress.style.width = `${baseWidth}%`;
+                    const baseWidth = (1 / miniProjectsData.length) * 100
+                    scrollProgress.style.width = `${baseWidth}%`
                 }
             }
 
             // --- Lightbox Logic ---
-            const lightbox = document.getElementById('simple-lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const lightboxCloseBtn = document.getElementById('lightbox-close');
+            const lightbox = document.getElementById('simple-lightbox')
+            const lightboxImg = document.getElementById('lightbox-img')
+            const lightboxCloseBtn = document.getElementById('lightbox-close')
 
             // ฟังก์ชันเปิด Lightbox
             function openLightbox(imgSrc) {
-                lightboxImg.src = imgSrc;
+                lightboxImg.src = imgSrc
                 // แสดง Lightbox พร้อมเอฟเฟกต์ Fade-in
-                lightbox.classList.remove('opacity-0', 'pointer-events-none');
+                lightbox.classList.remove('opacity-0', 'pointer-events-none')
                 // เอฟเฟกต์ซูมรูปเบาๆ (Scale-up)
-                lightboxImg.classList.remove('scale-95');
-                lightboxImg.classList.add('scale-100');
+                lightboxImg.classList.remove('scale-95')
+                lightboxImg.classList.add('scale-100')
                 // ล็อกไม่ให้หน้าเว็บด้านหลัง Scroll ได้
-                document.body.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden'
             }
 
             // ฟังก์ชันปิด Lightbox
             function closeLightbox() {
                 // ซ่อน Lightbox (Fade-out)
-                lightbox.classList.add('opacity-0', 'pointer-events-none');
+                lightbox.classList.add('opacity-0', 'pointer-events-none')
                 // ซูมรูปกลับไปขนาดเดิม
-                lightboxImg.classList.remove('scale-100');
-                lightboxImg.classList.add('scale-95');
+                lightboxImg.classList.remove('scale-100')
+                lightboxImg.classList.add('scale-95')
                 // คืนค่าให้หน้าเว็บ Scroll ได้ตามปกติ
-                document.body.style.overflow = '';
+                document.body.style.overflow = ''
                 // รอให้แอนิเมชันจบ (300ms) แล้วค่อยเคลียร์ src เพื่อกันรูปกระตุก
                 setTimeout(() => {
-                    lightboxImg.src = '';
-                }, 300);
+                    lightboxImg.src = ''
+                }, 300)
             }
 
             // 1. ปิดเมื่อคลิกพื้นที่ว่าง (bg)
             lightbox.addEventListener('click', (e) => {
                 // เช็คว่าจุดที่คลิกคือตัวพื้นหลัง (ไม่ใช่ตัวรูปภาพ)
                 if (e.target === lightbox) {
-                    closeLightbox();
+                    closeLightbox()
                 }
-            });
+            })
 
             // 2. ปิดเมื่อคลิกปุ่ม X
             if (lightboxCloseBtn)
-                lightboxCloseBtn.addEventListener('click', closeLightbox);
+                lightboxCloseBtn.addEventListener('click', closeLightbox)
 
             // 3. ปิดเมื่อกดปุ่ม ESC บนคีย์บอร์ด (เพิ่ม UX ที่ดี)
             document.addEventListener('keydown', (e) => {
@@ -1180,15 +1180,15 @@
                     e.key === 'Escape' &&
                     !lightbox.classList.contains('pointer-events-none')
                 ) {
-                    closeLightbox();
+                    closeLightbox()
                 }
-            });
+            })
 
             // Initialize Everything
-            renderDesktopProjects();
-            renderMobileSlider();
-            renderCertificates();
-            renderMiniProjects();
+            renderDesktopProjects()
+            renderMobileSlider()
+            renderCertificates()
+            renderMiniProjects()
         </script>
     </body>
 </html>
