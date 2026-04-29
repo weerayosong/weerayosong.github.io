@@ -291,54 +291,31 @@
 
         <section
             id="projects"
-            class="py-20 px-4 bg-white dark:bg-slate-800 transition-colors duration-300"
+            class="py-24 px-4 bg-gray-50 dark:bg-slate-800/30 transition-colors duration-300"
         >
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
                     <h2
                         class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 transition-colors duration-300"
                     >
-                        Featured Projects
+                        Featured Project
                     </h2>
                     <div
-                        class="w-20 h-1.5 bg-secondary mx-auto rounded-full"
+                        class="w-20 h-1.5 bg-secondary mx-auto rounded-sm"
                     ></div>
                     <p
                         class="mt-4 text-gray-500 dark:text-gray-300 transition-colors duration-300"
                     >
-                        A showcase of practical Full Stack projects, reflecting
-                        my ongoing training and dedication to Software
-                        Development.
+                        A showcase of my primary Full Stack application,
+                        reflecting my ongoing training and dedication to
+                        Software Development.
                     </p>
                 </div>
 
-                <div class="hidden md:block">
-                    <div
-                        id="projects-grid"
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    ></div>
-                    <div
-                        id="pagination"
-                        class="flex justify-center items-center gap-2 mt-12"
-                    ></div>
-                </div>
-
-                <div class="md:hidden">
-                    <div
-                        id="projects-slider"
-                        class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 no-scrollbar scroll-smooth"
-                    ></div>
-                    <div class="flex justify-center gap-1.5 mt-2">
-                        <div
-                            class="w-16 h-1 bg-gray-200 rounded-full overflow-hidden"
-                        >
-                            <div
-                                id="scroll-progress"
-                                class="w-1/4 h-full bg-secondary transition-all duration-300"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
+                <div
+                    id="featured-project-container"
+                    class="flex justify-center items-center px-2 sm:px-0"
+                ></div>
             </div>
         </section>
 
@@ -478,8 +455,8 @@
             // --- 2. Data Arrays ---
             const projectsData = [
                 {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
+                    title: '[WIP] Juicy Healthy E-commerce',
+                    desc: '[Sprint #1] Full-stack E-commerce Platform with MERN Stack',
                     tags: [
                         'MongoDB',
                         'Express.js',
@@ -487,104 +464,7 @@
                         'Node.js',
                         'Tailwind CSS',
                     ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/',
-                    previewLink: 'https://42-ong-colmar.vercel.app/',
-                },
-                {
-                    title: 'Cool Capz E-commerce',
-                    desc: 'Full-stack e-commerce platform for cap enthusiasts. Features product catalog, cart, and authentication.',
-                    tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React',
-                        'Node.js',
-                        'Tailwind CSS',
-                    ],
+                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/proj.gif?raw=true',
                     color: 'from-slate-500 to-slate-700',
                     githubLink: 'https://github.com/weerayosong/',
                     previewLink: 'https://42-ong-colmar.vercel.app/',
@@ -655,44 +535,14 @@
                     previewLink: 'https://space-castle-dooms.vercel.app/',
                 },
                 {
-                    title: 'Weather App',
-                    desc: 'Weather App via OpenWeather API.',
-                    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcndhcnN8ZW58MHx8MHx8fDA%3D',
-                    tags: ['HTML', 'CSS', 'JavaScript', 'API'],
-                    githubLink: '#',
-                    previewLink: '#',
-                },
-                {
-                    title: 'Weather App',
-                    desc: 'Weather App via OpenWeather API.',
-                    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcndhcnN8ZW58MHx8MHx8fDA%3D',
-                    tags: ['HTML', 'CSS', 'JavaScript', 'API'],
-                    githubLink: '#',
-                    previewLink: '#',
-                },
-                {
-                    title: 'Unit Converter',
-                    desc: 'Universal Unit Converter',
-                    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcndhcnN8ZW58MHx8MHx8fDA%3D',
-                    tags: ['JavaScript', 'Node.js'],
-                    githubLink: '#',
-                    previewLink: '#',
-                },
-                {
-                    title: 'Star Wars Datapad',
-                    desc: 'Star wars DB Cards',
-                    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcndhcnN8ZW58MHx8MHx8fDA%3D',
-                    tags: ['Vanilla JS', 'Tailwind CSS', 'Fetch'],
-                    githubLink: '#',
-                    previewLink: '#',
-                },
-                {
-                    title: 'To-Do List',
-                    desc: 'Short Note that can save on LocalStorage',
-                    image: 'https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3RhcndhcnN8ZW58MHx8MHx8fDA%3D',
+                    title: `Mini #6: TailwindCSS-Size to PX (and REM)`,
+                    desc: `You'll use Tailwind CSS-Size with more Precisionly, your aiming'll be as good as Stromtrooper! Use it! `,
+                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true',
                     tags: ['HTML', 'CSS', 'JavaScript'],
-                    githubLink: '#',
-                    previewLink: '#',
+                    githubLink:
+                        'https://github.com/weerayosong/tailwindcss-size-converter-darkside',
+                    previewLink:
+                        'https://tailwindcss-size-converter-darkside.vercel.app/',
                 },
             ]
 
@@ -753,212 +603,51 @@
                         'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud2.png?raw=true',
                     link: 'https://www.udemy.com/certificate/UC-3ef70702-3c40-4e21-9c93-67af3477b4c9/',
                 },
-                {
-                    title: 'Coming Soon',
-                    issuer: 'yosong.dev',
-                    icon: 'fa-css3-alt fab',
-                    bgImage:
-                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
-                    link: 'https://example.com/certificate-gen-th',
-                },
-                {
-                    title: 'Coming Soon',
-                    issuer: 'yosong.dev',
-                    icon: 'fa-css3-alt fab',
-                    bgImage:
-                        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=400&auto=format&fit=crop',
-                    link: 'https://example.com/certificate-gen-th',
-                },
             ]
 
-            // --- 3. Desktop Pagination Logic ---
-            const totalProjects = projectsData.length
-            const projectsGrid = document.getElementById('projects-grid')
-            const paginationContainer = document.getElementById('pagination')
-            const itemsPerPageDesktop = 3
-            let currentPage = 1
-
-            function renderDesktopProjects() {
-                projectsGrid.innerHTML = ''
-                const start = (currentPage - 1) * itemsPerPageDesktop
-                const end = start + itemsPerPageDesktop
-                const paginatedItems = projectsData.slice(start, end)
-
-                paginatedItems.forEach((project, index) => {
-                    const currentIndex = start + index + 1
-                    const tagsHTML = project.tags
-                        .map(
-                            (tag) =>
-                                `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
-                        )
-                        .join('')
-
-                    const card = document.createElement('div')
-                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-slate-900 transition-all duration-1000 group flex flex-col h-full`
-
-                    card.innerHTML = `
-                        <div class="aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
-                            
-                            <img id="img-project-${currentIndex}" src="" class="absolute inset-0 w-full h-full object-cover opacity-100 z-0 group-hover:scale-105 transition-transform duration-1000" alt="Project image">
-
-                            <div class="absolute inset-0 flex items-start justify-end p-4 z-10">
-                                <h4 class="text-white text-xs font-medium px-3 py-1.5 rounded bg-black/40   backdrop-blur-md border border-white/20 shadow-sm tracking-wide">
-                                Project ${currentIndex} / ${totalProjects}
-                                </h4>
-                            </div>
-                        </div>
-                        
-                        <div class="p-5 flex flex-col flex-grow">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="text-lg font-bold text-primary dark:text-white leading-tight">${project.title}</h3>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
-                            <div class="flex flex-wrap gap-1.5 mb-4">
-                                ${tagsHTML}
-                            </div>
-                            <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200 dark:border-slate-700">
-                                <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                                <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
-                            </div>
-                        </div>
-                        `
-
-                    projectsGrid.appendChild(card)
-
-                    fetch('https://dog.ceo/api/breeds/image/random')
-                        .then((response) => response.json())
-                        .then((data) => {
-                            const imgElement = document.getElementById(
-                                `img-project-${currentIndex}`,
-                            )
-
-                            if (imgElement) {
-                                imgElement.src = data.message
-                            }
-                        })
-                        .catch((error) => {
-                            console.error(
-                                `Error, can't fetch the images: `,
-                                error,
-                            )
-                        })
-                })
-                renderPagination()
-            }
-
-            function renderPagination() {
-                paginationContainer.innerHTML = ''
-                const totalPages = Math.ceil(
-                    projectsData.length / itemsPerPageDesktop,
+            // --- 3-4. Desktop Pagination Logic ---
+            function renderFeaturedProject() {
+                const container = document.getElementById(
+                    'featured-project-container',
                 )
+                container.innerHTML = ''
 
-                for (let i = 1; i <= totalPages; i++) {
-                    const btn = document.createElement('button')
-                    btn.textContent = i
-                    btn.className = `w-10 h-10 rounded-lg font-bold transition-all ${
-                        i === currentPage
-                            ? 'bg-primary dark:bg-slate-600 text-white'
-                            : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-700'
-                    }`
-                    btn.onclick = () => {
-                        currentPage = i
-                        renderDesktopProjects()
-                        renderPagination() // call for update active:btn color
+                // ดึงโปรเจกต์แรกมาโชว์ (เนื่องจากตอนนี้มีอันเดียว)
+                const project = projectsData[0]
 
-                        const projectSection =
-                            document.getElementById('projects')
-                        if (projectSection) {
-                            // smooth scroll back when change page
-                            projectSection.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start',
-                            })
-                        }
-                    }
-                    paginationContainer.appendChild(btn)
-                }
-            }
+                const tagsHTML = project.tags
+                    .map(
+                        (tag) =>
+                            `<span class="px-3 py-1.5 bg-gray-100 dark:bg-slate-700/50 border border-gray-200 dark:border-slate-600 rounded-sm text-[11px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shadow-sm">${tag}</span>`,
+                    )
+                    .join('')
 
-            // --- 4. Mobile Slider Logic ---
-            const projectsSlider = document.getElementById('projects-slider')
-            const scrollProgress = document.getElementById('scroll-progress')
+                const card = document.createElement('div')
 
-            function renderMobileSlider() {
-                const totalProjects = projectsData.length
-                projectsSlider.innerHTML = ''
+                // ดีไซน์การ์ดแบบ Grand: กว้างเต็มที่, แบ่งครึ่งซ้ายขวาบนจอใหญ่, ขอบมน rounded-sm, มีเงาหรูหรา
+                card.className = `w-full max-w-6xl bg-white dark:bg-slate-800 rounded-sm overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary/40 dark:hover:border-secondary/50 shadow-2xl hover:shadow-xl transition-all duration-500 flex flex-col lg:flex-row group`
 
-                projectsData.forEach((project, index) => {
-                    const currentIndex = index + 1
-                    const tagsHTML = project.tags
-                        .map(
-                            (tag) =>
-                                `<span class="px-2 py-1 bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded text-[10px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider">${tag}</span>`,
-                        )
-                        .join('')
+                card.innerHTML = `
+                    <div class="lg:w-3/5 relative overflow-hidden bg-slate-100 dark:bg-slate-900 aspect-video lg:aspect-auto lg:min-h-[450px]">
+                        <img src="${project.image}" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out" alt="${project.title}">
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    
+                    <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-white dark:bg-slate-800 relative z-10">
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-primary dark:text-white mb-4 leading-tight tracking-tight group-hover:text-secondary dark:group-hover:text-secondary transition-colors duration-300">${project.title}</h3>
+                        <div class="w-12 h-1 bg-secondary rounded-sm mb-6 opacity-80"></div>
+                        <p class="text-gray-600 dark:text-gray-400 text-base lg:text-lg mb-8 leading-relaxed">${project.desc}</p>
+                        <div class="flex flex-wrap gap-2 mb-10">
+                            ${tagsHTML}
+                        </div>
+                        <div class="flex gap-4 mt-auto pt-6 border-t border-gray-100 dark:border-slate-700/50">
+                            <a href="${project.githubLink}" target="_blank" class="px-6 py-3 bg-primary dark:bg-slate-700 text-white rounded-sm text-sm font-semibold hover:bg-secondary dark:hover:bg-slate-600 transition-colors flex items-center gap-2 shadow-md"><i class="fab fa-github text-lg"></i> Code</a>
+                            <a href="${project.previewLink}" target="_blank" class="px-6 py-3 bg-white dark:bg-slate-800 text-primary dark:text-white border border-gray-200 dark:border-slate-600 rounded-sm text-sm font-semibold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors flex items-center gap-2 shadow-sm"><i class="fas fa-external-link-alt text-lg"></i> Preview</a>
+                        </div>
+                    </div>
+                `
 
-                    const card = document.createElement('div')
-                    card.className = `bg-gray-50 dark:bg-slate-800/50 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700 flex-shrink-0 w-[85vw] snap-center flex flex-col`
-
-                    card.innerHTML = `
-                            <div class="w-full aspect-video bg-gradient-to-br ${project.color} relative overflow-hidden flex-shrink-0">
-                                
-                                <img id="img-project-mobile-${currentIndex}" src="" class="absolute inset-0 w-full h-full object-cover opacity-100 z-0 mix-blend-overlay" alt="Project image">
-
-                                <div class="absolute inset-0 flex items-start justify-end bg p-4 opacity-70 z-10">
-                                    <h4 class="text-white text-xs font-medium px-3 py-1.5 rounded bg-black/40   backdrop-blur-md border border-white/20 shadow-sm tracking-wide">
-                                    Project ${currentIndex} / ${totalProjects}
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="p-5 flex flex-col flex-grow bg-slate-50 dark:bg-slate-800/50">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-lg font-bold text-primary dark:text-white leading-tight">${project.title}</h3>
-                                </div>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow line-clamp-3">${project.desc}</p>
-                                <div class="flex flex-wrap gap-1.5 mb-4">
-                                    ${tagsHTML}
-                                </div>
-                                <div class="flex gap-3 mt-auto pt-4 border-t border-gray-200 dark:border-slate-700">
-                                    <a href="${project.githubLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                                    <a href="${project.previewLink}" target="_blank" class="text-sm font-semibold text-gray-500 dark:text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
-                                </div>
-                            </div>
-                            `
-                    projectsSlider.appendChild(card)
-
-                    fetch('https://dog.ceo/api/breeds/image/random')
-                        .then((response) => response.json())
-                        .then((data) => {
-                            const imgElement = document.getElementById(
-                                `img-project-mobile-${currentIndex}`,
-                            )
-
-                            if (imgElement) {
-                                imgElement.src = data.message
-                            }
-                        })
-                        .catch((error) => {
-                            console.error(
-                                `Error, can't fetch the mobile images: `,
-                                error,
-                            )
-                        })
-                })
-
-                // Update progress bar
-                projectsSlider.addEventListener('scroll', () => {
-                    const maxScrollLeft =
-                        projectsSlider.scrollWidth - projectsSlider.clientWidth
-                    if (maxScrollLeft > 0) {
-                        const scrollPercentage =
-                            (projectsSlider.scrollLeft / maxScrollLeft) * 100
-                        const baseWidth = (1 / projectsData.length) * 100
-                        scrollProgress.style.width = `${Math.max(
-                            baseWidth,
-                            scrollPercentage,
-                        )}%`
-                    }
-                })
+                container.appendChild(card)
             }
 
             // --- 5. Render Certificates ---
@@ -973,7 +662,7 @@
                     card.href = cert.link
                     card.target = '_blank'
 
-                    card.className = `relative overflow-hidden rounded-xl border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block`
+                    card.className = `relative overflow-hidden rounded-md border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block h-28`
 
                     card.innerHTML = `
                         <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 z-0" alt="Certificate Background">
@@ -981,16 +670,17 @@
                         <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
 
                         <div class="relative z-10 p-4 flex items-center gap-4 w-full h-full">
-                            <div class="w-12 h-12 bg-slate-800/60 border border-slate-600 rounded-full flex items-center justify-center shrink-0 shadow-inner backdrop-blur-sm group-hover:border-secondary transition-colors">
+                            <div class="w-12 h-12 bg-slate-800/60 border border-slate-600 rounded-md flex items-center justify-center shrink-0 shadow-inner backdrop-blur-sm group-hover:border-secondary transition-colors">
                                 <i class="${cert.icon} text-secondary text-lg group-hover:scale-110 transition-transform"></i>
                             </div>
-                            <div>
-                                <h3 class="text-base font-bold text-slate-100 leading-tight drop-shadow-md group-hover:text-white transition-colors">${cert.title}</h3>
-                                <p class="text-secondary text-xs font-semibold uppercase tracking-wider mt-1 drop-shadow-md">${cert.issuer}</p>
+                            
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-base font-bold text-slate-100 leading-tight drop-shadow-md group-hover:text-white transition-colors line-clamp-2">${cert.title}</h3>
+                                <p class="text-secondary text-xs font-semibold uppercase tracking-wider mt-1 drop-shadow-md truncate">${cert.issuer}</p>
                             </div>
                             
-                            <div class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <i class="fas fa-link text-sm"></i>
+                            <div class="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-external-link-alt text-sm text-secondary"></i>
                             </div>
                         </div>
                     `
@@ -1185,8 +875,7 @@
             })
 
             // Initialize Everything
-            renderDesktopProjects()
-            renderMobileSlider()
+            renderFeaturedProject()
             renderCertificates()
             renderMiniProjects()
         </script>
