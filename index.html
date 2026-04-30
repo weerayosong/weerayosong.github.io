@@ -626,28 +626,34 @@
                 card.className = `w-full max-w-6xl bg-white dark:bg-slate-800 rounded-sm overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary dark:hover:border-secondary shadow-lg hover:shadow-[0_0_25px_rgba(148,163,184,0.15)] transition-all duration-500 flex flex-col lg:flex-row group`
 
                 card.innerHTML = `
-        <div class="lg:w-3/5 relative overflow-hidden bg-slate-100 dark:bg-slate-900 aspect-video lg:aspect-auto lg:min-h-[450px]">
-            <img src="${project.image}" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" alt="${project.title}">
-        </div>
-        
-        
-        <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-white dark:bg-slate-800 relative z-10 border-t-4 lg:border-t-0 lg:border-l-4 border-transparent group-hover:border-secondary transition-all duration-500 ease-out">
-            
-            <h3 class="text-3xl lg:text-4xl font-extrabold text-primary dark:text-white mb-4 leading-tight tracking-tight group-hover:text-secondary dark:group-hover:text-secondary transition-colors duration-300">${project.title}</h3>
-            
-            
-            <div class="w-12 group-hover:w-24 h-1 bg-secondary rounded-sm mb-6 opacity-80 transition-all duration-500 ease-out"></div>
-            
-            <p class="text-gray-600 dark:text-gray-400 text-base lg:text-lg mb-8 leading-relaxed">${project.desc}</p>
-            <div class="flex flex-wrap gap-2 mb-10">
-                ${tagsHTML}
-            </div>
-            <div class="flex gap-4 mt-auto pt-6 border-t border-gray-100 dark:border-slate-700/50">
-                <a href="${project.githubLink}" target="_blank" class="px-6 py-3 bg-primary dark:bg-slate-700 text-white rounded-sm text-sm font-semibold hover:bg-secondary dark:hover:bg-slate-600 transition-colors flex items-center gap-2 shadow-md"><i class="fab fa-github text-lg"></i> Code</a>
-                <a href="${project.previewLink}" target="_blank" class="px-6 py-3 bg-white dark:bg-slate-800 text-primary dark:text-white border border-gray-200 dark:border-slate-600 rounded-sm text-sm font-semibold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors flex items-center gap-2 shadow-sm"><i class="fas fa-external-link-alt text-lg"></i> Preview</a>
-            </div>
-        </div>
-    `
+                    <div class="lg:w-3/5 relative overflow-hidden bg-slate-100 dark:bg-slate-900 aspect-video lg:aspect-auto lg:min-h-[450px]">
+                        <!-- เปลี่ยนจาก <img> เป็น <video> พร้อม attributes สำหรับ Autoplay, Loop, Mute -->
+                        <video 
+                            src="${project.image}" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline
+                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700 ease-in-out"
+                        ></video>
+                    </div>
+                    
+                    <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center bg-white dark:bg-slate-800 relative z-10 border-t-4 lg:border-t-0 lg:border-l-4 border-transparent group-hover:border-secondary transition-all duration-500 ease-out">
+                        
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-primary dark:text-white mb-4 leading-tight tracking-tight group-hover:text-secondary dark:group-hover:text-secondary transition-colors duration-300">${project.title}</h3>
+                        
+                        <div class="w-12 group-hover:w-24 h-1 bg-secondary rounded-sm mb-6 opacity-80 transition-all duration-500 ease-out"></div>
+                        
+                        <p class="text-gray-600 dark:text-gray-400 text-base lg:text-lg mb-8 leading-relaxed">${project.desc}</p>
+                        <div class="flex flex-wrap gap-2 mb-10">
+                            ${tagsHTML}
+                        </div>
+                        <div class="flex gap-4 mt-auto pt-6 border-t border-gray-100 dark:border-slate-700/50">
+                            <a href="${project.githubLink}" target="_blank" class="px-6 py-3 bg-primary dark:bg-slate-700 text-white rounded-sm text-sm font-semibold hover:bg-secondary dark:hover:bg-slate-600 transition-colors flex items-center gap-2 shadow-md"><i class="fab fa-github text-lg"></i> Code</a>
+                            <a href="${project.previewLink}" target="_blank" class="px-6 py-3 bg-white dark:bg-slate-800 text-primary dark:text-white border border-gray-200 dark:border-slate-600 rounded-sm text-sm font-semibold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors flex items-center gap-2 shadow-sm"><i class="fas fa-external-link-alt text-lg"></i> Preview</a>
+                        </div>
+                    </div>
+                `
 
                 container.appendChild(card)
             }
