@@ -172,11 +172,9 @@
                     class="text-lg text-gray-500 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
                 >
                     Passionate about building Responsive, Full Stack web
-                    applications. Skilled in modern Front-End Tools
-                    <strike>and solid Back-End Architectures</strike>
-                    <i class="text-slate-300 dark:text-slate-600">
-                        (not yet, lol)</i
-                    >, Ready to tackle complex problems.
+                    applications. Skilled in modern Front End Tools with good
+                    Back End Architectures , Preapared to tackle complex
+                    problems.
                 </p>
                 <div class="flex justify-center gap-4 flex-col sm:flex-row">
                     <a
@@ -241,6 +239,7 @@
                                 ></i>
                                 <a
                                     href="mailto:weerayosong@gmail.com"
+                                    target="_blank"
                                     class="hover:text-white transition-colors"
                                     >weerayosong@gmail.com</a
                                 >
@@ -265,7 +264,8 @@
                                     class="fab fa-linkedin text-secondary w-5 text-center"
                                 ></i>
                                 <a
-                                    href="#about"
+                                    href="https://www.linkedin.com/in/weerayosong/"
+                                    target="_blank"
                                     class="hover:text-white transition-colors"
                                     >LinkedIn Profile</a
                                 >
@@ -455,14 +455,21 @@
             // --- 2. Data Arrays ---
             const projectsData = [
                 {
-                    title: '[WIP] Juicy Healthy E-commerce',
-                    desc: '[Sprint #1] Full-stack E-commerce Platform with MERN Stack',
+                    title: `Juicy Healthy | Full Stack E-commerce`,
+                    desc: '[Independent Initiative] - Standalone Project >> Juicy Healthy | Full Stack MERN E-Commerce Website Project',
                     tags: [
                         'MongoDB',
                         'Express.js',
-                        'React',
+                        'React.js',
                         'Node.js',
                         'Tailwind CSS',
+                        'mongoose',
+                        'jwt',
+                        'cors',
+                        'bcrypts',
+                        'react router dom',
+                        'Redux',
+                        'Redux Toolkit',
                     ],
                     image: 'https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj1.mp4',
                     color: 'from-slate-500 to-slate-700',
@@ -477,7 +484,7 @@
                     title: `Mini #1: yosong.dev | weerayosong's Portfolio`,
                     desc: `Now you're looking at this mini. That's right, It's this page.`,
                     image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini1.png?raw=true',
-                    tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'API'],
+                    tags: ['HTML', 'Tailwind CSS', 'JavaScript'],
                     githubLink:
                         'https://github.com/weerayosong/weerayosong.github.io',
                     previewLink: 'https://www.yosong.dev/',
@@ -515,13 +522,7 @@
                     title: `Mini #4: My first API - Pokemon-Simple-API`,
                     desc: `PokeAPI in new simple API Schema, Contain only neccessesary property that we can easily use it for practice on Fetching API and Array method.`,
                     image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini4.png?raw=true',
-                    tags: [
-                        'JavaScript',
-                        'REST API',
-                        'Node',
-                        'Express',
-                        'Back-End',
-                    ],
+                    tags: ['JavaScript', 'REST API', 'Node', 'Express'],
                     githubLink: 'https://github.com/weerayosong/pokemon-simple',
                     previewLink: 'https://pokemon-simple.vercel.app/',
                 },
@@ -535,10 +536,10 @@
                     previewLink: 'https://space-castle-dooms.vercel.app/',
                 },
                 {
-                    title: `Mini #6: TailwindCSS-Size to PX (and REM)`,
+                    title: `Mini #6: Dark Side Converter | TailwindCSS-Size to PX (and REM)`,
                     desc: `You'll use Tailwind CSS-Size with more Precisionly, your aiming'll be as good as Stromtrooper! Use it! `,
                     image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true',
-                    tags: ['HTML', 'CSS', 'JavaScript'],
+                    tags: ['HTML', 'Tailwind CSS', 'JavaScript'],
                     githubLink:
                         'https://github.com/weerayosong/tailwindcss-size-converter-darkside',
                     previewLink:
@@ -603,6 +604,14 @@
                         'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud2.png?raw=true',
                     link: 'https://www.udemy.com/certificate/UC-3ef70702-3c40-4e21-9c93-67af3477b4c9/',
                 },
+                {
+                    title: 'Node.js, Express, MongoDB & More: The Complete Bootcamp',
+                    issuer: 'Jonas Schmedtmann',
+                    icon: 'fa-node fab',
+                    bgImage:
+                        'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud3.png?raw=true',
+                    link: 'https://www.udemy.com/certificate/UC-7f576566-1de9-4ce6-85a3-2fba8e2133bc/',
+                },
             ]
 
             // --- 3-4. renderFeaturedProject ---
@@ -628,31 +637,31 @@
                     card.className = `w-full max-w-6xl bg-white dark:bg-slate-800 rounded-sm overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary dark:hover:border-secondary shadow-lg hover:shadow-[0_0_25px_rgba(148,163,184,0.15)] transition-all duration-500 flex flex-col lg:flex-row group`
 
                     card.innerHTML = `
-                    
-                    <div class="w-full lg:w-[60%] relative overflow-hidden bg-slate-100 dark:bg-black aspect-video shrink-0">
-                        <video 
-                            src="${project.image}" 
-                            autoplay 
-                            loop 
-                            muted 
+
+                    <div class="w-full lg:w-[60%] relative overflow-hidden bg-slate-900 dark:bg-slate-100 aspect-video shrink-0">
+                        <video
+                            src="${project.image}"
+                            autoplay
+                            loop
+                            muted
                             playsinline
-                            oncontextmenu="return false;" 
-                            class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700 ease-in-out pointer-events-none select-none"
+                            oncontextmenu="return false;"
+                            class="absolute inset-0 w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-700 ease-in-out pointer-events-none select-none"
                         ></video>
-                    </div>                    
-                    
+                    </div>
+
                     <div class="flex-1 p-6 sm:p-8 lg:p-10 flex flex-col justify-center bg-white dark:bg-slate-800 relative z-10 border-t-4 lg:border-t-0 lg:border-l-4 border-transparent group-hover:border-secondary transition-all duration-500 ease-out min-w-0">
-                        
+
                         <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary dark:text-white mb-4 leading-tight tracking-tight transition-colors duration-300 line-clamp-2 shrink-0">${project.title}</h3>
-                        
+
                         <div class="w-12 group-hover:w-24 h-1 bg-secondary rounded-sm mb-5 opacity-80 transition-all duration-500 ease-out shrink-0"></div>
-                        
+
                         <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base mb-6 leading-relaxed line-clamp-3 lg:line-clamp-4">${project.desc}</p>
-                        
+
                         <div class="flex flex-wrap gap-2 mb-8 shrink-0">
                             ${tagsHTML}
                         </div>
-                        
+
                         <div class="flex flex-wrap gap-3 mt-auto pt-4 border-t border-gray-100 dark:border-slate-700/50 shrink-0">
                             <a href="${project.githubLink}" target="_blank" class="flex-1 text-center px-4 py-2.5 bg-primary dark:bg-slate-700 text-white rounded-sm text-sm font-semibold hover:bg-secondary dark:hover:bg-slate-600 transition-colors shadow-md flex justify-center items-center gap-2"><i class="fab fa-github text-base"></i> Code</a>
                             <a href="${project.previewLink}" target="_blank" class="flex-1 text-center px-4 py-2.5 bg-white dark:bg-slate-800 text-primary dark:text-white border border-gray-200 dark:border-slate-600 rounded-sm text-sm font-semibold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors shadow-sm flex justify-center items-center gap-2"><i class="fas fa-external-link-alt text-base"></i> Preview</a>
@@ -680,19 +689,19 @@
 
                     card.innerHTML = `
                         <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 z-0" alt="Certificate Background">
-                        
+
                         <div class="absolute inset-0 bg-slate-900/60 z-0"></div>
 
                         <div class="relative z-10 p-4 flex items-center gap-4 w-full h-full">
                             <div class="w-12 h-12 bg-slate-800/60 border border-slate-600 rounded-md flex items-center justify-center shrink-0 shadow-inner backdrop-blur-sm group-hover:border-secondary transition-colors">
                                 <i class="${cert.icon} text-secondary text-lg group-hover:scale-110 transition-transform"></i>
                             </div>
-                            
+
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-base font-bold text-slate-100 leading-tight drop-shadow-md group-hover:text-white transition-colors line-clamp-2">${cert.title}</h3>
                                 <p class="text-secondary text-xs font-semibold uppercase tracking-wider mt-1 drop-shadow-md truncate">${cert.issuer}</p>
                             </div>
-                            
+
                             <div class="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <i class="fas fa-external-link-alt text-sm text-secondary"></i>
                             </div>
@@ -771,7 +780,7 @@
                         <div class="w-40 shrink-0 relative overflow-hidden bg-grey-800">
                             <img src="${project.image}" onclick="openLightbox('${project.image}')" class="w-full h-full aspect-square object-cover opacity-100 group-hover:opacity-70 group-hover:scale-105 transition-all duration-1000 cursor-pointer" alt="${project.title}">
                         </div>
-                        
+
                         <div class="p-4 flex flex-col flex-grow justify-between">
                             <div>
                                 <h3 class="text-white font-bold text-md leading-tight mb-1">${project.title}</h3>
@@ -796,7 +805,7 @@
                     mobileCard.innerHTML = `
                         <div class="w-full relative overflow-hidden bg-grey-800 pt-[100%]"> <img src="${project.image}" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
                         </div>
-            
+
                         <div class="p-5 flex flex-col flex-grow">
                             <h3 class="text-white font-bold text-lg mb-2">${project.title}</h3>
                             <p class="text-gray-400 text-sm mb-4 flex-grow">${project.desc}</p>
