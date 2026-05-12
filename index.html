@@ -7,16 +7,16 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
-                darkMode: 'class',
+                darkMode: "class",
                 theme: {
                     extend: {
                         colors: {
-                            primary: '#0f172a',
-                            secondary: '#94a3b8',
+                            primary: "#0f172a",
+                            secondary: "#94a3b8",
                         },
                     },
                 },
-            }
+            };
         </script>
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -160,7 +160,7 @@
                 <p
                     class="text-secondary font-bold tracking-widest text-sm mb-4"
                 >
-                    Now, WEERAYOSONG's training hard to be a great
+                    Now, Weerayos's training hard to be a great
                 </p>
                 <h1
                     class="text-5xl md:text-7xl font-extrabold text-primary dark:text-gray-300 mb-6 leading-tight transition-colors duration-300"
@@ -171,10 +171,10 @@
                 <p
                     class="text-lg text-gray-500 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
                 >
-                    Passionate about building Responsive, Full Stack web
-                    applications. Skilled in modern Front End Tools with good
-                    Back End Architectures , Preapared to tackle complex
-                    problems.
+                    A Full Stack Developer with a deep commitment to continuous
+                    learning, currently focusing on foundation, system design
+                    and business logic to lay a solid foundation for building
+                    scalable applications in the future.
                 </p>
                 <div class="flex justify-center gap-4 flex-col sm:flex-row">
                     <a
@@ -211,13 +211,16 @@
                         </h3>
 
                         <p class="mb-6 leading-relaxed">
-                            I am a highly motivated Full Stack Developer with a
-                            passion for creating Elegant, Efficient, and
-                            User-friendly web applications. Currently honing my
-                            skills at Generation Thailand, I am constantly
-                            learning and adapting to new Technologies. My focus
-                            is on writing Clean, Maintainable code and Solving
-                            complex problems with Creative solutions.
+                            A Full Stack Developer with a good foundation in web
+                            development and a deep commitment to continuous
+                            learning. Currently dedicating myself to studying on
+                            foundation, system design, business logic, and
+                            system architecture. While I am at the beginning of
+                            my software engineering journey, I am highly
+                            motivated to build a holistic understanding of how
+                            systems operate, with the long-term goal of
+                            contributing to and building scalable, future-ready
+                            applications.
                         </p>
 
                         <div
@@ -410,242 +413,223 @@
         </div>
 
         <footer
-            class="bg-white dark:bg-slate-800 border-t border-gray-200 py-8 px-4 text-center transition-colors duration-300"
+            class="bg-white dark:bg-slate-800 border-t border-gray-200 py-4 px-4 text-center transition-colors duration-300"
         >
             <div class="max-w-7xl mx-auto">
                 <p
                     class="text-gray-500 dark:text-gray-300 text-sm font-medium transition-colors duration-300"
                 >
                     &copy; <span id="year"></span> yosong.dev | All rights
-                    reserved. <br />
-                    Built with Vanilla JS & Tailwind CSS in 1 HTML File 😎
+                    reserved.
                 </p>
             </div>
         </footer>
 
         <script>
             // --- 1. UI Interactions ---
-            document.getElementById('year').textContent =
-                new Date().getFullYear()
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
 
-            const menuBtn = document.getElementById('mobile-menu-btn')
-            const mobileMenu = document.getElementById('mobile-menu')
-            const menuIcon = document.getElementById('menu-icon')
+            const menuBtn = document.getElementById("mobile-menu-btn");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const menuIcon = document.getElementById("menu-icon");
 
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden')
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.classList.remove('fa-times')
-                    menuIcon.classList.add('fa-bars')
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+                if (mobileMenu.classList.contains("hidden")) {
+                    menuIcon.classList.remove("fa-times");
+                    menuIcon.classList.add("fa-bars");
                 } else {
-                    menuIcon.classList.remove('fa-bars')
-                    menuIcon.classList.add('fa-times')
+                    menuIcon.classList.remove("fa-bars");
+                    menuIcon.classList.add("fa-times");
                 }
-            })
+            });
 
             // Close menu on link click
-            document.querySelectorAll('#mobile-menu a').forEach((link) => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden')
-                    menuIcon.classList.remove('fa-times')
-                    menuIcon.classList.add('fa-bars')
-                })
-            })
+            document.querySelectorAll("#mobile-menu a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                    menuIcon.classList.remove("fa-times");
+                    menuIcon.classList.add("fa-bars");
+                });
+            });
 
             // --- 2. Data Arrays ---
             const projectsData = [
                 {
                     title: `Juicy Healthy | Full Stack E-commerce`,
-                    desc: '[Independent Initiative] - Standalone Project >> Juicy Healthy | Full Stack MERN E-Commerce Website Project',
+                    desc: "[Independent Initiative] - Standalone Project >> Juicy Healthy | Full Stack MERN E-Commerce Website Project",
                     tags: [
-                        'MongoDB',
-                        'Express.js',
-                        'React.js',
-                        'Node.js',
-                        'REST API',
-                        'mongoose',
-                        'jwt',
-                        'cors',
-                        'bcrypts',
-                        'DotEnv',
-                        'Tailwind CSS',
-                        'react router dom',
-                        'Redux',
-                        'Redux Toolkit',
-                        'Paypal payment Integration',
-                        'Vercel',
-                        'Render',
+                        "MongoDB",
+                        "Express.js",
+                        "React.js",
+                        "Node.js",
+                        "REST API",
+                        "mongoose",
+                        "jwt",
+                        "cors",
+                        "bcrypts",
+                        "DotEnv",
+                        "Tailwind CSS",
+                        "react router dom",
+                        "Redux",
+                        "Redux Toolkit",
+                        "Paypal payment Integration",
+                        "Vercel",
+                        "Render",
                     ],
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj1.mp4',
-                    color: 'from-slate-500 to-slate-700',
-                    githubLink: 'https://github.com/weerayosong/juicy-healthy',
-                    previewLink: 'https://juicy-healthy.vercel.app/',
+                    image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj1.mp4",
+                    color: "from-slate-500 to-slate-700",
+                    githubLink: "https://github.com/weerayosong/juicy-healthy",
+                    previewLink: "https://juicy-healthy.vercel.app/",
                 },
-            ]
+            ];
 
             // --- Mini Projects Data ---
             const miniProjectsData = [
                 {
                     title: `Mini #1: yosong.dev | weerayosong's Portfolio`,
                     desc: `Now you're looking at this mini. That's right, It's this page.`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini1.png?raw=true',
-                    tags: ['HTML', 'Tailwind CSS', 'JavaScript'],
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini1.png?raw=true",
+                    tags: ["HTML", "Tailwind CSS", "JavaScript"],
                     githubLink:
-                        'https://github.com/weerayosong/weerayosong.github.io',
-                    previewLink: 'https://www.yosong.dev/',
+                        "https://github.com/weerayosong/weerayosong.github.io",
+                    previewLink: "https://www.yosong.dev/",
                 },
                 {
                     title: `Mini #2: Empire Strikes Clicker! | JS Browser-based Idle/Clicker - Star wars fan-made game`,
                     desc: `Cookie clicker-clone with the love of Star wars in mind!`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini2.png?raw=true',
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini2.png?raw=true",
                     tags: [
-                        'HTML',
-                        'Tailwind CSS',
-                        'JavaScript',
-                        'DOM Manipulation',
+                        "HTML",
+                        "Tailwind CSS",
+                        "JavaScript",
+                        "DOM Manipulation",
                     ],
                     githubLink:
-                        'https://github.com/weerayosong/jsd12_week07/tree/main/02_empire-strikes-clicker',
-                    previewLink: 'https://jsd12week07.vercel.app/',
+                        "https://github.com/weerayosong/jsd12_week07/tree/main/02_empire-strikes-clicker",
+                    previewLink: "https://jsd12week07.vercel.app/",
                 },
                 {
                     title: `Mini #3: Dark Side Converter | PX to REM`,
                     desc: `PX to REM unit converter made by Lord Vader (Don't you dare insert the wrong input!)`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini3.png?raw=true',
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini3.png?raw=true",
                     tags: [
-                        'HTML',
-                        'TailwindCSS',
-                        'JavaScript',
-                        'DOM Manipulation',
+                        "HTML",
+                        "TailwindCSS",
+                        "JavaScript",
+                        "DOM Manipulation",
                     ],
                     githubLink:
-                        'https://github.com/weerayosong/px-rem-converter-darkside',
+                        "https://github.com/weerayosong/px-rem-converter-darkside",
                     previewLink:
-                        'https://px-rem-converter-darkside.vercel.app/',
+                        "https://px-rem-converter-darkside.vercel.app/",
                 },
                 {
                     title: `Mini #4: My first API - Pokemon-Simple-API`,
                     desc: `PokeAPI in new simple API Schema, Contain only neccessesary property that we can easily use it for practice on Fetching API and Array method.`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini4.png?raw=true',
-                    tags: ['JavaScript', 'REST API', 'Node', 'Express'],
-                    githubLink: 'https://github.com/weerayosong/pokemon-simple',
-                    previewLink: 'https://pokemon-simple.vercel.app/',
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini4.png?raw=true",
+                    tags: ["JavaScript", "REST API", "Node", "Express"],
+                    githubLink: "https://github.com/weerayosong/pokemon-simple",
+                    previewLink: "https://pokemon-simple.vercel.app/",
                 },
                 {
                     title: `Mini #5: Space Castle Dooms | JS Browser-based Rogue-like game - React Game Project`,
                     desc: `Practice myself by make game with REACT!, Inspire by Instructor Neeti's The 'React Castle Rooms`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini5.png?raw=true',
-                    tags: ['React', 'JavaScript', 'Tailwind CSS'],
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini5.png?raw=true",
+                    tags: ["React", "JavaScript", "Tailwind CSS"],
                     githubLink:
-                        'https://github.com/weerayosong/space-castle-dooms.git',
-                    previewLink: 'https://space-castle-dooms.vercel.app/',
+                        "https://github.com/weerayosong/space-castle-dooms.git",
+                    previewLink: "https://space-castle-dooms.vercel.app/",
                 },
                 {
                     title: `Mini #6: Dark Side Converter | TailwindCSS-Size to PX (and REM)`,
                     desc: `You'll use Tailwind CSS-Size with more Precisionly, your aiming'll be as good as Stromtrooper! Use it! `,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true',
-                    tags: ['HTML', 'Tailwind CSS', 'JavaScript'],
+                    image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true",
+                    tags: ["HTML", "Tailwind CSS", "JavaScript"],
                     githubLink:
-                        'https://github.com/weerayosong/tailwindcss-size-converter-darkside',
+                        "https://github.com/weerayosong/tailwindcss-size-converter-darkside",
                     previewLink:
-                        'https://tailwindcss-size-converter-darkside.vercel.app/',
+                        "https://tailwindcss-size-converter-darkside.vercel.app/",
                 },
-                {
-                    title: `[Coming Soon] Mini #7: FE+BE | JS Browser-based RPG game Project`,
-                    desc: `Just wanna try to apply simple concept of Front End, Back End and Database to make a quick and simple RPG Game on my free time.`,
-                    image: 'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini7.png?raw=true',
-                    tags: [
-                        'HTML',
-                        'JavaScript',
-                        'Tailwind CSS',
-                        'Node.js',
-                        'Express.js',
-                        'MongoDB',
-                        'REST API',
-                        'CORS',
-                        'Vercel Deploy',
-                    ],
-                    githubLink: '',
-                    previewLink: '',
-                },
-            ]
+            ];
 
             const certsData = [
                 {
-                    title: 'Junior Software Developer Bootcamp',
-                    issuer: 'Generation TH',
-                    icon: 'fa-globe fas',
+                    title: "Junior Software Developer Bootcamp",
+                    issuer: "Generation TH",
+                    icon: "fa-globe fas",
                     bgImage:
-                        'https://thailand.generation.org/wp-content/uploads/2024/08/Final-Junior-Software-Developer.png',
-                    link: 'https://thailand.generation.org/programs/junior-software-developer/',
+                        "https://thailand.generation.org/wp-content/uploads/2024/08/Final-Junior-Software-Developer.png",
+                    link: "https://thailand.generation.org/programs/junior-software-developer/",
                 },
                 {
-                    title: 'HTML CSS Masterful',
-                    issuer: 'MilerDev',
-                    icon: 'fa-html5 fab',
+                    title: "HTML CSS Masterful",
+                    issuer: "MilerDev",
+                    icon: "fa-html5 fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/htmlcss.png?raw=true',
-                    link: 'https://milerdev.com/certificate/CERT-RXC6-RW2P',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/htmlcss.png?raw=true",
+                    link: "https://milerdev.com/certificate/CERT-RXC6-RW2P",
                 },
                 {
-                    title: 'Figma to Code',
-                    issuer: 'MilerDev',
-                    icon: 'fa-css3-alt fab',
+                    title: "Figma to Code",
+                    issuer: "MilerDev",
+                    icon: "fa-css3-alt fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/figmacode.png?raw=true',
-                    link: 'https://milerdev.com/certificate/CERT-RR6T-RCPA',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/figmacode.png?raw=true",
+                    link: "https://milerdev.com/certificate/CERT-RR6T-RCPA",
                 },
                 {
-                    title: 'JavaScript Mastery',
-                    issuer: 'MilerDev',
-                    icon: 'fa-js fab',
+                    title: "JavaScript Mastery",
+                    issuer: "MilerDev",
+                    icon: "fa-js fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/jsmastery.png?raw=true',
-                    link: 'https://milerdev.com/certificate/CERT-FLXX-FTQU',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/jsmastery.png?raw=true",
+                    link: "https://milerdev.com/certificate/CERT-FLXX-FTQU",
                 },
                 {
-                    title: 'ReactJS Front-End Mastery',
-                    issuer: 'MilerDev',
-                    icon: 'fa-react fab',
+                    title: "ReactJS Front-End Mastery",
+                    issuer: "MilerDev",
+                    icon: "fa-react fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/reactfrontend.png?raw=true',
-                    link: 'https://milerdev.com/certificate/CERT-4325-QVED',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/581515a9d7e528f430eeba8c9f61f21b77de30ea/images/reactfrontend.png?raw=true",
+                    link: "https://milerdev.com/certificate/CERT-4325-QVED",
                 },
                 {
-                    title: 'The Complete JavaScript Course 2025: From Zero to Expert!',
-                    issuer: 'Jonas Schmedtmann',
-                    icon: 'fa-js fab',
+                    title: "The Complete JavaScript Course 2025: From Zero to Expert!",
+                    issuer: "Jonas Schmedtmann",
+                    icon: "fa-js fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud1.png?raw=true',
-                    link: 'https://www.udemy.com/certificate/UC-f0e171d2-8c7b-4ac8-8fba-0732aea0b2fa/',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud1.png?raw=true",
+                    link: "https://www.udemy.com/certificate/UC-f0e171d2-8c7b-4ac8-8fba-0732aea0b2fa/",
                 },
                 {
-                    title: 'The Ultimate React Course 2025: React, Next.js, Redux & More',
-                    issuer: 'Jonas Schmedtmann',
-                    icon: 'fa-react fab',
+                    title: "The Ultimate React Course 2025: React, Next.js, Redux & More",
+                    issuer: "Jonas Schmedtmann",
+                    icon: "fa-react fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud2.png?raw=true',
-                    link: 'https://www.udemy.com/certificate/UC-3ef70702-3c40-4e21-9c93-67af3477b4c9/',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud2.png?raw=true",
+                    link: "https://www.udemy.com/certificate/UC-3ef70702-3c40-4e21-9c93-67af3477b4c9/",
                 },
                 {
-                    title: 'Node.js, Express, MongoDB & More: The Complete Bootcamp',
-                    issuer: 'Jonas Schmedtmann',
-                    icon: 'fa-node fab',
+                    title: "Node.js, Express, MongoDB & More: The Complete Bootcamp",
+                    issuer: "Jonas Schmedtmann",
+                    icon: "fa-node fab",
                     bgImage:
-                        'https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud3.png?raw=true',
-                    link: 'https://www.udemy.com/certificate/UC-7f576566-1de9-4ce6-85a3-2fba8e2133bc/',
+                        "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/ud3.png?raw=true",
+                    link: "https://www.udemy.com/certificate/UC-7f576566-1de9-4ce6-85a3-2fba8e2133bc/",
                 },
-            ]
+            ];
 
             // --- 3-4. renderFeaturedProject ---
             function renderFeaturedProject() {
                 const container = document.getElementById(
-                    'featured-project-container',
-                )
+                    "featured-project-container",
+                );
 
-                container.innerHTML = ''
+                container.innerHTML = "";
                 container.className =
-                    'flex flex-col gap-12 w-full items-center px-4 sm:px-0'
+                    "flex flex-col gap-12 w-full items-center px-4 sm:px-0";
 
                 projectsData.forEach((project) => {
                     const tagsHTML = project.tags
@@ -653,11 +637,11 @@
                             (tag) =>
                                 `<span class="px-3 py-1.5 bg-gray-100 dark:bg-slate-700/50 border border-gray-200 dark:border-slate-600 rounded-sm text-[11px] font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shadow-sm">${tag}</span>`,
                         )
-                        .join('')
+                        .join("");
 
-                    const card = document.createElement('div')
+                    const card = document.createElement("div");
 
-                    card.className = `w-full max-w-6xl bg-white dark:bg-slate-800 rounded-sm overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary dark:hover:border-secondary shadow-lg hover:shadow-[0_0_25px_rgba(148,163,184,0.15)] transition-all duration-500 flex flex-col lg:flex-row group`
+                    card.className = `w-full max-w-6xl bg-white dark:bg-slate-800 rounded-sm overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary dark:hover:border-secondary shadow-lg hover:shadow-[0_0_25px_rgba(148,163,184,0.15)] transition-all duration-500 flex flex-col lg:flex-row group`;
 
                     card.innerHTML = `
 
@@ -690,25 +674,25 @@
                             <a href="${project.previewLink}" target="_blank" class="flex-1 text-center px-4 py-2.5 bg-white dark:bg-slate-800 text-primary dark:text-white border border-gray-200 dark:border-slate-600 rounded-sm text-sm font-semibold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors shadow-sm flex justify-center items-center gap-2"><i class="fas fa-external-link-alt text-base"></i> Preview</a>
                         </div>
                     </div>
-                `
+                `;
 
-                    container.appendChild(card)
-                })
+                    container.appendChild(card);
+                });
             }
 
             // --- 5. Render Certificates ---
-            const certsContainer = document.getElementById('certs-container')
+            const certsContainer = document.getElementById("certs-container");
 
             function renderCertificates() {
-                certsContainer.innerHTML = ''
+                certsContainer.innerHTML = "";
 
                 certsData.forEach((cert, index) => {
-                    const card = document.createElement('a')
+                    const card = document.createElement("a");
 
-                    card.href = cert.link
-                    card.target = '_blank'
+                    card.href = cert.link;
+                    card.target = "_blank";
 
-                    card.className = `relative overflow-hidden rounded-md border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block h-28`
+                    card.className = `relative overflow-hidden rounded-md border border-slate-700/50 hover:border-secondary transition-colors group cursor-pointer block h-28`;
 
                     card.innerHTML = `
                         <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 z-0" alt="Certificate Background">
@@ -729,62 +713,62 @@
                                 <i class="fas fa-external-link-alt text-sm text-secondary"></i>
                             </div>
                         </div>
-                    `
-                    certsContainer.appendChild(card)
-                })
+                    `;
+                    certsContainer.appendChild(card);
+                });
             }
 
             // 6. Dark/Light Mode
             function toggleTheme() {
-                document.documentElement.classList.toggle('dark')
+                document.documentElement.classList.toggle("dark");
 
                 const isDark =
-                    document.documentElement.classList.contains('dark')
+                    document.documentElement.classList.contains("dark");
 
-                localStorage.setItem('theme', isDark ? 'dark' : 'light')
+                localStorage.setItem("theme", isDark ? "dark" : "light");
 
-                document.querySelectorAll('.theme-icon').forEach((icon) => {
-                    icon.textContent = isDark ? '◽️' : '◾️'
-                })
+                document.querySelectorAll(".theme-icon").forEach((icon) => {
+                    icon.textContent = isDark ? "◽️" : "◾️";
+                });
             }
 
             document
-                .getElementById('theme-toggle-desktop')
-                .addEventListener('click', toggleTheme)
+                .getElementById("theme-toggle-desktop")
+                .addEventListener("click", toggleTheme);
             document
-                .getElementById('theme-toggle-mobile')
-                .addEventListener('click', toggleTheme)
+                .getElementById("theme-toggle-mobile")
+                .addEventListener("click", toggleTheme);
 
             if (
-                localStorage.theme === 'dark' ||
-                (!('theme' in localStorage) &&
-                    window.matchMedia('(prefers-color-scheme: dark)').matches)
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
             ) {
-                document.documentElement.classList.add('dark')
+                document.documentElement.classList.add("dark");
                 document
-                    .querySelectorAll('.theme-icon')
-                    .forEach((icon) => (icon.textContent = '◽️'))
+                    .querySelectorAll(".theme-icon")
+                    .forEach((icon) => (icon.textContent = "◽️"));
             } else {
-                document.documentElement.classList.remove('dark')
+                document.documentElement.classList.remove("dark");
                 document
-                    .querySelectorAll('.theme-icon')
-                    .forEach((icon) => (icon.textContent = '◾️'))
+                    .querySelectorAll(".theme-icon")
+                    .forEach((icon) => (icon.textContent = "◾️"));
             }
 
             // 7. --- Render Mini Projects Section---
             function renderMiniProjects() {
                 const desktopContainer = document.getElementById(
-                    'mini-projects-desktop',
-                )
+                    "mini-projects-desktop",
+                );
                 const mobileContainer = document.getElementById(
-                    'mini-projects-mobile',
-                )
+                    "mini-projects-mobile",
+                );
                 const scrollProgress = document.getElementById(
-                    'mini-scroll-progress',
-                )
+                    "mini-scroll-progress",
+                );
 
-                desktopContainer.innerHTML = ''
-                mobileContainer.innerHTML = ''
+                desktopContainer.innerHTML = "";
+                mobileContainer.innerHTML = "";
 
                 miniProjectsData.forEach((project) => {
                     // Tags HTML
@@ -793,11 +777,11 @@
                             (tag) =>
                                 `<span class="px-2 py-0.5 bg-slate-600/50 text-secondary text-[10px] font-semibold rounded uppercase tracking-wider">${tag}</span>`,
                         )
-                        .join('')
+                        .join("");
 
                     // 7a. Desktop card (2col row card)
-                    const desktopCard = document.createElement('div')
-                    desktopCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-secondary hover:shadow-lg transition-all duration-300 group h-40`
+                    const desktopCard = document.createElement("div");
+                    desktopCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-secondary hover:shadow-lg transition-all duration-300 group h-40`;
 
                     desktopCard.innerHTML = `
                         <div class="w-40 shrink-0 relative overflow-hidden bg-grey-800">
@@ -817,13 +801,13 @@
                                 <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
-                    `
-                    desktopContainer.appendChild(desktopCard)
+                    `;
+                    desktopContainer.appendChild(desktopCard);
 
                     // 7b. Mobile Card (1col simple swipe-next)
-                    const mobileCard = document.createElement('div')
+                    const mobileCard = document.createElement("div");
                     // fixed w-[75vw] and snap-center
-                    mobileCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group`
+                    mobileCard.className = `bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group`;
 
                     mobileCard.innerHTML = `
                         <div class="w-full relative overflow-hidden bg-grey-800 pt-[100%]"> <img src="${project.image}" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
@@ -840,90 +824,90 @@
                                 <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-secondary transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                             </div>
                         </div>
-                    `
-                    mobileContainer.appendChild(mobileCard)
-                })
+                    `;
+                    mobileContainer.appendChild(mobileCard);
+                });
 
                 // 7c. add simple Progress Bar for Mobile Slider
                 if (mobileContainer && scrollProgress) {
-                    mobileContainer.addEventListener('scroll', () => {
+                    mobileContainer.addEventListener("scroll", () => {
                         const maxScrollLeft =
                             mobileContainer.scrollWidth -
-                            mobileContainer.clientWidth
+                            mobileContainer.clientWidth;
                         if (maxScrollLeft > 0) {
                             const scrollPercentage =
                                 (mobileContainer.scrollLeft / maxScrollLeft) *
-                                100
+                                100;
 
                             const baseWidth =
-                                (1 / miniProjectsData.length) * 100
-                            scrollProgress.style.width = `${Math.max(baseWidth, scrollPercentage)}%`
+                                (1 / miniProjectsData.length) * 100;
+                            scrollProgress.style.width = `${Math.max(baseWidth, scrollPercentage)}%`;
                         }
-                    })
+                    });
 
-                    const baseWidth = (1 / miniProjectsData.length) * 100
-                    scrollProgress.style.width = `${baseWidth}%`
+                    const baseWidth = (1 / miniProjectsData.length) * 100;
+                    scrollProgress.style.width = `${baseWidth}%`;
                 }
             }
 
             // --- Lightbox Logic ---
-            const lightbox = document.getElementById('simple-lightbox')
-            const lightboxImg = document.getElementById('lightbox-img')
-            const lightboxCloseBtn = document.getElementById('lightbox-close')
+            const lightbox = document.getElementById("simple-lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxCloseBtn = document.getElementById("lightbox-close");
 
             // ฟังก์ชันเปิด Lightbox
             function openLightbox(imgSrc) {
-                lightboxImg.src = imgSrc
+                lightboxImg.src = imgSrc;
                 // แสดง Lightbox พร้อมเอฟเฟกต์ Fade-in
-                lightbox.classList.remove('opacity-0', 'pointer-events-none')
+                lightbox.classList.remove("opacity-0", "pointer-events-none");
                 // เอฟเฟกต์ซูมรูปเบาๆ (Scale-up)
-                lightboxImg.classList.remove('scale-95')
-                lightboxImg.classList.add('scale-100')
+                lightboxImg.classList.remove("scale-95");
+                lightboxImg.classList.add("scale-100");
                 // ล็อกไม่ให้หน้าเว็บด้านหลัง Scroll ได้
-                document.body.style.overflow = 'hidden'
+                document.body.style.overflow = "hidden";
             }
 
             // ฟังก์ชันปิด Lightbox
             function closeLightbox() {
                 // ซ่อน Lightbox (Fade-out)
-                lightbox.classList.add('opacity-0', 'pointer-events-none')
+                lightbox.classList.add("opacity-0", "pointer-events-none");
                 // ซูมรูปกลับไปขนาดเดิม
-                lightboxImg.classList.remove('scale-100')
-                lightboxImg.classList.add('scale-95')
+                lightboxImg.classList.remove("scale-100");
+                lightboxImg.classList.add("scale-95");
                 // คืนค่าให้หน้าเว็บ Scroll ได้ตามปกติ
-                document.body.style.overflow = ''
+                document.body.style.overflow = "";
                 // รอให้แอนิเมชันจบ (300ms) แล้วค่อยเคลียร์ src เพื่อกันรูปกระตุก
                 setTimeout(() => {
-                    lightboxImg.src = ''
-                }, 300)
+                    lightboxImg.src = "";
+                }, 300);
             }
 
             // 1. ปิดเมื่อคลิกพื้นที่ว่าง (bg)
-            lightbox.addEventListener('click', (e) => {
+            lightbox.addEventListener("click", (e) => {
                 // เช็คว่าจุดที่คลิกคือตัวพื้นหลัง (ไม่ใช่ตัวรูปภาพ)
                 if (e.target === lightbox) {
-                    closeLightbox()
+                    closeLightbox();
                 }
-            })
+            });
 
             // 2. ปิดเมื่อคลิกปุ่ม X
             if (lightboxCloseBtn)
-                lightboxCloseBtn.addEventListener('click', closeLightbox)
+                lightboxCloseBtn.addEventListener("click", closeLightbox);
 
             // 3. ปิดเมื่อกดปุ่ม ESC บนคีย์บอร์ด (เพิ่ม UX ที่ดี)
-            document.addEventListener('keydown', (e) => {
+            document.addEventListener("keydown", (e) => {
                 if (
-                    e.key === 'Escape' &&
-                    !lightbox.classList.contains('pointer-events-none')
+                    e.key === "Escape" &&
+                    !lightbox.classList.contains("pointer-events-none")
                 ) {
-                    closeLightbox()
+                    closeLightbox();
                 }
-            })
+            });
 
             // Initialize Everything
-            renderFeaturedProject()
-            renderCertificates()
-            renderMiniProjects()
+            renderFeaturedProject();
+            renderCertificates();
+            renderMiniProjects();
         </script>
     </body>
 </html>
