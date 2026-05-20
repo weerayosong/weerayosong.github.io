@@ -30,10 +30,21 @@
                 -ms-overflow-style: none;
                 scrollbar-width: none;
             }
+            /* Premium Card Hover Effect */
+            .premium-card {
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .premium-card:hover {
+                /* transform: translateY(-8px); */
+                box-shadow: 0 25px 50px -12px rgba(148, 163, 184, 0.25);
+            }
+            .dark .premium-card:hover {
+                box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.15);
+            }
         </style>
     </head>
     <body
-        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300"
+        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white dark:bg-slate-800 dark:text-gray-100 transition-colors duration-300"
     >
         <nav
             class="sticky top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 transition-all duration-300"
@@ -274,34 +285,42 @@
                 </div>
             </div>
         </section>
-
+        <!-- w-[80vw] mx-auto py-24 -->
         <section
             id="projects"
-            class="py-24 px-4 md:px-8 bg-gray-50 dark:bg-slate-800/30 transition-colors duration-300 overflow-hidden"
+            class="max-w-7xl w-full mx-auto px-4 py-24 sm:px-6 lg:px-8"
         >
-            <div class="w-full max-w-[1600px] mx-auto">
-                <div class="text-center mb-16">
-                    <h2
-                        class="text-3xl md:text-5xl font-bold text-primary dark:text-white mb-4 transition-colors duration-300"
+            <div class="text-center mb-16">
+                <span
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-secondary block mb-2"
+                    >Continuous Learning Journey</span
+                >
+                <h2
+                    class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 tracking-tight"
+                >
+                    Featured
+                    <span class="text-slate-600 dark:text-slate-400"
+                        >Projects</span
                     >
-                        Featured Projects
-                    </h2>
-                    <div
-                        class="w-24 h-1.5 bg-secondary mx-auto rounded-md"
-                    ></div>
-                    <p
-                        class="mt-6 text-lg text-gray-500 dark:text-gray-300 transition-colors duration-300"
-                    >
-                        A showcase of my primary Full Stack application,
-                        reflecting my ongoing training and dedication to
-                        Software Development.
-                    </p>
-                </div>
+                </h2>
                 <div
-                    id="featured-project-container"
-                    class="flex justify-center items-center px-2 sm:px-0"
+                    class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"
                 ></div>
+                <p
+                    class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed"
+                >
+                    These projects serve as my continuous learning ground. They
+                    reflect my foundational steps in understanding System Design
+                    and Business Logic, as well as my strong commitment to
+                    building more robust system architectures with every new
+                    project.
+                </p>
             </div>
+
+            <div
+                id="featured-project-container"
+                class="flex flex-col gap-16"
+            ></div>
         </section>
 
         <section id="certificates" class="py-20 px-4 bg-slate-900 text-white">
@@ -455,65 +474,41 @@
 
             const projectsData = [
                 {
-                    title: "Juicy Healthy | Full Stack E-commerce",
-                    desc: "[Standalone Project] Juicy Healthy | Full Stack MERN E-Commerce Website Project",
+                    title: "Juicy Healthy | Full-Stack E-Commerce Learning Journey",
+                    desc: "My very first self-taught (trial and errors) full-stack project built to understand the foundational mechanics of a real-world E-commerce website. It served as a practical learning ground for global state management with Redux Toolkit, secure user authentication, and PayPal payment integration, paved the way for my deeper studies in advanced system design.",
                     tags: [
-                        "MongoDB",
-                        "Express.js",
-                        "React.js",
-                        "Node.js",
-                        "REST API",
-                        "mongoose",
-                        "jwt",
-                        "cors",
-                        "bcrypts",
-                        "DotEnv",
-                        "Tailwind CSS",
-                        "react router dom",
-                        "Redux",
+                        "My First Full-Stack Project",
+                        "MERN Stack",
                         "Redux Toolkit",
-                        "Paypal payment Integration",
-                        "Vercel",
-                        "Render",
+                        "PayPal Integration",
+                        "Vercel & Render",
                     ],
                     image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj1.mp4",
                     githubLink: "https://github.com/weerayosong/juicy-healthy",
                     previewLink: "https://juicy-healthy.vercel.app/",
                 },
                 {
-                    title: "[WIP] Balance Tracker | MERN To-Do List App",
-                    desc: "Full Stack MERN | Work & Life Balance, Advance Task Management App",
+                    title: "[WIP] MERN Architecture Lab: Balance Tracker",
+                    desc: "A full-stack architectural case study focusing on production-ready system design via the MERN stack. Implements advanced task workflows with clean separation of concerns, optimized database modeling, and decoupled cross-cloud deployment on Vercel and Render.",
                     tags: [
-                        "MongoDB",
-                        "Express.js",
-                        "React.js",
-                        "Node.js",
-                        "REST API",
-                        "mongoose",
-                        "cors",
-                        "Tailwind CSS",
-                        "react router dom",
-                        "Vercel",
-                        "Render",
+                        "System Design",
+                        "MERN Stack",
+                        "REST API Architecture",
+                        "Vercel & Render",
                     ],
-                    image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj2.mp4",
+                    image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj2b.mp4",
                     githubLink:
                         "https://github.com/weerayosong/balance-tracker",
                     previewLink: "",
                 },
                 {
-                    title: "[WIP] JSD12 Full Stack App",
-                    desc: "Full Stack MERN/PERN | USERS dashboard for PRODUCTS management with task NOTES",
+                    title: "[WIP] JSD12 Full-Stack Architecture & System Design Lab",
+                    desc: "An architectural system design project applying MERN and PERN stacks to a unified dashboard. It demonstrates decoupled logic (SoC) across MongoDB and PostgreSQL, fully production-ready and cross-deployed via Vercel and Render.",
                     tags: [
-                        "MongoDB",
-                        "Express.js",
-                        "React.js",
-                        "Node.js",
-                        "REST API",
-                        "mongoose",
-                        "cors",
-                        "Tailwind CSS",
-                        ".. and more in progress",
+                        "System Design",
+                        "MERN (MongoDB) / PERN (Supabase)",
+                        "Authentication & Authorization",
+                        "Vercel & Render",
                     ],
                     image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj3.mp4",
                     githubLink:
@@ -570,7 +565,7 @@
                     previewLink: "https://pokemon-simple.vercel.app/",
                 },
                 {
-                    title: "Mini #5: Space Castle Dooms",
+                    title: "Mini #5: Space Castle Dooms | JS Browser-based Rogue-like game",
                     desc: "Practice myself by make game with REACT!",
                     image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini5.png?raw=true",
                     tags: ["React", "JavaScript", "Tailwind CSS"],
@@ -579,8 +574,8 @@
                     previewLink: "https://space-castle-dooms.vercel.app/",
                 },
                 {
-                    title: "Mini #6: Dark Side Converter",
-                    desc: "You'll use Tailwind CSS-Size with more Precisionly.",
+                    title: "Mini #6: Dark Side Converter | Tailwind CSS-Size",
+                    desc: "You'll use Tailwind CSS-Size with more Precisionly (like Stromtrooper).",
                     image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true",
                     tags: ["HTML", "Tailwind CSS", "JavaScript"],
                     githubLink:
@@ -665,50 +660,77 @@
                 },
             ];
 
+            // วางโครงสร้างเป็น Single Column (flex-col) 1 โปรเจคต์ ต่อ 1 ก้อนยาวๆ เพื่อเน้นวิดีโอใหญ่สุด
             function renderFeaturedProject() {
                 const container = document.getElementById(
                     "featured-project-container",
                 );
-                container.innerHTML = "";
-                container.className =
-                    "flex flex-col gap-16 lg:gap-24 w-full items-center px-4 sm:px-0";
+                if (!container) return;
 
-                projectsData.forEach((project, index) => {
-                    const tagsHTML = project.tags
-                        .map(
-                            (tag) =>
-                                `<span class="px-4 py-2 bg-gray-100 dark:bg-slate-700/50 border border-gray-200 dark:border-slate-600 rounded-md text-xs font-bold text-gray-600 dark:text-gray-300 uppercase tracking-wider shadow-sm">${tag}</span>`,
-                        )
-                        .join("");
+                container.innerHTML = projectsData
+                    .map((project) => {
+                        return `
+                        <div class="premium-card flex flex-col bg-white dark:bg-slate-900/40 border border-gray-100 dark:border-slate-800/80 rounded-2xl overflow-hidden group relative">
+                            
+                            <div class="w-full aspect-video bg-slate-900 relative cursor-pointer border-b border-gray-100 dark:border-slate-800/50" onclick="openVideoLightbox('${project.image}')">
+                                <video 
+                                    src="${project.image}" 
+                                    class="w-full h-full object-fill select-none" 
+                                    loop 
+                                    muted 
+                                    playsinline
+                                    autoplay
+                                    oncontextmenu="return false;">
+                                </video>
+                            </div>
 
-                    const isReverse = index % 2 !== 0;
-                    const flexDir = isReverse
-                        ? "lg:flex-row-reverse"
-                        : "lg:flex-row";
-                    const borderDir = isReverse
-                        ? "lg:border-r-4"
-                        : "lg:border-l-4";
+                            <div class="p-8 md:p-10 flex flex-col md:flex-row md:items-start justify-between gap-8 z-10">
+                                
+                                <div class="flex-1 space-y-4">
+                                    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-slate-600 dark:group-hover:text-slate-400 transition-colors duration-300">
+                                        ${project.title}
+                                    </h3>
+                                    <p class="text-base text-slate-500 dark:text-slate-400 leading-relaxed font-light max-w-3xl">
+                                        ${project.desc}
+                                    </p>
+                                </div>
 
-                    const card = document.createElement("div");
-                    card.className = `w-full bg-white dark:bg-slate-800 rounded-md overflow-hidden border border-gray-200 dark:border-slate-700/60 hover:border-secondary dark:hover:border-secondary shadow-xl flex flex-col ${flexDir} group`;
+                                <div class="w-full md:w-80 shrink-0 space-y-6">
+                                    <div class="flex flex-wrap gap-2">
+                                        ${project.tags
+                                            .map(
+                                                (tag) => `
+                                            <span class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-md border border-slate-200 dark:border-slate-700/50 shadow-sm">
+                                                ${tag}
+                                            </span>
+                                        `,
+                                            )
+                                            .join("")}
+                                    </div>
 
-                    card.innerHTML = `
-                    <div class="w-full lg:w-[60%] relative overflow-hidden bg-slate-900 aspect-video shrink-0 cursor-pointer" onclick="openVideoLightbox('${project.image}')">
-                        <video src="${project.image}" autoplay loop muted playsinline oncontextmenu="return false;" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-all duration-700 ease-in-out select-none"></video>
-                    </div>
-                    <div class="flex-1 p-8 lg:p-12 flex flex-col justify-center bg-white dark:bg-slate-800 relative z-10 border-t-4 lg:border-t-0 ${borderDir} border-transparent group-hover:border-secondary transition-all duration-500 ease-out min-w-0">
-                        <h3 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary dark:text-white mb-6 leading-tight tracking-tight transition-colors duration-300 shrink-0">${project.title}</h3>
-                        <div class="w-16 group-hover:w-32 h-1.5 bg-secondary rounded-md mb-8 opacity-80 transition-all duration-500 ease-out shrink-0"></div>
-                        <p class="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed line-clamp-4">${project.desc}</p>
-                        <div class="flex flex-wrap gap-2 mb-10 shrink-0">${tagsHTML}</div>
-                        <div class="flex flex-wrap gap-4 mt-auto pt-6 border-t border-gray-100 dark:border-slate-700/50 shrink-0">
-                            <a href="${project.githubLink}" target="_blank" class="flex-1 text-center px-6 py-4 bg-primary dark:bg-slate-700 text-white rounded-md text-base font-bold hover:bg-secondary dark:hover:bg-slate-600 transition-colors shadow-md flex justify-center items-center gap-2"><i class="fab fa-github text-xl"></i> Code</a>
-                            <a href="${project.previewLink}" target="_blank" class="flex-1 text-center px-6 py-4 bg-white dark:bg-slate-800 text-primary dark:text-white border-2 border-gray-200 dark:border-slate-600 rounded-md text-base font-bold hover:text-secondary dark:hover:text-secondary hover:border-secondary dark:hover:border-secondary transition-colors shadow-sm flex justify-center items-center gap-2"><i class="fas fa-external-link-alt text-xl"></i> Preview</a>
+                                    <div class="pt-6 flex gap-6 text-sm font-medium border-t border-gray-50 dark:border-slate-800/60">
+                                        <a href="${project.githubLink}" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-400 transition-colors duration-200 flex items-center gap-2">
+                                            <i class="fab fa-github text-lg"></i> Code
+                                        </a>
+                                        ${
+                                            project.previewLink
+                                                ? `
+                                            <a href="${project.previewLink}" target="_blank" class="text-slate-600 dark:text-slate-400 hover:text-slate-600 dark:hover:text-slate-400 transition-colors duration-200 flex items-center gap-2">
+                                                <i class="fas fa-external-link-alt text-lg"></i> Preview
+                                            </a>
+                                        `
+                                                : ""
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="absolute inset-0 rounded-2xl pointer-events-none border-2 border-transparent group-hover:border-slate-500/20 transition-colors duration-500"></div>
+
                         </div>
-                    </div>
                     `;
-                    container.appendChild(card);
-                });
+                    })
+                    .join("");
             }
 
             function renderCertificates() {
