@@ -152,7 +152,7 @@
                 <p
                     class="text-secondary font-bold tracking-widest text-sm mb-2"
                 >
-                    As a good learner at
+                    Once a good learner at
                 </p>
                 <a
                     href="https://thailand.generation.org/"
@@ -168,7 +168,7 @@
                 <p
                     class="text-secondary font-bold tracking-widest text-sm mb-4"
                 >
-                    Now, Weerayos's training hard to be a great
+                    Now, Weerayos still study harder to be a great
                 </p>
                 <h1
                     class="text-5xl md:text-7xl font-extrabold text-primary dark:text-gray-300 mb-6 leading-tight transition-colors duration-300"
@@ -198,14 +198,30 @@
             <div class="max-w-6xl mx-auto">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div
-                        class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-700 flex-shrink-0 shadow-2xl"
+                        class="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 shadow-2xl"
                     >
-                        <img
-                            src="https://avatars.githubusercontent.com/u/233284525?s=400&u=2b71ed1d904223057236bc3af56e6cdf9aae889b&v=4"
-                            alt="Profile Picture"
-                            class="w-full h-full object-cover"
-                        />
+                        <div
+                            class="w-full h-full rounded-full overflow-hidden border-4 border-slate-700"
+                        >
+                            <img
+                                src="https://avatars.githubusercontent.com/u/233284525?s=400&u=2b71ed1d904223057236bc3af56e6cdf9aae889b&v=4"
+                                alt="Profile Picture"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div
+                            onclick="openProfileSubLightbox()"
+                            class="absolute bottom-2 right-2 w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-slate-700 bg-slate-800 transform translate-x-2 translate-y-2 shadow-lg cursor-pointer hover:scale-105 transition-transform"
+                        >
+                            <img
+                                src="https://drive.google.com/thumbnail?id=1CMBZMznCFjh-l2pAxKPAr6WAqxAuLd-m&sz=w500"
+                                alt="Sub Profile Picture"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
+
                     <div class="flex-1 text-center md:text-left">
                         <h2
                             class="text-3xl md:text-4xl font-bold text-white mb-2"
@@ -280,11 +296,46 @@
                                     >https://www.yosong.dev</a
                                 >
                             </div>
+                            <div class="flex items-center justify-start gap-3">
+                                <i
+                                    class="fas fa-file-alt text-secondary w-5 text-center"
+                                ></i>
+                                <a
+                                    href="https://drive.google.com/open?id=1JoioEYGeIWyRLI-4V-nm2ZBf0Ll6Zv9N"
+                                    target="_blank"
+                                    class="hover:text-white transition-colors"
+                                    >My CV / Resume</a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <dialog
+            id="profileSubImageLightbox"
+            onclick="closeProfileSubLightbox(event)"
+            class="bg-transparent p-0 backdrop:bg-black/80 backdrop:backdrop-blur-sm max-w-3xl max-h-[85vh] outline-none rounded-md overflow-hidden shadow-2xl border border-slate-700"
+        >
+            <div class="relative group" onclick="event.stopPropagation()">
+                <button
+                    onclick="
+                        document
+                            .getElementById('profileSubImageLightbox')
+                            .close()
+                    "
+                    class="absolute top-4 right-4 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/90 transition-colors z-10"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+                <img
+                    src="https://drive.google.com/thumbnail?id=1CMBZMznCFjh-l2pAxKPAr6WAqxAuLd-m&sz=w1000"
+                    alt="Lightbox Image"
+                    class="max-w-full h-auto max-h-[85vh] object-contain block"
+                />
+            </div>
+        </dialog>
         <!-- w-[80vw] mx-auto py-24 -->
         <section
             id="projects"
@@ -584,7 +635,7 @@
                     previewLink: "https://typesith.vercel.app/",
                 },
                 {
-                    title: "[WIP] AI RAG Agent: Smart Product Assistant",
+                    title: "AI RAG Agent: Smart Product Assistant",
                     desc: "[Project #8] 'AI RAG Agent' is a full-stack monorepo application designed to explore and implement Retrieval-Augmented Generation (RAG) architecture. Functioning as an intelligent product assistant, the system integrates Google's Gemini 3.5 Flash model via a Node.js/Express backend and a React frontend. A unique aspect of this project was orchestrating development alongside 'Antigravity'—an AI coding agent—by engineering precise architectural context and structured project blueprints. The core technical challenges I overcame included managing context-aware chat memory, enforcing strict context grounding via DummyJSON to prevent AI hallucinations, and building a robust system with a clean separation of concerns. This project is my training ground to build AI-integrated applications while embracing cutting-edge AI development workflows.",
                     tags: [
                         "React & TypeScript",
@@ -596,6 +647,7 @@
                     ],
                     image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj8.mp4",
                     githubLink: "https://github.com/weerayosong/ai-rag-agent",
+                    previewLink: "https://ai-rag-agent-client.vercel.app",
                 },
                 {
                     title: "Nextzy Gamification: Full-Stack Reward Engine",
@@ -611,7 +663,7 @@
                     image: "https://github.com/weerayosong/weerayosong.github.io/raw/refs/heads/main/images/proj9.mp4",
                     githubLink:
                         "https://github.com/weerayosong/nextzy-game-client",
-                    previewLink: "https://nextzy-game-client.vercel.app/",
+                    previewLink: "https://nextzy-game-client.vercel.app",
                 },
             ];
 
@@ -1065,6 +1117,26 @@
                     !videoLightbox.classList.contains("pointer-events-none")
                 )
                     closeVideoLightbox();
+            });
+
+            //lightboxCert
+            const profileSubLightbox = document.getElementById(
+                "profileSubImageLightbox",
+            );
+
+            function openProfileSubLightbox() {
+                profileSubLightbox.showModal();
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeProfileSubLightbox(event) {
+                if (event.target === profileSubLightbox) {
+                    profileSubLightbox.close();
+                }
+            }
+
+            profileSubLightbox.addEventListener("close", () => {
+                document.body.style.overflow = "";
             });
 
             renderFeaturedProject();
