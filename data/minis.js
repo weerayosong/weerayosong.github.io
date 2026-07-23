@@ -1,8 +1,22 @@
+import {
+    mini1,
+    mini2,
+    mini3,
+    mini4,
+    mini5,
+    mini6,
+    mini7,
+    mini8,
+    mini9,
+    mini10,
+    mini11,
+} from "./assets.js";
+
 export const miniProjectsData = [
     {
         title: "Mini #1: yosong.dev | weerayosong's Portfolio",
         desc: "Now you're looking at this mini. That's right, It's this page.",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini1.png?raw=true",
+        image: mini1,
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/weerayosong.github.io",
         previewLink: "https://www.yosong.dev",
@@ -10,7 +24,7 @@ export const miniProjectsData = [
     {
         title: "Mini #2: Empire Strikes Clicker!",
         desc: "Cookie clicker-clone with the love of Star wars in mind!",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini2.png?raw=true",
+        image: mini2,
         tags: ["HTML", "Tailwind CSS", "JavaScript", "DOM Manipulation"],
         githubLink:
             "https://github.com/weerayosong/jsd12_week07/tree/main/02_empire-strikes-clicker",
@@ -19,7 +33,7 @@ export const miniProjectsData = [
     {
         title: "Mini #3: Dark Side Converter | PX to REM",
         desc: "PX to REM unit converter made by Lord Vader",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini3.png?raw=true",
+        image: mini3,
         tags: ["HTML", "TailwindCSS", "JavaScript", "DOM Manipulation"],
         githubLink: "https://github.com/weerayosong/px-rem-converter-darkside",
         previewLink: "https://px-rem-converter-darkside.vercel.app",
@@ -27,7 +41,7 @@ export const miniProjectsData = [
     {
         title: "Mini #4: My first API - Pokemon-Simple-API",
         desc: "PokeAPI in new simple API Schema, Contain only neccessesary property.",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini4.png?raw=true",
+        image: mini4,
         tags: ["JavaScript", "REST API", "Node", "Express"],
         githubLink: "https://github.com/weerayosong/pokemon-simple",
         previewLink: "https://pokemon-simple.vercel.app",
@@ -35,7 +49,7 @@ export const miniProjectsData = [
     {
         title: "Mini #5: Space Castle Dooms | JS Browser-based Rogue-like game",
         desc: "Practice myself by make game with REACT!",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini5.png?raw=true",
+        image: mini5,
         tags: ["React", "JavaScript", "Tailwind CSS"],
         githubLink: "https://github.com/weerayosong/space-castle-dooms",
         previewLink: "https://space-castle-dooms.vercel.app",
@@ -43,7 +57,7 @@ export const miniProjectsData = [
     {
         title: "Mini #6: Dark Side Converter | Tailwind CSS-Size",
         desc: "You'll use Tailwind CSS-Size with more Precisionly (like Stromtrooper).",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini6.png?raw=true",
+        image: mini6,
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink:
             "https://github.com/weerayosong/tailwindcss-size-converter-darkside",
@@ -52,7 +66,7 @@ export const miniProjectsData = [
     {
         title: "Mini #7: FE + BE | JS Browser-based RPG game",
         desc: "At least made a quick game with React, better than abandon whole project.",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini7b.png?raw=true",
+        image: mini7,
         tags: ["React", "JavaScript", "Tailwind CSS"],
         githubLink: "https://github.com/weerayosong/febe-game",
         previewLink: "https://febe-game.vercel.app",
@@ -60,7 +74,7 @@ export const miniProjectsData = [
     {
         title: "Mini #8: Portfolio II | From Design to Code Portfolio ",
         desc: "JSD12 Portfolio Workshop, from Design to Code in 1 Day",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini8.png?raw=true",
+        image: mini8,
         tags: ["Figma", "HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/portfolio2",
         previewLink: "https://portfolio2-wheat-pi.vercel.app",
@@ -68,7 +82,7 @@ export const miniProjectsData = [
     {
         title: "Mini #9: Tailwind CSS Random Color | Tailwind CSS Color Generator ",
         desc: "Which color do you want? IDK just random it.",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini9.png?raw=true",
+        image: mini9,
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/tailwind-random-color",
         previewLink: "https://tailwind-random-color.vercel.app",
@@ -76,7 +90,7 @@ export const miniProjectsData = [
     {
         title: "Mini #10: JS Knowledge Cards | Flash card app to learn JavaScript ",
         desc: "Swipe to thrive up your knowledges of JavaScript",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini10.png?raw=true",
+        image: mini10,
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/js-card",
         previewLink: "https://js-card-psi.vercel.app",
@@ -84,7 +98,7 @@ export const miniProjectsData = [
     {
         title: "Mini #11: Keybong | Typing Practice App for Slowpokes!! ",
         desc: "May the typing speed be with you.",
-        image: "https://github.com/weerayosong/weerayosong.github.io/blob/main/images/mini11.png?raw=true",
+        image: mini11,
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/keybong",
         previewLink: "https://keybong.vercel.app",
