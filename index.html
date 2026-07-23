@@ -55,11 +55,6 @@
             crossorigin
         />
 
-        <link
-            rel="preconnect"
-            href="https://cdnjs.cloudflare.com"
-            crossorigin
-        />
         <!-- โหลดไฟล์ CSS ปกติ แต่กำหนดให้ไม่บล็อกการเรนเดอร์ และเพิ่ม media="print" ทริกให้โหลดอยู่เบื้องหลัง -->
         <link
             rel="stylesheet"
@@ -78,7 +73,7 @@
         <link rel="stylesheet" href="./css/output.css" />
     </head>
     <body
-        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white dark:bg-slate-800 dark:text-gray-100 transition-colors duration-300"
+        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-slate-500 selection:text-white dark:bg-slate-800 dark:text-gray-100 transition-colors duration-300"
     >
         <nav
             class="sticky top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 transition-all duration-300"
@@ -89,27 +84,29 @@
                         href="#"
                         class="text-2xl font-bold text-primary dark:text-white tracking-tight"
                     >
-                        yosong<span class="text-secondary">.dev</span>
+                        yosong<span class="text-slate-500 dark:text-slate-400"
+                            >.dev</span
+                        >
                     </a>
                     <div class="hidden md:flex space-x-8 items-center">
                         <a
                             href="#about"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
                             >About</a
                         >
                         <a
                             href="#projects"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
                             >Projects</a
                         >
                         <a
                             href="#certificates"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
                             >Certificates</a
                         >
                         <a
                             href="#mini-projects"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-secondary dark:hover:text-secondary transition-colors"
+                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
                             >Mini:p</a
                         >
                         <a
@@ -124,7 +121,7 @@
                             id="theme-toggle-desktop"
                             type="button"
                             aria-label="Toggle Color Theme"
-                            class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2.5 transition-colors cursor-pointer"
+                            class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2.5 transition-colors cursor-pointer"
                         >
                             <span class="theme-icon text-xl">◾️</span>
                         </button>
@@ -134,7 +131,7 @@
                             id="theme-toggle-mobile"
                             type="button"
                             aria-label="Toggle Color Theme"
-                            class="text-gray-500 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2 transition-colors cursor-pointer"
+                            class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2 transition-colors cursor-pointer"
                         >
                             <span class="theme-icon text-xl">◾️</span>
                         </button>
@@ -156,28 +153,28 @@
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a
                         href="#about"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
                         >About</a
                     >
                     <a
                         href="#projects"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
                         >Projects</a
                     >
                     <a
                         href="#certificates"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
                         >Certificates</a
                     >
                     <a
                         href="#mini-projects"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
                         >Mini:p</a
                     >
                     <a
                         href="https://github.com/weerayosong"
                         target="_blank"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-slate-800"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
                     >
                         <i class="fab fa-github mr-2"></i> GitHub
                     </a>
@@ -193,7 +190,7 @@
             >
                 <div class="max-w-4xl mx-auto text-center">
                     <p
-                        class="text-secondary font-bold tracking-widest text-sm mb-2"
+                        class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-2"
                     >
                         Once a good learner at
                     </p>
@@ -210,7 +207,7 @@
                         />
                     </a>
                     <p
-                        class="text-secondary font-bold tracking-widest text-sm mb-4"
+                        class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-4"
                     >
                         Now, Weerayos still study harder to be a great
                     </p>
@@ -220,7 +217,7 @@
                         Full-Stack<br />Developer
                     </h1>
                     <p
-                        class="text-lg text-gray-500 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
+                        class="text-lg text-slate-600 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
                     >
                         A Full-Stack Developer with a deep commitment to
                         continuous learning, currently focusing on foundation,
@@ -275,10 +272,10 @@
                             >
                                 Weerayos (Ong) Thammachamrat
                             </h2>
-                            <h3 class="text-xl text-secondary font-medium mb-6">
+                            <h3 class="text-xl text-slate-400 font-medium mb-6">
                                 weerayosong | Full-Stack Developer
                             </h3>
-                            <p class="mb-6 leading-relaxed">
+                            <p class="mb-6 leading-relaxed text-slate-300">
                                 A Full-Stack Developer with a good foundation in
                                 web development and a deep commitment to
                                 continuous learning. Currently dedicating myself
@@ -291,13 +288,13 @@
                                 building scalable, future-ready applications.
                             </p>
                             <div
-                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-fit mx-auto md:w-full md:mx-0"
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-fit mx-auto md:w-full md:mx-0 text-slate-300"
                             >
                                 <div
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fas fa-map-marker-alt text-secondary w-5 text-center"
+                                        class="fas fa-map-marker-alt text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <span>Bangkok, Thailand</span>
@@ -306,7 +303,7 @@
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fas fa-envelope text-secondary w-5 text-center"
+                                        class="fas fa-envelope text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <a
@@ -320,7 +317,7 @@
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fab fa-github text-secondary w-5 text-center"
+                                        class="fab fa-github text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <a
@@ -334,7 +331,7 @@
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fab fa-linkedin text-secondary w-5 text-center"
+                                        class="fab fa-linkedin text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <a
@@ -348,7 +345,7 @@
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fas fa-globe text-secondary w-5 text-center"
+                                        class="fas fa-globe text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <a
@@ -362,7 +359,7 @@
                                     class="flex items-center justify-start gap-3"
                                 >
                                     <i
-                                        class="fas fa-file-alt text-secondary w-5 text-center"
+                                        class="fas fa-file-alt text-slate-400 w-5 text-center"
                                         aria-hidden="true"
                                     ></i>
                                     <a
@@ -410,7 +407,7 @@
             >
                 <div class="text-center mb-16">
                     <span
-                        class="text-sm font-bold uppercase tracking-[0.2em] text-secondary block mb-2"
+                        class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 block mb-2"
                         >Continuous Learning Journey</span
                     >
                     <h2
@@ -422,10 +419,10 @@
                         >
                     </h2>
                     <div
-                        class="w-24 h-1.5 bg-secondary mx-auto rounded-full mb-8"
+                        class="w-24 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-full mb-8"
                     ></div>
                     <p
-                        class="text-gray-500 dark:text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed"
+                        class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed"
                     >
                         These projects serve as my continuous learning ground.
                         They reflect my foundational steps in understanding
@@ -451,10 +448,10 @@
                             Certifications & Learning
                         </h2>
                         <div
-                            class="w-20 h-1.5 bg-secondary mx-auto rounded-md"
+                            class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md"
                         ></div>
                         <p
-                            class="mt-4 text-gray-500 dark:text-gray-300 transition-colors duration-300"
+                            class="mt-4 text-slate-300 transition-colors duration-300"
                         >
                             Recognizing that strong fundamentals are the key to
                             becoming a reliable developer, I have dedicated
@@ -477,13 +474,14 @@
                         <h2
                             class="text-3xl md:text-4xl font-bold text-white mb-4"
                         >
-                            Mini <span class="text-secondary">Projects</span>
+                            Mini
+                            <span class="text-slate-400">Projects</span>
                         </h2>
                         <div
-                            class="w-20 h-1.5 bg-secondary mx-auto rounded-md mb-6"
+                            class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md mb-6"
                         ></div>
                         <p
-                            class="text-gray-200 max-w-2xl mx-auto text-sm md:text-base"
+                            class="text-slate-300 max-w-2xl mx-auto text-sm md:text-base"
                         >
                             Mini Projects engineered to sharpen my skills,
                             serving as the support wings for my Full-Stack
@@ -504,7 +502,7 @@
                         >
                             <div
                                 id="mini-scroll-progress"
-                                class="h-full bg-secondary w-0 transition-all duration-300"
+                                class="h-full bg-slate-400 w-0 transition-all duration-300"
                             ></div>
                         </div>
                     </div>
@@ -565,7 +563,7 @@
         >
             <div class="max-w-7xl mx-auto">
                 <p
-                    class="text-gray-500 dark:text-gray-300 text-sm font-medium transition-colors duration-300"
+                    class="text-gray-500 dark:text-gray-400 text-sm font-medium transition-colors duration-300"
                 >
                     &copy; <span id="year"></span> yosong.dev | All rights
                     reserved.

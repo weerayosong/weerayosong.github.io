@@ -3,7 +3,7 @@
 /* 1. ย้าย Config เดิมมาเป็น Theme Variables ของ Tailwind v4 */
 @theme {
     --color-primary: #0f172a;
-    --color-secondary: #94a3b8;
+    /* --color-secondary: #475569; slate #94a3b8(400) #64748b(500 ) #475569(600) */
 }
 
 /* 2. ตั้งค่าให้ Dark Mode เปลี่ยนตาม Class .dark (แทนการใช้ OS Default) */
