@@ -14,19 +14,41 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCertificates();
     renderMiniProjects();
 
-    // 3. Lazy Autoplay Videos (หน่วงเวลา 1.5 วิ ก่อนโหลดวิดีโอ)
-    setTimeout(() => {
-        const lazyVideos = document.querySelectorAll("video.lazy-video");
-        lazyVideos.forEach((video) => {
-            // ดึงลิงก์จาก data-src มาใส่ใน src เพื่อเริ่มดาวน์โหลด
-            video.src = video.dataset.src;
-            video.load(); // สั่งเบราว์เซอร์ให้โหลดข้อมูลวิดีโอ
+    // 3. Smart Lazy Autoplay Videos (Intersection Observer)
+    const lazyVideos = document.querySelectorAll("video.lazy-video");
 
-            // ทันทีที่วิดีโอโหลดพร้อมเล่น (loadeddata) ให้แสดงผลและเล่น
-            video.addEventListener("loadeddata", () => {
-                video.classList.remove("opacity-0"); // ให้วิดีโอ Fade-in ขึ้นมา
-                video.play(); // สั่งให้เล่นอัตโนมัติ
-            });
+    if ("IntersectionObserver" in window) {
+        // สร้าง Observer เพื่อจับตาดูว่าวิดีโอเข้ามาในหน้าจอหรือยัง
+        const videoObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    // ถ้าวิดีโอเลื่อนเข้ามาในหน้าจอแล้ว (isIntersecting)
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+
+                        // สั่งให้เริ่มโหลดวิดีโอ
+                        video.src = video.dataset.src;
+                        video.load();
+
+                        // เมื่อโหลดพร้อม ให้แสดงผลและเล่น แล้วเลิกติดตาม (unobserve)
+                        video.addEventListener("loadeddata", () => {
+                            video.classList.remove("opacity-0");
+                            video.play();
+                        });
+
+                        observer.unobserve(video);
+                    }
+                });
+            },
+            {
+                // โหลดล่วงหน้าก่อนที่วิดีโอจะโผล่พ้นขอบจอด้านล่าง 200px (เพื่อให้เนียนตา)
+                rootMargin: "0px 0px 200px 0px",
+            },
+        );
+
+        // สั่งให้ Observer เริ่มจับตาวิดีโอทุกตัวที่ติดคลาส lazy-video
+        lazyVideos.forEach((video) => {
+            videoObserver.observe(video);
         });
-    }, 1500); // 1500 ms (1.5 วินาที) คือจังหวะที่ PageSpeed ตรวจสอบ LCP จบไปแล้ว
+    }
 });
