@@ -65,3 +65,13 @@ export const cert8 =
     "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784800443/cert8_bkthcb.png";
 export const cert9 =
     "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784800444/cert9_ztlmbe.png";
+
+// --- Layout Assets ---
+export const logoGenTH =
+    "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804807/asset-genth_rm7afy.webp";
+export const imgProfile =
+    "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804810/asset-profilepic_gsyu4d.jpg";
+export const imgCertJSD =
+    "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804807/asset-certjsd12_ngtmrq.png";
+export const imgCertJSDThumb =
+    "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804808/asset-certjsd12-thumbnail_hs4dqc.png";

@@ -1,8 +1,8 @@
 # https://www.yosong.dev
 
-## Mini Project #1 | One File One Page Portfolio
+## Mini Project #1 | ~~One File One Page~~ My vanillaJS Portfolio
 
-### 1 File 1 Page Portfolio นี่คือ มินิโปรเจคท์เล็ก ๆ โปรเจคท์แรก เป็นเว็บเพจ portfolio หน้าเดียวและถูกสร้างขึ้นด้วย ไฟล์ html ไฟล์เดียว ด้วย VanillaJS และ TailwindCSS
+### ~~1 File 1 Page~~ My vanillaJS Portfolio นี่คือ มินิโปรเจคท์เล็ก ๆ โปรเจคท์แรก เป็นเว็บเพจ portfolio หน้าเดียวและถูกสร้างขึ้นด้วย ไฟล์ html ไฟล์เดียว ด้วย VanillaJS และ TailwindCSS
 
 ## จุดประสงค์
 
