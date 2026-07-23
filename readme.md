@@ -1,41 +1,62 @@
-# https://www.yosong.dev
+# yosong.dev | My VanillaJS Portfolio Website
 
-## Mini Project #1 | ~~One File One Page~~ My vanillaJS Portfolio
+**Live Preview:** [https://www.yosong.dev](https://www.yosong.dev)
 
-### ~~1 File 1 Page~~ My vanillaJS Portfolio นี่คือ มินิโปรเจคท์เล็ก ๆ โปรเจคท์แรก เป็นเว็บเพจ portfolio หน้าเดียวและถูกสร้างขึ้นด้วย ไฟล์ html ไฟล์เดียว ด้วย VanillaJS และ TailwindCSS
+นี่คือโปรเจกต์เว็บพอร์ตโฟลิโอส่วนตัว ที่เริ่มต้นจากไอเดียเล็กๆ สู่การพัฒนาโครงสร้างโค้ดแบบเต็มรูปแบบ เพื่อแสดงเส้นทางการเรียนรู้และการเติบโตในสายงาน Full-Stack Developer
 
-## จุดประสงค์
+---
 
-ต้องการนำความรู้ที่ได้เรียนรู้จาก 4 สัปดาห์แรก นำมาประยุกต์เป็นโปรเจคท์ เล็ก ๆ ง่าย ๆ ใช้เวลาสั้น ๆ สร้างขึ้นมาเป็นเว็บพอร์ทโฟลิโออย่างง่าย ๆ ไว้แสดงลิงค์ผลงาน โดยมีเงื่อนไขปัญหาเริ่มต้นไว้ข้อเดียวเดียวเลยในตอนแรก คือ ต้องเป็น Responsive Design เพราะช่วงที่เริ่มต้นพัฒนาเว็บนี้ ตัวผู้สร้างเองส่วนใหญ่อยู่ข้างนอกสถานที่ และมีเวลาว่างที่น้อยมาก ๆ จึงต้องโค้ดผ่านมือถือด้วย Code App และสร้างเว็บเป็นแบบ Mobile first ผู้สร้างจึงเลือกใช้ TailwindCSS ผ่าน CDN มาใช้ช่วยขึ้นเลย์เอาท์ จนเป็นรูปเป็นร่าง หลังจากแก้ปัญหาแรกได้ feature อื่นมันก็งอกผุดมาเรื่อย จนเป็นเว็บเพจในเวอร์ชั่นปัจจุบัน
+## จุดประสงค์เริ่มต้น (The Origin)
 
-โดยใช้ความรู้ที่เรียนจาก Junior Software Developer Program ซึ่งเป็น Bootcamp ที่ทาง Generation Thailand ได้จัดขึ้น
-ตัวเว็บทั้งหมดใช้เพียงบทเรียน ที่สอนภายใน 1 เดือนแรกของบูทแคมป์เท่านั้น คือเรื่องพื้นฐานคอมทั่วไป HPPT/IP DNS Response Request รวมไปถึง การพัฒนาเว็บไซต์ด้วย HTML CSS JS.
+โปรเจกต์นี้เริ่มต้นขึ้นในฐานะ **"Mini Project #1"** โดยมีเป้าหมายเพื่อนำความรู้พื้นฐาน (HTML, CSS, JS) ที่เรียนรู้ในช่วง 1 เดือนแรกจาก Junior Software Developer Bootcamp ของ Generation Thailand มาประยุกต์ใช้ทันที
 
-**สิ่งที่นำมาใช้ ก็จะมีประมาณนี้:**
+**โจทย์ท้าทายแรกสุด:**
+เนื่องจากในช่วงเริ่มต้น ผมมักจะอยู่ข้างนอกและมีเวลาจำกัด จึงต้องเขียนโค้ดผ่านแอปฯ บนโทรศัพท์มือถือเป็นหลัก เว็บไซต์นี้จึงถูกตั้งใจสร้างขึ้นด้วยแนวคิด **Mobile First** และ **1 File 1 Page Architecture** คือรวมทุกอย่างทั้ง โครงสร้าง HTML, สไตล์ CSS (Tailwind ผ่าน CDN) และลอจิกการทำงาน (Vanilla JS) ไว้ในไฟล์ `index.html` ไฟล์เดียวเพื่อให้ง่ายต่อการจัดการผ่านมือถือ
 
-- **Document Architecture**
-    - The source code utilizes a single-file architecture, consolidating document structure, formatting, and operational logic into one HTML file.
-    - Semantic HTML tags, including `<nav>`, `<section>`, and `<footer>`, are employed to establish a meaningful document structure.
-    - Viewport metadata is configured to ensure responsive rendering and scale adjustments across varying device screen dimensions.
+## การพัฒนาและปรับโครงสร้างใหม่ (The Evolution)
 
-- **Stylesheet and Presentation Management**
-    - The Tailwind CSS framework is integrated via a Content Delivery Network (CDN).
-    - Framework configuration is customized through a `tailwind.config` object within an inline script, defining system-level `primary` and `secondary` color codes.
-    - Internal Cascading Style Sheets (CSS) rules are defined to control specific visual behaviors, including scrollbar concealment (`.no-scrollbar`) and overlay image positioning (`.card-overlay-img`).
-    - Responsive design principles are applied using framework utility classes to dynamically adjust proportions, typography, and grid layouts based on screen width parameters.
-    - Vector graphical icons from the Font Awesome library are incorporated via CDN.
+เมื่อฟีเจอร์เริ่มงอกและโปรเจกต์เริ่มใหญ่ขึ้น การใช้สถาปัตยกรรมแบบไฟล์เดียวเริ่มไม่ตอบโจทย์เรื่องความเร็ว (PageSpeed) และความสะอาดของโค้ด (Clean Code)
 
-- **Client-Side Processing and DOM Manipulation**
-    - Vanilla JavaScript is utilized for Document Object Model (DOM) manipulation, specifically managing the toggle functionality and visibility state of the mobile navigation interface.
-    - Array data structures (`projectsData` and `certsData`) are implemented to store structured information arrays, which are subsequently iterated over for the dynamic generation of HTML elements.
-    - Pagination logic is engineered for desktop viewport rendering, regulating data display intervals via `currentPage` and `itemsPerPageDesktop` variables.
-    - A horizontal scrolling mechanism is developed for mobile viewports, integrated with scroll ratio calculation logic to scale a visual progress bar dynamically.
-    - The Fetch API is deployed to execute asynchronous HTTP requests to an external endpoint (`https://dog.ceo/api/breeds/image/random`), dynamically allocating the resolved response URLs to the source attributes of the generated project image elements.
+ในเวอร์ชันปัจจุบัน เว็บไซต์นี้จึงได้รับการ **Refactor โครงสร้างครั้งใหญ่** โดยใช้หลักการ **Separation of Concerns (SoC)** แยกทุกส่วนออกจากกันอย่างชัดเจน เพื่อประสิทธิภาพสูงสุด และนี่คือโครงสร้างทางเทคนิคที่ใช้อยู่ในปัจจุบัน:
 
-- **Dark Mode Implementation ◽️/◾️**
+### 1. Document Architecture (โครงสร้างเอกสาร)
 
-    The theme control for this website is built using Vanilla JavaScript, without relying on any external libraries. It operates on 4 main principles:
-    - **Theme Toggling (Class Strategy):** When the user clicks the toggle button, the function adds or removes (toggles) the `dark` class on the `<html>` tag. Tailwind CSS then immediately applies the corresponding dark variant styles.
-    - **Local Storage Persistence:** The system saves the current theme state (`dark` or `light`) into the browser's `localStorage`. This ensures that the user's preferred theme remains active even after refreshing the page or closing the browser.
-    - **UI Synchronization:** The script automatically updates all theme toggle buttons across the interface (both on the Desktop Navbar and the Mobile Menu) to synchronously switch their icons to match the active theme.
-    - **System Preference Detection (Smart Default):** On the initial load, the system checks `localStorage` first. If no user preference is found, it uses `window.matchMedia` to detect the operating system's default preference (Dark or Light mode) and applies it automatically.
+- **HTML Semantics:** ปรับเปลี่ยนโครงสร้างเอกสารโดยการแยก `UI`, `Data`, และ `Logic` ออกจากกันอย่างเด็ดขาด แต่ยังคงการใช้แท็กเชิงความหมาย (Semantic Tags) อย่าง `<nav>`, `<main>`, `<section>`, และ `<footer>` เพื่อรองรับ Accessibility (a11y) และ SEO
+
+- **ES6 Modules:** เปลี่ยนรูปแบบการเขียนลอจิกเป็น Module (ใช้อิมพอร์ต `import`/`export`) เพื่อให้สามารถแบ่งไฟล์การทำงานออกเป็นสัดส่วน (เช่น `main.js`, `renderUI.js`, `utils.js`) ทำให้โค้ดอ่านง่ายและดูแลรักษาได้ในระยะยาว
+
+### 2. Stylesheet & Presentation (การจัดการสไตล์)
+
+- **Tailwind CSS v4:** ถอดการเรียกใช้ Tailwind ผ่าน CDN ออก และเปลี่ยนมาใช้การ Build ไฟล์ผ่าน Tailwind CLI (`output.css`) เพื่อลดขนาดไฟล์ CSS ที่ไม่จำเป็น (Purge/Minify) ช่วยแก้ปัญหา Render-blocking และเพิ่มคะแนน PageSpeed
+- **Custom CSS Extraction:** สกัดคลาสแบบกำหนดเอง (เช่น เอฟเฟกต์การ Hover การ์ด, การซ่อน Scrollbar) ออกไปเขียนแยกในไฟล์ `style.css`
+- **Font Optimization:** เปลี่ยนวิธีโหลด Font Awesome เป็นแบบ Asynchronous (`preload`) เพื่อไม่ให้กีดขวางการเรนเดอร์เนื้อหาหลักในหน้าแรก
+
+### 3. Media & Assets Management (การจัดการไฟล์มีเดีย)
+
+- **Cloudinary CDN:** ย้ายไฟล์รูปภาพ (PNG/JPG) และวิดีโอตัวอย่างโปรเจกต์ (.mp4) ทั้งหมดออกจาก GitHub Repository ไปฝากไว้บน **Cloudinary**
+- **Auto-Optimization:** ใช้งาน URL parameters ของ Cloudinary (`q_auto, f_auto, f_webp`) เพื่อบีบอัดขนาดไฟล์และแปลงสกุลไฟล์เป็น WebP แบบอัตโนมัติ (On-the-fly) ช่วยลดภาระการโหลดของเบราว์เซอร์ไปได้กว่า 80%
+- **Centralized Assets Data:** สร้างไฟล์ตัวแปรกลาง (`assets.js`) เพื่อเก็บ URL ของรูปภาพและวิดีโอทั้งหมด (Single Source of Truth) ทำให้แก้ไขลิงก์ได้ง่ายจากจุดเดียว
+
+### 4. Client-Side Processing (การทำงานฝั่งไคลเอนต์)
+
+- **Dynamic UI Rendering:** ข้อมูลโปรเจกต์, มินิโปรเจกต์ และใบรับรอง ถูกแยกไปเก็บในรูปแบบ Array of Objects (ในโฟลเดอร์ `/data`) จากนั้นใช้ Vanilla JS (`.map()`) สร้างโค้ด HTML (Template Literals) แล้วแทรกเข้าไปใน DOM ทันทีเมื่อหน้าเว็บโหลดเสร็จ
+
+- **Horizontal Scroll Progress:** สร้างระบบแถบความคืบหน้า (Progress bar) สำหรับการเลื่อนดูมินิโปรเจกต์บนมือถือ โดยคำนวณจากเปอร์เซ็นต์การ Scroll (Scroll Ratio)
+
+- **Global Error Protection:** ผูก Event Listener เข้ากับตัวแปรแม่แทนที่จะผูกทีละปุ่ม (Event Delegation) เพื่อลดการใช้ Memory และโค้ดที่ซ้ำซ้อน
+
+### 5. Dark Mode Implementation ◽️/◾️ (ระบบจัดการธีม)
+
+ระบบควบคุมธีมของเว็บไซต์สร้างขึ้นด้วย Vanilla JS เพียวๆ โดยไม่ต้องพึ่งพาไลบรารีภายนอก อาศัยหลักการ 4 ข้อคือ:
+
+- **Theme Toggling (Class Strategy):** การสลับคลาส `dark` บนแท็ก `<html>` เพื่อให้ Tailwind ตอบสนอง
+
+- **Local Storage Persistence:** บันทึกสถานะธีม (Dark/Light) ลงในเบราว์เซอร์ เพื่อให้ระบบจำค่าที่ผู้ใช้เลือกไว้
+
+- **UI Synchronization:** ซิงค์ไอคอนปุ่มสลับธีมทั้งบน Desktop Navbar และ Mobile Menu ให้ตรงกันเสมอ
+
+- **System Preference Detection (Smart Default):** หากไม่มีการตั้งค่าไว้ล่วงหน้า ระบบจะตรวจจับธีมมาตรฐานที่ผู้ใช้ตั้งไว้บนระบบปฏิบัติการ (OS) แล้วแสดงผลแบบนั้นเป็นค่าเริ่มต้น (ใช้ `window.matchMedia`)
+
+---
+
+✌️*V for Vanilla! Built with logic, continuously learning to lay a solid foundation for scalable applications in the future.*
