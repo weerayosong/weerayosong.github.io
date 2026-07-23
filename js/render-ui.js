@@ -13,12 +13,11 @@ export function renderFeaturedProject() {
                 
                 <div class="w-full aspect-video bg-slate-900 relative cursor-pointer border-b border-gray-100 dark:border-slate-800/50" onclick="openVideoLightbox('${project.image}')">
                     <video 
-                        src="${project.image}" 
-                        class="w-full h-full object-fill select-none" 
+                        data-src="${project.image}" 
+                        class="lazy-video w-full h-full object-fill select-none transition-opacity duration-1000 opacity-0" 
                         loop 
                         muted 
                         playsinline
-                        autoplay
                         oncontextmenu="return false;">
                     </video>
                 </div>
