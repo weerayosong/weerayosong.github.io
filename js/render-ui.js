@@ -85,8 +85,8 @@ export function renderCertificates() {
         card.className =
             "relative overflow-hidden rounded-md border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 hover:border-secondary transition-all duration-300 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_10px_30px_rgba(0,0,0,0.5)] group cursor-pointer block h-28";
         card.innerHTML = `
-            <img src="${cert.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0" alt="Certificate Background">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/20 to-transparent z-0"></div>
+            <img src="${cert.bgImage}" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 z-0" alt="Certificate Background">
+            <div class="absolute inset-0 bg-linear-to-r from-slate-950 via-slate-950/20 to-transparent z-0"></div>
             <div class="relative z-10 p-4 flex items-center gap-6 w-full h-full">
                 <div class="rounded-md w-10 h-10 border border-slate-700 bg-slate-900/90 flex items-center justify-center shrink-0 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)] transform rotate-45 group-hover:border-secondary transition-colors">
                     <i class="${cert.icon} text-secondary text-2xl transform -rotate-45"></i>
@@ -126,9 +126,9 @@ export function renderMiniProjects() {
                 "bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-secondary hover:shadow-lg transition-all duration-300 group h-40";
             desktopCard.innerHTML = `
                 <div class="w-40 shrink-0 relative overflow-hidden bg-grey-800">
-                    <img src="${project.image}" onclick="openLightbox('${project.image}')" class="w-full h-full aspect-square object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 cursor-pointer" alt="${project.title}">
+                    <img src="${project.image}" loading="lazy" onclick="openLightbox('${project.image}')" class="w-full h-full aspect-square object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 cursor-pointer" alt="${project.title}">
                 </div>
-                <div class="p-4 flex flex-col flex-grow justify-between">
+                <div class="p-4 flex flex-col grow justify-between">
                     <div>
                         <h3 class="text-white font-bold text-md leading-tight mb-1">${project.title}</h3>
                         <p class="text-gray-400 text-xs line-clamp-2">${project.desc}</p>
@@ -149,11 +149,11 @@ export function renderMiniProjects() {
                 "bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group";
             mobileCard.innerHTML = `
                 <div class="w-full relative overflow-hidden bg-grey-800 pt-[100%]">
-                    <img src="${project.image}" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
+                    <img src="${project.image}" loading="lazy" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
                 </div>
-                <div class="p-5 flex flex-col flex-grow">
+                <div class="p-5 flex flex-col grow">
                     <h3 class="text-white font-bold text-lg mb-2">${project.title}</h3>
-                    <p class="text-gray-400 text-sm mb-4 flex-grow">${project.desc}</p>
+                    <p class="text-gray-400 text-sm mb-4 grow">${project.desc}</p>
                     <div class="flex flex-wrap gap-1.5 mb-4">${tagsHTML}</div>
                     <div class="flex gap-3 mt-2 pt-2 border-t border-slate-700/50">
                         <a href="${project.githubLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>

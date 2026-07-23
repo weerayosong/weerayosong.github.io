@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* 1. ย้าย Config เดิมมาเป็น Theme Variables ของ Tailwind v4 */
+@theme {
+    --color-primary: #0f172a;
+    --color-secondary: #94a3b8;
+}
+
+/* 2. ตั้งค่าให้ Dark Mode เปลี่ยนตาม Class .dark (แทนการใช้ OS Default) */
+@custom-variant dark (&:is(.dark *));
+
+/* 3. Custom CSS ของเดิม */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Premium Card Hover Effect */
+.premium-card {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(148, 163, 184, 0.25);
+}
+.dark .premium-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.15);
+}

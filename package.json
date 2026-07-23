@@ -1,0 +1,25 @@
+{
+  "name": "weerayosong.github.io",
+  "version": "1.0.0",
+  "description": "ต้องการนำความรู้ที่ได้เรียนรู้จาก 4 สัปดาห์แรก นำมาประยุกต์เป็นโปรเจคท์ เล็ก ๆ ง่าย ๆ ใช้เวลาสั้น ๆ สร้างขึ้นมาเป็นเว็บพอร์ทโฟลิโออย่างง่าย ๆ ไว้แสดงลิงค์ผลงาน โดยมีเงื่อนไขปัญหาเริ่มต้นไว้ข้อเดียวเดียวเลยในตอนแรก คือ ต้องเป็น Responsive Design เพราะช่วงที่เริ่มต้นพัฒนาเว็บนี้ ตัวผู้สร้างเองส่วนใหญ่อยู่ข้างนอกสถานที่ และมีเวลาว่างที่น้อยมาก ๆ จึงต้องโค้ดผ่านมือถือด้วย Code App และสร้างเว็บเป็นแบบ Mobile first ผู้สร้างจึงเลือกใช้ TailwindCSS ผ่าน CDN มาใช้ช่วยขึ้นเลย์เอาท์ จนเป็นรูปเป็นร่าง หลังจากแก้ปัญหาแรกได้ feature อื่นมันก็งอกผุดมาเรื่อย จนเป็นเว็บเพจในเวอร์ชั่นปัจจุบัน",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weerayosong/weerayosong.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/weerayosong/weerayosong.github.io/issues"
+  },
+  "homepage": "https://github.com/weerayosong/weerayosong.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
