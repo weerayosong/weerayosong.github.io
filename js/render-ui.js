@@ -116,7 +116,7 @@ export function renderMiniProjects() {
         const tagsHTML = project.tags
             .map(
                 (tag) =>
-                    `<span class="px-2 py-0.5 bg-slate-600/50 text-secondary text-[10px] font-semibold rounded-md uppercase tracking-wider">${tag}</span>`,
+                    `<span class="px-2 py-0.5 bg-slate-600/50 text-white text-[10px] font-semibold rounded-md uppercase tracking-wider">${tag}</span>`,
             )
             .join("");
 
