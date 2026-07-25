@@ -115,27 +115,27 @@ export function renderMiniProjects() {
         const tagsHTML = project.tags
             .map(
                 (tag) =>
-                    `<span class="px-2 py-0.5 bg-slate-600/50 text-white text-[10px] font-semibold rounded-md uppercase tracking-wider">${tag}</span>`,
+                    `<span class="px-2 py-0.5 bg-gray-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-[10px] font-semibold rounded-md uppercase tracking-wider">${tag}</span>`,
             )
             .join("");
 
         if (desktopContainer) {
             const desktopCard = document.createElement("div");
             desktopCard.className =
-                "bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex hover:border-slate-400 hover:shadow-lg transition-all duration-300 group h-40";
+                "bg-white dark:bg-slate-900 rounded-xl border border-slate-300 dark:border-slate-700/80 overflow-hidden flex shadow-md hover:shadow-lg hover:border-slate-400 dark:hover:border-slate-500 transition-all duration-300 group h-40";
             desktopCard.innerHTML = `
-                <div class="w-40 shrink-0 relative overflow-hidden bg-grey-800">
+                <div class="w-40 shrink-0 relative overflow-hidden bg-slate-100 dark:bg-slate-950 border-r border-slate-200 dark:border-slate-800">
                     <img src="${project.image}" loading="lazy" onclick="openLightbox('${project.image}')" class="w-full h-full aspect-square object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 cursor-pointer" alt="${project.title}">
                 </div>
                 <div class="p-4 flex flex-col grow justify-between">
                     <div>
-                        <h3 class="text-white font-bold text-md leading-tight mb-1">${project.title}</h3>
-                        <p class="text-gray-400 text-xs line-clamp-2">${project.desc}</p>
+                        <h3 class="text-slate-900 dark:text-white font-bold text-md leading-tight mb-1">${project.title}</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-xs line-clamp-2">${project.desc}</p>
                         <div class="flex flex-wrap gap-1 mt-2">${tagsHTML}</div>
                     </div>
-                    <div class="flex gap-3 mt-2 pt-2 border-t border-slate-700/50">
-                        <a href="${project.githubLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                        <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-slate-300 transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                    <div class="flex gap-3 mt-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                        <a href="${project.githubLink}" target="_blank" class="text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                        <a href="${project.previewLink}" target="_blank" class="text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                     </div>
                 </div>
             `;
@@ -145,18 +145,18 @@ export function renderMiniProjects() {
         if (mobileContainer) {
             const mobileCard = document.createElement("div");
             mobileCard.className =
-                "bg-grey-800/40 backdrop-blur-sm rounded-md border border-slate-700/50 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group";
+                "bg-white dark:bg-slate-900 rounded-xl border border-slate-300 dark:border-slate-700/80 overflow-hidden flex flex-col w-[75vw] sm:w-[50vw] shrink-0 snap-center group shadow-md hover:shadow-lg transition-shadow";
             mobileCard.innerHTML = `
-                <div class="w-full relative overflow-hidden bg-grey-800 pt-[100%]">
+                <div class="w-full relative overflow-hidden bg-slate-100 dark:bg-slate-950 pt-[100%] border-b border-slate-200 dark:border-slate-800">
                     <img src="${project.image}" loading="lazy" onclick="openLightbox('${project.image}')" class="absolute inset-0 w-full h-full object-cover opacity-100 cursor-pointer" alt="${project.title}">
                 </div>
                 <div class="p-5 flex flex-col grow">
-                    <h3 class="text-white font-bold text-lg mb-2">${project.title}</h3>
-                    <p class="text-gray-400 text-sm mb-4 grow">${project.desc}</p>
+                    <h3 class="text-slate-900 dark:text-white font-bold text-lg mb-2">${project.title}</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 grow">${project.desc}</p>
                     <div class="flex flex-wrap gap-1.5 mb-4">${tagsHTML}</div>
-                    <div class="flex gap-3 mt-2 pt-2 border-t border-slate-700/50">
-                        <a href="${project.githubLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
-                        <a href="${project.previewLink}" target="_blank" class="text-xs font-semibold text-gray-400 hover:text-slate-300 transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
+                    <div class="flex gap-3 mt-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+                        <a href="${project.githubLink}" target="_blank" class="text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1"><i class="fab fa-github"></i> Code</a>
+                        <a href="${project.previewLink}" target="_blank" class="text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-1"><i class="fas fa-external-link-alt"></i> Preview</a>
                     </div>
                 </div>
             `;
