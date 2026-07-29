@@ -1,1016 +1,931 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>weerayosong | Full-Stack Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weerayosong | Full-Stack Developer</title>
 
-        <!-- SEO & Meta Tags -->
-        <meta
-            name="description"
-            content="Portfolio of Weerayos (Ong) Thammachamrat, a Full Stack Developer passionate about scalable web applications."
-        />
-        <meta
-            name="keywords"
-            content="Weerayos, Ong, Full Stack Developer, Web Developer, Portfolio, JavaScript, MERN, Tailwind CSS"
-        />
-        <meta name="author" content="Weerayos Thammachamrat" />
+    <!-- SEO & Meta Tags -->
+    <meta
+      name="description"
+      content="Portfolio of Weerayos (Ong) Thammachamrat, a Full Stack Developer passionate about scalable web applications."
+    />
+    <meta
+      name="keywords"
+      content="Weerayos, Ong, Full Stack Developer, Web Developer, Portfolio, JavaScript, MERN, Tailwind CSS"
+    />
+    <meta name="author" content="Weerayos Thammachamrat" />
 
-        <!-- Open Graph / Facebook / LinkedIn -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.yosong.dev/" />
-        <meta
-            property="og:title"
-            content="Weerayos (Ong) | Full-Stack Developer"
-        />
-        <meta
-            property="og:description"
-            content="Explore the portfolio and continuous learning journey of Weerayos, a Full Stack Developer."
-        />
-        <meta
-            property="og:image"
-            content="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
-        />
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.yosong.dev/" />
+    <meta property="og:title" content="Weerayos (Ong) | Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio and continuous learning journey of Weerayos, a Full Stack Developer."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
+    />
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.yosong.dev/" />
-        <meta
-            name="twitter:title"
-            content="Weerayos (Ong) | Full-Stack Developer"
-        />
-        <meta
-            name="twitter:description"
-            content="Explore the portfolio and continuous learning journey of Weerayos, a Full Stack Developer."
-        />
-        <meta
-            name="twitter:image"
-            content="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
-        />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.yosong.dev/" />
+    <meta
+      name="twitter:title"
+      content="Weerayos (Ong) | Full-Stack Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore the portfolio and continuous learning journey of Weerayos, a Full Stack Developer."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
+    />
 
-        <!-- Preconnect ช่วยให้บราวเซอร์เตรียมเชื่อมต่อกับเซิร์ฟเวอร์ Font Awesome ล่วงหน้า -->
-        <link
-            rel="preconnect"
-            href="https://cdnjs.cloudflare.com"
-            crossorigin
-        />
+    <!-- Preconnect ช่วยให้บราวเซอร์เตรียมเชื่อมต่อกับเซิร์ฟเวอร์ Font Awesome ล่วงหน้า -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-        <!-- โหลดไฟล์ CSS ปกติ แต่กำหนดให้ไม่บล็อกการเรนเดอร์ และเพิ่ม media="print" ทริกให้โหลดอยู่เบื้องหลัง -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            media="print"
-            onload="this.media = 'all'"
-        />
-        <!-- Fallback เผื่อไว้ -->
-        <noscript>
-            <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            />
-        </noscript>
+    <!-- โหลดไฟล์ CSS ปกติ แต่กำหนดให้ไม่บล็อกการเรนเดอร์ และเพิ่ม media="print" ทริกให้โหลดอยู่เบื้องหลัง -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <!-- Fallback เผื่อไว้ -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    </noscript>
 
-        <link rel="stylesheet" href="./css/output.css" />
-    </head>
-    <body
-        class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-slate-500 selection:text-white dark:bg-slate-800 dark:text-gray-100 transition-colors duration-300"
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-slate-500 selection:text-white dark:bg-slate-800 dark:text-gray-100 transition-colors duration-300"
+  >
+    <nav
+      class="sticky top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 transition-all duration-300"
     >
-        <nav
-            class="sticky top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 transition-all duration-300"
-        >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between items-center h-16">
-                    <a
-                        href="#"
-                        class="text-2xl font-bold text-primary dark:text-white tracking-tight"
-                    >
-                        yosong<span class="text-slate-500 dark:text-slate-400"
-                            >.dev</span
-                        >
-                    </a>
-                    <div class="hidden md:flex space-x-8 items-center">
-                        <a
-                            href="#about"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >About</a
-                        >
-                        <a
-                            href="#projects"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >Projects</a
-                        >
-                        <a
-                            href="#certificates"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >Certificates</a
-                        >
-                        <a
-                            href="#mini-projects"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >Mini:p</a
-                        >
-                        <a
-                            href="#lab"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >Lab</a
-                        >
-                        <a
-                            href="#saas"
-                            class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
-                            >SaaS</a
-                        >
-                        <a
-                            href="https://github.com/weerayosong"
-                            target="_blank"
-                            aria-label="GitHub Profile"
-                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors text-xl"
-                        >
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <button
-                            id="theme-toggle-desktop"
-                            type="button"
-                            aria-label="Toggle Color Theme"
-                            class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2.5 transition-colors cursor-pointer"
-                        >
-                            <span class="theme-icon text-xl">◾️</span>
-                        </button>
-                    </div>
-                    <div class="md:hidden flex items-center gap-2">
-                        <button
-                            id="theme-toggle-mobile"
-                            type="button"
-                            aria-label="Toggle Color Theme"
-                            class="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2 transition-colors cursor-pointer"
-                        >
-                            <span class="theme-icon text-xl">◾️</span>
-                        </button>
-                        <button
-                            id="mobile-menu-btn"
-                            type="button"
-                            aria-label="Toggle Navigation Menu"
-                            class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white focus:outline-none p-2 cursor-pointer"
-                        >
-                            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                id="mobile-menu"
-                class="hidden md:hidden bg-white border-b dark:bg-slate-900 border-gray-100 dark:border-slate-800 absolute w-full shadow-lg"
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="#"
+            class="text-2xl font-bold text-primary dark:text-white tracking-tight"
+          >
+            yosong<span class="text-slate-500 dark:text-slate-400">.dev</span>
+          </a>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#about"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >About</a
             >
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a
-                        href="#about"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >About</a
-                    >
-                    <a
-                        href="#projects"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >Projects</a
-                    >
-                    <a
-                        href="#certificates"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >Certificates</a
-                    >
-                    <a
-                        href="#mini-projects"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >Mini:p</a
-                    >
-                    <a
-                        href="#lab"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >Lab</a
-                    >
-                    <a
-                        href="#saas"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                        >SaaS</a
-                    >
-                    <a
-                        href="https://github.com/weerayosong"
-                        target="_blank"
-                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
-                    >
-                        <i class="fab fa-github mr-2"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- ครอบด้วยแท็ก <main> เพื่อสร้าง Main Landmark -->
-        <main>
-            <section
-                id="home"
-                class="px-4 py-16 min-h-[60vh] flex items-center dark:bg-slate-800 transition-colors duration-300"
+            <a
+              href="#projects"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >Projects</a
             >
-                <div class="max-w-4xl mx-auto text-center">
-                    <p
-                        class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-2"
-                    >
-                        Once a good learner at
-                    </p>
-                    <a
-                        href="https://thailand.generation.org/"
-                        target="_blank"
-                        aria-label="Generation Thailand Website"
-                        class="flex justify-center align-middle"
-                    >
-                        <img
-                            class="max-w-40 mb-5"
-                            src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804807/asset-genth_rm7afy.webp"
-                            alt="Generation Thailand Logo"
-                        />
-                    </a>
-                    <p
-                        class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-4"
-                    >
-                        Now, Weerayos still study harder to be a great
-                    </p>
-                    <h1
-                        class="text-5xl md:text-7xl font-extrabold text-primary dark:text-gray-300 mb-6 leading-tight transition-colors duration-300"
-                    >
-                        Full-Stack<br />Developer
-                    </h1>
-                    <p
-                        class="text-lg text-slate-600 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
-                    >
-                        A Full-Stack Developer with a deep commitment to
-                        continuous learning, currently focusing on foundation,
-                        system design and business logic to lay a solid
-                        foundation for building scalable applications in the
-                        future.
-                    </p>
-                    <div class="flex justify-center gap-4 flex-col sm:flex-row">
-                        <a
-                            href="#projects"
-                            class="bg-primary dark:bg-slate-900 text-white dark:text-gray-300 dark:hover:text-black px-8 py-3 rounded-md font-medium hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors shadow-md"
-                        >
-                            Explore My Works
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" class="py-24 px-4 bg-slate-900 text-slate-300">
-                <div class="max-w-6xl mx-auto">
-                    <div class="flex flex-col md:flex-row items-center gap-12">
-                        <div
-                            class="relative w-48 h-48 md:w-64 md:h-64 shrink-0 shadow-2xl"
-                        >
-                            <div
-                                class="w-full h-full rounded-full overflow-hidden border-4 border-slate-700"
-                            >
-                                <img
-                                    src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
-                                    alt="Weerayos Thammachamrat Profile Picture"
-                                    class="w-full h-full object-cover"
-                                />
-                            </div>
-
-                            <button
-                                type="button"
-                                aria-label="Open Certificate Lightbox"
-                                onclick="openProfileSubLightbox()"
-                                class="absolute bottom-2 right-2 w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-slate-700 bg-slate-800 transform translate-x-2 translate-y-2 shadow-lg cursor-pointer hover:scale-105 transition-transform"
-                            >
-                                <img
-                                    src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804808/asset-certjsd12-thumbnail_hs4dqc.png"
-                                    alt="Generation Thailand Certificate Thumbnail"
-                                    class="w-full h-full object-cover"
-                                />
-                            </button>
-                        </div>
-
-                        <div class="flex-1 text-center md:text-left">
-                            <h2
-                                class="text-3xl md:text-4xl font-bold text-white mb-2"
-                            >
-                                Weerayos (Ong) Thammachamrat
-                            </h2>
-                            <h3 class="text-xl text-slate-400 font-medium mb-6">
-                                weerayosong | Full-Stack Developer
-                            </h3>
-                            <p class="mb-6 leading-relaxed text-slate-300">
-                                A Full-Stack Developer with a good foundation in
-                                web development and a deep commitment to
-                                continuous learning. Currently dedicating myself
-                                to studying on foundation, system design,
-                                business logic, and system architecture. While I
-                                am at the beginning of my software engineering
-                                journey, I am highly motivated to build a
-                                holistic understanding of how systems operate,
-                                with the long-term goal of contributing to and
-                                building scalable, future-ready applications.
-                            </p>
-                            <div
-                                class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-fit mx-auto md:w-full md:mx-0 text-slate-300"
-                            >
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fas fa-map-marker-alt text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <span>Bangkok, Thailand</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fas fa-envelope text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <a
-                                        href="mailto:weerayosong@gmail.com"
-                                        target="_blank"
-                                        class="hover:text-white transition-colors"
-                                        >weerayosong@gmail.com</a
-                                    >
-                                </div>
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fab fa-github text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <a
-                                        href="https://github.com/weerayosong"
-                                        target="_blank"
-                                        class="hover:text-white transition-colors"
-                                        >https://github.com/weerayosong</a
-                                    >
-                                </div>
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fab fa-linkedin text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <a
-                                        href="https://www.linkedin.com/in/weerayosong/"
-                                        target="_blank"
-                                        class="hover:text-white transition-colors"
-                                        >LinkedIn Profile</a
-                                    >
-                                </div>
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fas fa-globe text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <a
-                                        href="https://www.yosong.dev"
-                                        target="_blank"
-                                        class="hover:text-white transition-colors"
-                                        >https://www.yosong.dev</a
-                                    >
-                                </div>
-                                <div
-                                    class="flex items-center justify-start gap-3"
-                                >
-                                    <i
-                                        class="fas fa-file-alt text-slate-400 w-5 text-center"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <a
-                                        href="https://drive.google.com/file/d/1N8WYzcPVwmgAcQipA5_-EhuzeIgdjgkK"
-                                        target="_blank"
-                                        class="hover:text-white transition-colors"
-                                        >My CV / Resume</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <dialog
-                id="profileSubImageLightbox"
-                onclick="closeProfileSubLightbox(event)"
-                class="m-auto bg-transparent p-0 backdrop:bg-black/80 backdrop:backdrop-blur-sm max-w-3xl max-h-[85vh] outline-none rounded-md overflow-hidden shadow-2xl border border-slate-700"
+            <a
+              href="#certificates"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >Certificates</a
             >
-                <div class="relative group" onclick="event.stopPropagation()">
-                    <button
-                        type="button"
-                        aria-label="Close Lightbox"
-                        onclick="
-                            document
-                                .getElementById('profileSubImageLightbox')
-                                .close()
-                        "
-                        class="absolute top-4 right-4 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/90 transition-colors z-10"
-                    >
-                        <i class="fas fa-times" aria-hidden="true"></i>
-                    </button>
-                    <img
-                        src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804807/asset-certjsd12_ngtmrq.png"
-                        alt="Junior Software Developer Program Certificate"
-                        class="max-w-full h-auto max-h-[85vh] object-contain block"
-                    />
-                </div>
-            </dialog>
-
-            <section
-                id="projects"
-                class="max-w-7xl w-full mx-auto px-4 py-24 sm:px-6 lg:px-8"
+            <a
+              href="#mini-projects"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >Mini:p</a
             >
-                <div class="text-center mb-16">
-                    <span
-                        class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 block mb-2"
-                        >Continuous Learning Journey</span
-                    >
-                    <h2
-                        class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 tracking-tight"
-                    >
-                        Featured
-                        <span class="text-slate-600 dark:text-slate-400"
-                            >Projects</span
-                        >
-                    </h2>
-                    <div
-                        class="w-24 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-full mb-8"
-                    ></div>
-                    <p
-                        class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed"
-                    >
-                        These projects serve as my continuous learning ground.
-                        They reflect my foundational steps in understanding
-                        System Design and Business Logic, as well as my strong
-                        commitment to building more robust system architectures
-                        with every new project.
-                    </p>
-                </div>
-
-                <div
-                    id="featured-project-container"
-                    class="flex flex-col gap-16"
-                ></div>
-            </section>
-
-            <section
-                id="certificates"
-                class="py-20 px-4 bg-slate-900 text-white"
+            <a
+              href="#lab"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >Lab</a
             >
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                            Certifications & Learning
-                        </h2>
-                        <div
-                            class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md"
-                        ></div>
-                        <p
-                            class="mt-4 text-slate-300 transition-colors duration-300"
-                        >
-                            Recognizing that strong fundamentals are the key to
-                            becoming a reliable developer, I have dedicated
-                            myself to structured learning and hands-on training.
-                            This collection represents my earnest effort to
-                            build a robust foundation in web technologies and
-                            remain adaptable in a rapidly evolving industry.
-                        </p>
-                    </div>
-                    <div
-                        id="certs-container"
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                    ></div>
-                </div>
-            </section>
-
-            <!-- Mini Projects Section -->
-            <section
-                id="mini-projects"
-                class="py-20 px-4 transition-colors duration-300"
+            <a
+              href="#saas"
+              class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              >SaaS</a
             >
-                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <div class="text-center mb-16">
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4"
-                        >
-                            Mini
-                            <span class="text-slate-500 dark:text-slate-400"
-                                >Projects</span
-                            >
-                        </h2>
-                        <div
-                            class="w-20 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-md mb-6"
-                        ></div>
-                        <p
-                            class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base"
-                        >
-                            Mini Projects engineered to sharpen my skills,
-                            serving as the support wings for my Full-Stack
-                            Development journey.
-                        </p>
-                    </div>
-                    <div
-                        id="mini-projects-desktop"
-                        class="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-6"
-                    ></div>
-                    <div class="md:hidden relative w-full">
-                        <div
-                            id="mini-projects-mobile"
-                            class="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory hide-scrollbar items-stretch"
-                        ></div>
-                        <div
-                            class="absolute bottom-0 left-0 w-full h-1 bg-gray-200 dark:bg-slate-800 rounded-md overflow-hidden"
-                        >
-                            <div
-                                id="mini-scroll-progress"
-                                class="h-full bg-slate-400 w-0 transition-all duration-300"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Under Development Divider -->
-            <section
-                class="w-full py-8 relative overflow-hidden flex items-center justify-center shadow-inner border-y border-yellow-500/30"
-                style="
-                    background-image: repeating-linear-gradient(
-                        -45deg,
-                        #fbbf24,
-                        #fbbf24 25px,
-                        #0f172a 25px,
-                        #0f172a 50px
-                    );
-                "
+            <a
+              href="https://github.com/weerayosong"
+              target="_blank"
+              aria-label="GitHub Profile"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors text-xl"
             >
-                <div
-                    class="bg-slate-900/95 backdrop-blur-md px-8 py-3 rounded-md border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] transform -rotate-1 hover:rotate-0 transition-transform duration-300 z-10 cursor-default"
-                >
-                    <span
-                        class="text-yellow-400 font-extrabold text-lg md:text-xl uppercase tracking-[0.2em] flex items-center gap-4"
-                    >
-                        <i class="fas fa-flask text-xl"></i>
-                        Lab Under Development
-                        <i class="fas fa-tools text-xl"></i>
-                    </span>
-                </div>
-
-                <div
-                    class="absolute inset-0 bg-linear-to-b from-slate-900/40 via-transparent to-slate-900/40 pointer-events-none"
-                ></div>
-            </section>
-
-            <!-- Lab Section -->
-            <section
-                id="lab"
-                class="py-24 px-4 bg-slate-900 text-white transition-colors duration-300"
+              <i class="fab fa-github"></i>
+            </a>
+            <button
+              id="theme-toggle-desktop"
+              type="button"
+              aria-label="Toggle Color Theme"
+              class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2.5 transition-colors cursor-pointer"
             >
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <span
-                            class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 block mb-2"
-                            >Experimental & Research</span
-                        >
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-white mb-4"
-                        >
-                            The <span class="text-slate-400">Lab</span>
-                        </h2>
-                        <div
-                            class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md mb-6"
-                        ></div>
-                        <p
-                            class="text-slate-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
-                        >
-                            My Lab, Sandbox, Dojo, Proving Ground. A dedicated
-                            space for experimenting with new technologies,
-                            system architectures, and proof-of-concept
-                            developments.
-                        </p>
-                    </div>
-
-                    <!-- Lab Full-Width Item -->
-                    <div
-                        class="max-w-5xl mx-auto bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 group"
-                    >
-                        <div
-                            class="w-full h-64 md:h-80 bg-slate-950 relative flex items-center justify-center border-b border-slate-700"
-                        >
-                            <!-- Abstract Lab Visualization Placeholder -->
-                            <div
-                                class="absolute inset-0 opacity-40"
-                                style="
-                                    background-image: radial-gradient(
-                                        #64748b 1px,
-                                        transparent 1px
-                                    );
-                                    background-size: 20px 20px;
-                                "
-                            ></div>
-                            <div class="z-10 text-center">
-                                <div
-                                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8 border border-slate-200 dark:border-slate-700"
-                                >
-                                    <span
-                                        class="w-2 h-2 rounded-full bg-amber-500"
-                                    ></span>
-                                    [Work in progress]
-                                </div>
-                                <div
-                                    class="font-mono text-sm tracking-widest text-slate-400 uppercase"
-                                >
-                                    Architecture Visualization
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-10"
-                        >
-                            <div class="flex-1 text-center md:text-left">
-                                <div
-                                    class="inline-block px-3 py-1 bg-slate-700 text-slate-300 text-xs font-bold uppercase tracking-wider rounded-full mb-4"
-                                >
-                                    Current Experiment
-                                </div>
-                                <h3
-                                    class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-slate-300 transition-colors"
-                                >
-                                    Distributed Caching & Query Optimization
-                                </h3>
-                                <p
-                                    class="text-base text-slate-400 leading-relaxed mb-6"
-                                >
-                                    Testing the integration of Redis for caching
-                                    expensive database queries in a Node.js
-                                    environment. This experiment focuses on
-                                    handling concurrent requests efficiently,
-                                    reducing database load, and implementing
-                                    intelligent cache invalidation strategies
-                                    for real-time data consistency.
-                                </p>
-                                <div
-                                    class="flex flex-wrap justify-center md:justify-start gap-2"
-                                >
-                                    <span
-                                        class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
-                                        >Node.js</span
-                                    >
-                                    <span
-                                        class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
-                                        >Redis</span
-                                    >
-                                    <span
-                                        class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
-                                        >PostgreSQL</span
-                                    >
-                                    <span
-                                        class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
-                                        >Docker</span
-                                    >
-                                </div>
-                            </div>
-                            <div
-                                class="w-full md:w-auto shrink-0 flex justify-center"
-                            >
-                                <a
-                                    href="#lab"
-                                    class="px-6 py-3 border-2 border-slate-600 text-slate-300 font-semibold rounded-md hover:bg-slate-700 transition-colors flex items-center gap-2"
-                                >
-                                    <i class="fab fa-github text-lg"></i> View
-                                    Source
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SaaS Under Development Divider -->
-            <section
-                class="w-full py-8 relative overflow-hidden flex items-center justify-center shadow-inner border-y border-yellow-500/30"
-                style="
-                    background-image: repeating-linear-gradient(
-                        -45deg,
-                        #fbbf24,
-                        #fbbf24 25px,
-                        #0f172a 25px,
-                        #0f172a 50px
-                    );
-                "
+              <span class="theme-icon text-xl">◾️</span>
+            </button>
+          </div>
+          <div class="md:hidden flex items-center gap-2">
+            <button
+              id="theme-toggle-mobile"
+              type="button"
+              aria-label="Toggle Color Theme"
+              class="text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800 focus:outline-none rounded-md text-sm p-2 transition-colors cursor-pointer"
             >
-                <div
-                    class="bg-slate-900/95 backdrop-blur-md px-8 py-3 rounded-md border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] transform rotate-1 hover:-rotate-1 transition-transform duration-300 z-10 cursor-default"
-                >
-                    <span
-                        class="text-yellow-400 font-extrabold text-lg md:text-xl uppercase tracking-[0.2em] flex items-center gap-4"
-                    >
-                        <i class="fas fa-rocket text-xl"></i>
-                        SaaS Under Development
-                        <i class="fas fa-laptop-code text-xl"></i>
-                    </span>
-                </div>
-
-                <div
-                    class="absolute inset-0 bg-linear-to-b from-slate-900/40 via-transparent to-slate-900/40 pointer-events-none"
-                ></div>
-            </section>
-
-            <!-- SaaS Section -->
-            <section
-                id="saas"
-                class="py-24 px-4 transition-colors duration-300"
+              <span class="theme-icon text-xl">◾️</span>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle Navigation Menu"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white focus:outline-none p-2 cursor-pointer"
             >
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-12">
-                        <span
-                            class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 block mb-2"
-                            >Learn more into business</span
-                        >
-                        <h2
-                            class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4"
-                        >
-                            Software
-                            <span class="text-slate-500 dark:text-slate-400"
-                                >as a Service</span
-                            >
-                        </h2>
-                        <div
-                            class="w-20 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-md"
-                        ></div>
-                        <p
-                            class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
-                        >
-                            Driven by a problem-first mindset. These platforms
-                            are engineered to solve genuine industry pain points
-                            through robust business logic, delivering tangible
-                            value before scaling into sustainable business
-                            operations.
-                        </p>
-                    </div>
+              <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b dark:bg-slate-900 border-gray-100 dark:border-slate-800 absolute w-full shadow-lg"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >Projects</a
+          >
+          <a
+            href="#certificates"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >Certificates</a
+          >
+          <a
+            href="#mini-projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >Mini:p</a
+          >
+          <a
+            href="#lab"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >Lab</a
+          >
+          <a
+            href="#saas"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+            >SaaS</a
+          >
+          <a
+            href="https://github.com/weerayosong"
+            target="_blank"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-slate-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-slate-800"
+          >
+            <i class="fab fa-github mr-2"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </nav>
 
-                    <!-- SaaS Full-Width Mini Landing Page -->
-                    <div
-                        class="max-w-6xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-gray-200 dark:border-slate-700/60 shadow-2xl overflow-hidden relative"
-                    >
-                        <div class="pt-16 px-6 text-center relative z-10">
-                            <div
-                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8 border border-slate-200 dark:border-slate-700"
-                            >
-                                <span
-                                    class="w-2 h-2 rounded-full bg-amber-500"
-                                ></span>
-                                [Work in progress]
-                            </div>
-                            <h3
-                                class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6"
-                            >
-                                Automated Expense Intelligence
-                            </h3>
-                            <p
-                                class="text-lg md:text-xl text-slate-800 dark:text-slate-100 max-w-3xl mx-auto leading-relaxed mb-10"
-                            >
-                                Transform receipts and invoices into structured
-                                accounting data instantly. Powered by advanced
-                                OCR and LLM technologies to eliminate manual
-                                data entry.
-                            </p>
-                            <div
-                                class="flex flex-col sm:flex-row justify-center gap-4 mb-16"
-                            >
-                                <a
-                                    href="#saas"
-                                    class="bg-primary dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-800 dark:hover:bg-gray-200 transition-colors shadow-md"
-                                >
-                                    Try it out!
-                                </a>
-                                <a
-                                    href="#saas"
-                                    class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-8 py-3 rounded-md font-semibold border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
-                                >
-                                    Read Documentation
-                                </a>
-                            </div>
-                        </div>
+    <!-- ครอบด้วยแท็ก <main> เพื่อสร้าง Main Landmark -->
+    <main>
+      <section
+        id="home"
+        class="px-4 py-16 min-h-[60vh] flex items-center dark:bg-slate-800 transition-colors duration-300"
+      >
+        <div class="max-w-4xl mx-auto text-center">
+          <p
+            class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-2"
+          >
+            Once a good learner at
+          </p>
+          <a
+            href="https://thailand.generation.org/"
+            target="_blank"
+            aria-label="Generation Thailand Website"
+            class="flex justify-center align-middle"
+          >
+            <img
+              class="max-w-40 mb-5"
+              src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804807/asset-genth_rm7afy.webp"
+              alt="Generation Thailand Logo"
+            />
+          </a>
+          <p
+            class="text-slate-500 dark:text-slate-400 font-bold tracking-widest text-sm mb-4"
+          >
+            Now, Weerayos still study harder to be a great
+          </p>
+          <h1
+            class="text-5xl md:text-7xl font-extrabold text-primary dark:text-gray-300 mb-6 leading-tight transition-colors duration-300"
+          >
+            Full-Stack<br />Developer
+          </h1>
+          <p
+            class="text-lg text-slate-600 dark:text-gray-300 mb-10 leading-relaxed transition-colors duration-300"
+          >
+            A Full-Stack Developer with a deep commitment to continuous
+            learning, currently focusing on foundation, system design and
+            business logic to lay a solid foundation for building scalable
+            applications in the future.
+          </p>
+          <div class="flex justify-center gap-4 flex-col sm:flex-row">
+            <a
+              href="#projects"
+              class="bg-primary dark:bg-slate-900 text-white dark:text-gray-300 dark:hover:text-black px-8 py-3 rounded-md font-medium hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors shadow-md"
+            >
+              Explore My Works
+            </a>
+          </div>
+        </div>
+      </section>
 
-                        <div class="px-4 md:px-12 relative z-10">
-                            <div
-                                class="w-full max-w-4xl mx-auto aspect-video bg-slate-100 dark:bg-slate-950 rounded-t-xl border border-b-0 border-gray-300 dark:border-slate-700 shadow-inner overflow-hidden flex flex-col"
-                            >
-                                <div
-                                    class="h-10 bg-slate-200 dark:bg-slate-900 flex items-center px-4 gap-2 border-b border-gray-300 dark:border-slate-800"
-                                >
-                                    <div
-                                        class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
-                                    ></div>
-                                    <div
-                                        class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
-                                    ></div>
-                                    <div
-                                        class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
-                                    ></div>
-                                </div>
-                                <div class="flex-1 p-6 flex gap-6">
-                                    <div
-                                        class="w-1/3 bg-white dark:bg-slate-900 rounded border border-gray-200 dark:border-slate-800 p-4 flex flex-col gap-3"
-                                    >
-                                        <div
-                                            class="h-32 bg-slate-200 dark:bg-slate-800 rounded flex items-center justify-center text-slate-400"
-                                        >
-                                            <i
-                                                class="fas fa-file-invoice text-3xl"
-                                            ></i>
-                                        </div>
-                                        <div
-                                            class="h-4 w-3/4 bg-slate-200 dark:bg-slate-800 rounded"
-                                        ></div>
-                                        <div
-                                            class="h-4 w-1/2 bg-slate-200 dark:bg-slate-800 rounded"
-                                        ></div>
-                                    </div>
-                                    <div
-                                        class="w-2/3 bg-white dark:bg-slate-900 rounded border border-gray-200 dark:border-slate-800 p-4 flex flex-col gap-4"
-                                    >
-                                        <div
-                                            class="h-8 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"
-                                        ></div>
-                                        <div class="space-y-2">
-                                            <div
-                                                class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded"
-                                            ></div>
-                                            <div
-                                                class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded"
-                                            ></div>
-                                            <div
-                                                class="h-4 w-4/5 bg-slate-100 dark:bg-slate-800 rounded"
-                                            ></div>
-                                        </div>
-                                        <div
-                                            class="mt-auto h-12 w-full bg-slate-50 dark:bg-slate-950 rounded border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-900 dark:text-slate-100 text-xs font-semibold uppercase"
-                                        >
-                                            Extracted JSON Data
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="border-t border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-900/50 relative z-10"
-                        >
-                            <div
-                                class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-slate-800"
-                            >
-                                <div
-                                    class="p-8 md:p-12 text-center md:text-left"
-                                >
-                                    <div
-                                        class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
-                                    >
-                                        <i
-                                            class="fas fa-brain text-slate-700 dark:text-slate-300 text-xl"
-                                        ></i>
-                                    </div>
-                                    <h4
-                                        class="text-lg font-bold text-slate-900 dark:text-white mb-3"
-                                    >
-                                        AI Data Extraction
-                                    </h4>
-                                    <p
-                                        class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                                    >
-                                        Leverages state-of-the-art
-                                        Vision-Language models to accurately map
-                                        unstructured receipt images into clean,
-                                        structured JSON formats.
-                                    </p>
-                                </div>
-                                <div
-                                    class="p-8 md:p-12 text-center md:text-left"
-                                >
-                                    <div
-                                        class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
-                                    >
-                                        <i
-                                            class="fas fa-plug text-slate-700 dark:text-slate-300 text-xl"
-                                        ></i>
-                                    </div>
-                                    <h4
-                                        class="text-lg font-bold text-slate-900 dark:text-white mb-3"
-                                    >
-                                        Seamless Integration
-                                    </h4>
-                                    <p
-                                        class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                                    >
-                                        Built with a robust RESTful API
-                                        architecture, allowing easy integration
-                                        with existing ERP and accounting
-                                        software ecosystems.
-                                    </p>
-                                </div>
-                                <div
-                                    class="p-8 md:p-12 text-center md:text-left"
-                                >
-                                    <div
-                                        class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
-                                    >
-                                        <i
-                                            class="fas fa-shield-alt text-slate-700 dark:text-slate-300 text-xl"
-                                        ></i>
-                                    </div>
-                                    <h4
-                                        class="text-lg font-bold text-slate-900 dark:text-white mb-3"
-                                    >
-                                        Secure & Compliant
-                                    </h4>
-                                    <p
-                                        class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
-                                    >
-                                        Designed with strict multi-tenant data
-                                        isolation, role-based access control
-                                        (RBAC), and enterprise-grade encryption
-                                        at rest.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-slate-300/20 dark:bg-slate-700/20 blur-[100px] rounded-full pointer-events-none z-0"
-                        ></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <div
-            id="simple-lightbox"
-            class="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
-        >
-            <div class="relative max-w-[90vw] max-h-[90vh]">
+      <section id="about" class="py-24 px-4 bg-slate-900 text-slate-300">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="relative w-48 h-48 md:w-64 md:h-64 shrink-0 shadow-2xl">
+              <div
+                class="w-full h-full rounded-full overflow-hidden border-4 border-slate-700"
+              >
                 <img
-                    id="lightbox-img"
-                    src=""
-                    class="max-w-full max-h-[90vh] object-contain rounded-md shadow-2xl transition-transform duration-300"
-                    alt="Lightbox Preview"
+                  src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804810/asset-profilepic_gsyu4d.jpg"
+                  alt="Weerayos Thammachamrat Profile Picture"
+                  class="w-full h-full object-cover"
                 />
-                <button
-                    id="lightbox-close"
-                    type="button"
-                    aria-label="Close Lightbox"
-                    class="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-white/50 hover:text-white bg-slate-800 hover:bg-slate-700 w-8 h-8 md:w-10 md:h-10 rounded-md flex items-center justify-center transition-colors shadow-lg border border-slate-600"
-                >
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
+              </div>
+
+              <button
+                type="button"
+                aria-label="Open Certificate Lightbox"
+                onclick="openProfileSubLightbox()"
+                class="absolute bottom-2 right-2 w-14 h-14 md:w-20 md:h-20 rounded-full overflow-hidden border-4 border-slate-700 bg-slate-800 transform translate-x-2 translate-y-2 shadow-lg cursor-pointer hover:scale-105 transition-transform"
+              >
+                <img
+                  src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784804808/asset-certjsd12-thumbnail_hs4dqc.png"
+                  alt="Generation Thailand Certificate Thumbnail"
+                  class="w-full h-full object-cover"
+                />
+              </button>
             </div>
+
+            <div class="flex-1 text-center md:text-left">
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+                Weerayos (Ong) Thammachamrat
+              </h2>
+              <h3 class="text-xl text-slate-400 font-medium mb-6">
+                weerayosong | Full-Stack Developer
+              </h3>
+              <p class="mb-6 leading-relaxed text-slate-300">
+                A Full-Stack Developer with a good foundation in web development
+                and a deep commitment to continuous learning. Currently
+                dedicating myself to studying on foundation, system design,
+                business logic, and system architecture. While I am at the
+                beginning of my software engineering journey, I am highly
+                motivated to build a holistic understanding of how systems
+                operate, with the long-term goal of contributing to and building
+                scalable, future-ready applications.
+              </p>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 w-fit mx-auto md:w-full md:mx-0 text-slate-300"
+              >
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fas fa-map-marker-alt text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <span>Bangkok, Thailand</span>
+                </div>
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fas fa-envelope text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="mailto:weerayosong@gmail.com"
+                    target="_blank"
+                    class="hover:text-white transition-colors"
+                    >weerayosong@gmail.com</a
+                  >
+                </div>
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fab fa-github text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="https://github.com/weerayosong"
+                    target="_blank"
+                    class="hover:text-white transition-colors"
+                    >https://github.com/weerayosong</a
+                  >
+                </div>
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fab fa-linkedin text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="https://www.linkedin.com/in/weerayosong/"
+                    target="_blank"
+                    class="hover:text-white transition-colors"
+                    >LinkedIn Profile</a
+                  >
+                </div>
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fas fa-globe text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="https://www.yosong.dev"
+                    target="_blank"
+                    class="hover:text-white transition-colors"
+                    >https://www.yosong.dev</a
+                  >
+                </div>
+                <div class="flex items-center justify-start gap-3">
+                  <i
+                    class="fas fa-file-alt text-slate-400 w-5 text-center"
+                    aria-hidden="true"
+                  ></i>
+                  <a
+                    href="https://drive.google.com/file/d/1N8WYzcPVwmgAcQipA5_-EhuzeIgdjgkK"
+                    target="_blank"
+                    class="hover:text-white transition-colors"
+                    >My CV / Resume</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <dialog
+        id="profileSubImageLightbox"
+        onclick="closeProfileSubLightbox(event)"
+        class="m-auto bg-transparent p-0 backdrop:bg-black/80 backdrop:backdrop-blur-sm max-w-3xl max-h-[85vh] outline-none rounded-md overflow-hidden shadow-2xl border border-slate-700"
+      >
+        <div class="relative group" onclick="event.stopPropagation()">
+          <button
+            type="button"
+            aria-label="Close Lightbox"
+            onclick="document.getElementById('profileSubImageLightbox').close()"
+            class="absolute top-4 right-4 bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/90 transition-colors z-10"
+          >
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+          <img
+            src="https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_webp/v1784804807/asset-certjsd12_ngtmrq.png"
+            alt="Junior Software Developer Program Certificate"
+            class="max-w-full h-auto max-h-[85vh] object-contain block"
+          />
+        </div>
+      </dialog>
+
+      <section
+        id="projects"
+        class="max-w-7xl w-full mx-auto px-4 py-24 sm:px-6 lg:px-8"
+      >
+        <div class="text-center mb-16">
+          <span
+            class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 block mb-2"
+            >Continuous Learning Journey</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-extrabold text-primary dark:text-white mb-6 tracking-tight"
+          >
+            Featured
+            <span class="text-slate-600 dark:text-slate-400">Projects</span>
+          </h2>
+          <div
+            class="w-24 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-full mb-8"
+          ></div>
+          <p
+            class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed"
+          >
+            These projects serve as my continuous learning ground. They reflect
+            my foundational steps in understanding System Design and Business
+            Logic, as well as my strong commitment to building more robust
+            system architectures with every new project.
+          </p>
+        </div>
+
+        <div id="featured-project-container" class="flex flex-col gap-16"></div>
+      </section>
+
+      <section id="certificates" class="py-20 px-4 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Certifications & Learning
+            </h2>
+            <div class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md"></div>
+            <p class="mt-4 text-slate-300 transition-colors duration-300">
+              Recognizing that strong fundamentals are the key to becoming a
+              reliable developer, I have dedicated myself to structured learning
+              and hands-on training. This collection represents my earnest
+              effort to build a robust foundation in web technologies and remain
+              adaptable in a rapidly evolving industry.
+            </p>
+          </div>
+          <div
+            id="certs-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Mini Projects Section -->
+      <section
+        id="mini-projects"
+        class="py-20 px-4 transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4"
+            >
+              Mini
+              <span class="text-slate-500 dark:text-slate-400">Projects</span>
+            </h2>
+            <div
+              class="w-20 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-md mb-6"
+            ></div>
+            <p
+              class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base"
+            >
+              Mini Projects engineered to sharpen my skills, serving as the
+              support wings for my Full-Stack Development journey.
+            </p>
+          </div>
+          <div
+            id="mini-projects-desktop"
+            class="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-6"
+          ></div>
+          <div class="md:hidden relative w-full">
+            <div
+              id="mini-projects-mobile"
+              class="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory hide-scrollbar items-stretch"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-full h-1 bg-gray-200 dark:bg-slate-800 rounded-md overflow-hidden"
+            >
+              <div
+                id="mini-scroll-progress"
+                class="h-full bg-slate-400 w-0 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Under Development Divider -->
+      <section
+        class="w-full py-8 relative overflow-hidden flex items-center justify-center shadow-inner border-y border-yellow-500/30"
+        style="
+          background-image: repeating-linear-gradient(
+            -45deg,
+            #fbbf24,
+            #fbbf24 25px,
+            #0f172a 25px,
+            #0f172a 50px
+          );
+        "
+      >
+        <div
+          class="bg-slate-900/95 backdrop-blur-md px-8 py-3 rounded-md border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] transform -rotate-1 hover:rotate-0 transition-transform duration-300 z-10 cursor-default"
+        >
+          <span
+            class="text-yellow-400 font-extrabold text-lg md:text-xl uppercase tracking-[0.2em] flex items-center gap-4"
+          >
+            <i class="fas fa-flask text-xl"></i>
+            Lab Under Development
+            <i class="fas fa-tools text-xl"></i>
+          </span>
         </div>
 
         <div
-            id="video-lightbox"
-            class="fixed inset-0 z-110 flex items-center justify-center bg-slate-900/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500"
-        >
-            <div
-                class="relative w-full h-full flex justify-center items-center"
+          class="absolute inset-0 bg-linear-to-b from-slate-900/40 via-transparent to-slate-900/40 pointer-events-none"
+        ></div>
+      </section>
+
+      <!-- Lab Section -->
+      <section
+        id="lab"
+        class="py-24 px-4 bg-slate-900 text-white transition-colors duration-300"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <span
+              class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 block mb-2"
+              >Experimental & Research</span
             >
-                <video
-                    id="lightbox-video"
-                    src=""
-                    class="w-full max-w-[90vw] max-h-[90vh] object-contain rounded-md shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-transform duration-500"
-                    loop
-                    playsinline
-                    controls
-                ></video>
-                <button
-                    id="video-lightbox-close"
-                    type="button"
-                    aria-label="Close Video Lightbox"
-                    class="absolute top-6 right-6 md:top-10 md:right-10 text-white/70 hover:text-white bg-slate-800/50 hover:bg-slate-700 w-12 h-12 rounded-md flex items-center justify-center transition-colors shadow-lg border border-slate-500 z-120"
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+              The <span class="text-slate-400">Lab</span>
+            </h2>
+            <div class="w-20 h-1.5 bg-slate-500 mx-auto rounded-md mb-6"></div>
+            <p
+              class="text-slate-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
+            >
+              My Lab, Sandbox, Dojo, Proving Ground. A dedicated space for
+              experimenting with new technologies, system architectures, and
+              proof-of-concept developments.
+            </p>
+          </div>
+
+          <!-- Lab Full-Width Item -->
+          <div
+            class="max-w-5xl mx-auto bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] transition-all duration-500 group"
+          >
+            <div
+              class="w-full h-64 md:h-80 bg-slate-950 relative flex items-center justify-center border-b border-slate-700"
+            >
+              <!-- Abstract Lab Visualization Placeholder -->
+              <div
+                class="absolute inset-0 opacity-40"
+                style="
+                  background-image: radial-gradient(
+                    #64748b 1px,
+                    transparent 1px
+                  );
+                  background-size: 20px 20px;
+                "
+              ></div>
+              <div class="z-10 text-center">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8 border border-slate-200 dark:border-slate-700"
                 >
-                    <i class="fas fa-times text-xl" aria-hidden="true"></i>
-                </button>
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  [Work in progress]
+                </div>
+                <div
+                  class="font-mono text-sm tracking-widest text-slate-400 uppercase"
+                >
+                  Architecture Visualization
+                </div>
+              </div>
             </div>
+
+            <div
+              class="p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-10"
+            >
+              <div class="flex-1 text-center md:text-left">
+                <div
+                  class="inline-block px-3 py-1 bg-slate-700 text-slate-300 text-xs font-bold uppercase tracking-wider rounded-full mb-4"
+                >
+                  Current Experiment
+                </div>
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-slate-300 transition-colors"
+                >
+                  Distributed Caching & Query Optimization
+                </h3>
+                <p class="text-base text-slate-400 leading-relaxed mb-6">
+                  Testing the integration of Redis for caching expensive
+                  database queries in a Node.js environment. This experiment
+                  focuses on handling concurrent requests efficiently, reducing
+                  database load, and implementing intelligent cache invalidation
+                  strategies for real-time data consistency.
+                </p>
+                <div
+                  class="flex flex-wrap justify-center md:justify-start gap-2"
+                >
+                  <span
+                    class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
+                    >Node.js</span
+                  >
+                  <span
+                    class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
+                    >Redis</span
+                  >
+                  <span
+                    class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="px-3 py-1.5 text-xs font-mono uppercase tracking-wider bg-slate-900 text-slate-300 rounded border border-slate-700 shadow-sm"
+                    >Docker</span
+                  >
+                </div>
+              </div>
+              <div class="w-full md:w-auto shrink-0 flex justify-center">
+                <a
+                  href="https://github.com/weerayosong/the-lab/tree/main/db-001-redis-caching"
+                  class="px-6 py-3 border-2 border-slate-600 text-slate-300 font-semibold rounded-md hover:bg-slate-700 transition-colors flex items-center gap-2"
+                  target="_blank"
+                >
+                  <i class="fab fa-github text-lg"></i> View Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SaaS Under Development Divider -->
+      <section
+        class="w-full py-8 relative overflow-hidden flex items-center justify-center shadow-inner border-y border-yellow-500/30"
+        style="
+          background-image: repeating-linear-gradient(
+            -45deg,
+            #fbbf24,
+            #fbbf24 25px,
+            #0f172a 25px,
+            #0f172a 50px
+          );
+        "
+      >
+        <div
+          class="bg-slate-900/95 backdrop-blur-md px-8 py-3 rounded-md border-2 border-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.3)] transform rotate-1 hover:-rotate-1 transition-transform duration-300 z-10 cursor-default"
+        >
+          <span
+            class="text-yellow-400 font-extrabold text-lg md:text-xl uppercase tracking-[0.2em] flex items-center gap-4"
+          >
+            <i class="fas fa-rocket text-xl"></i>
+            SaaS Under Development
+            <i class="fas fa-laptop-code text-xl"></i>
+          </span>
         </div>
 
-        <footer
-            class="bg-white dark:bg-slate-800 border-t border-gray-200 py-4 px-4 text-center transition-colors duration-300"
-        >
-            <div class="max-w-7xl mx-auto">
-                <p
-                    class="text-gray-500 dark:text-gray-400 text-sm font-medium transition-colors duration-300"
-                >
-                    &copy; <span id="year"></span> yosong.dev | All rights
-                    reserved.
-                </p>
-            </div>
-        </footer>
+        <div
+          class="absolute inset-0 bg-linear-to-b from-slate-900/40 via-transparent to-slate-900/40 pointer-events-none"
+        ></div>
+      </section>
 
-        <!-- เรียกใช้ main.js แบบ Module -->
-        <script type="module" src="./js/main.js"></script>
-    </body>
+      <!-- SaaS Section -->
+      <section id="saas" class="py-24 px-4 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12">
+            <span
+              class="text-sm font-bold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400 block mb-2"
+              >Learn more into business</span
+            >
+            <h2
+              class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4"
+            >
+              Software
+              <span class="text-slate-500 dark:text-slate-400"
+                >as a Service</span
+              >
+            </h2>
+            <div
+              class="w-20 h-1.5 bg-slate-400 dark:bg-slate-500 mx-auto rounded-md"
+            ></div>
+            <p
+              class="text-slate-600 dark:text-gray-300 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
+            >
+              Driven by a problem-first mindset. These platforms are engineered
+              to solve genuine industry pain points through robust business
+              logic, delivering tangible value before scaling into sustainable
+              business operations.
+            </p>
+          </div>
+
+          <!-- SaaS Full-Width Mini Landing Page -->
+          <div
+            class="max-w-6xl mx-auto bg-white dark:bg-slate-900 rounded-3xl border border-gray-200 dark:border-slate-700/60 shadow-2xl overflow-hidden relative"
+          >
+            <div class="pt-16 px-6 text-center relative z-10">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8 border border-slate-200 dark:border-slate-700"
+              >
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                [Work in progress]
+              </div>
+              <h3
+                class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6"
+              >
+                Automated Expense Intelligence
+              </h3>
+              <p
+                class="text-lg md:text-xl text-slate-800 dark:text-slate-100 max-w-3xl mx-auto leading-relaxed mb-10"
+              >
+                Transform receipts and invoices into structured accounting data
+                instantly. Powered by advanced OCR and LLM technologies to
+                eliminate manual data entry.
+              </p>
+              <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a
+                  href="#saas"
+                  class="bg-primary dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-md font-semibold hover:bg-slate-800 dark:hover:bg-gray-200 transition-colors shadow-md"
+                >
+                  Try it out!
+                </a>
+                <a
+                  href="#saas"
+                  class="bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-8 py-3 rounded-md font-semibold border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+                >
+                  Read Documentation
+                </a>
+              </div>
+            </div>
+
+            <div class="px-4 md:px-12 relative z-10">
+              <div
+                class="w-full max-w-4xl mx-auto aspect-video bg-slate-100 dark:bg-slate-950 rounded-t-xl border border-b-0 border-gray-300 dark:border-slate-700 shadow-inner overflow-hidden flex flex-col"
+              >
+                <div
+                  class="h-10 bg-slate-200 dark:bg-slate-900 flex items-center px-4 gap-2 border-b border-gray-300 dark:border-slate-800"
+                >
+                  <div
+                    class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"
+                  ></div>
+                </div>
+                <div class="flex-1 p-6 flex gap-6">
+                  <div
+                    class="w-1/3 bg-white dark:bg-slate-900 rounded border border-gray-200 dark:border-slate-800 p-4 flex flex-col gap-3"
+                  >
+                    <div
+                      class="h-32 bg-slate-200 dark:bg-slate-800 rounded flex items-center justify-center text-slate-400"
+                    >
+                      <i class="fas fa-file-invoice text-3xl"></i>
+                    </div>
+                    <div
+                      class="h-4 w-3/4 bg-slate-200 dark:bg-slate-800 rounded"
+                    ></div>
+                    <div
+                      class="h-4 w-1/2 bg-slate-200 dark:bg-slate-800 rounded"
+                    ></div>
+                  </div>
+                  <div
+                    class="w-2/3 bg-white dark:bg-slate-900 rounded border border-gray-200 dark:border-slate-800 p-4 flex flex-col gap-4"
+                  >
+                    <div
+                      class="h-8 w-1/3 bg-slate-200 dark:bg-slate-800 rounded"
+                    ></div>
+                    <div class="space-y-2">
+                      <div
+                        class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded"
+                      ></div>
+                      <div
+                        class="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded"
+                      ></div>
+                      <div
+                        class="h-4 w-4/5 bg-slate-100 dark:bg-slate-800 rounded"
+                      ></div>
+                    </div>
+                    <div
+                      class="mt-auto h-12 w-full bg-slate-50 dark:bg-slate-950 rounded border border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-900 dark:text-slate-100 text-xs font-semibold uppercase"
+                    >
+                      Extracted JSON Data
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="border-t border-gray-200 dark:border-slate-800 bg-gray-50/50 dark:bg-slate-900/50 relative z-10"
+            >
+              <div
+                class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-slate-800"
+              >
+                <div class="p-8 md:p-12 text-center md:text-left">
+                  <div
+                    class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
+                  >
+                    <i
+                      class="fas fa-brain text-slate-700 dark:text-slate-300 text-xl"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-lg font-bold text-slate-900 dark:text-white mb-3"
+                  >
+                    AI Data Extraction
+                  </h4>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Leverages state-of-the-art Vision-Language models to
+                    accurately map unstructured receipt images into clean,
+                    structured JSON formats.
+                  </p>
+                </div>
+                <div class="p-8 md:p-12 text-center md:text-left">
+                  <div
+                    class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
+                  >
+                    <i
+                      class="fas fa-plug text-slate-700 dark:text-slate-300 text-xl"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-lg font-bold text-slate-900 dark:text-white mb-3"
+                  >
+                    Seamless Integration
+                  </h4>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Built with a robust RESTful API architecture, allowing easy
+                    integration with existing ERP and accounting software
+                    ecosystems.
+                  </p>
+                </div>
+                <div class="p-8 md:p-12 text-center md:text-left">
+                  <div
+                    class="w-12 h-12 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg flex items-center justify-center mb-6 mx-auto md:mx-0 shadow-sm"
+                  >
+                    <i
+                      class="fas fa-shield-alt text-slate-700 dark:text-slate-300 text-xl"
+                    ></i>
+                  </div>
+                  <h4
+                    class="text-lg font-bold text-slate-900 dark:text-white mb-3"
+                  >
+                    Secure & Compliant
+                  </h4>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
+                  >
+                    Designed with strict multi-tenant data isolation, role-based
+                    access control (RBAC), and enterprise-grade encryption at
+                    rest.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-slate-300/20 dark:bg-slate-700/20 blur-[100px] rounded-full pointer-events-none z-0"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="simple-lightbox"
+      class="fixed inset-0 z-100 flex items-center justify-center bg-slate-900/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div class="relative max-w-[90vw] max-h-[90vh]">
+        <img
+          id="lightbox-img"
+          src=""
+          class="max-w-full max-h-[90vh] object-contain rounded-md shadow-2xl transition-transform duration-300"
+          alt="Lightbox Preview"
+        />
+        <button
+          id="lightbox-close"
+          type="button"
+          aria-label="Close Lightbox"
+          class="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-white/50 hover:text-white bg-slate-800 hover:bg-slate-700 w-8 h-8 md:w-10 md:h-10 rounded-md flex items-center justify-center transition-colors shadow-lg border border-slate-600"
+        >
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="video-lightbox"
+      class="fixed inset-0 z-110 flex items-center justify-center bg-slate-900/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-500"
+    >
+      <div class="relative w-full h-full flex justify-center items-center">
+        <video
+          id="lightbox-video"
+          src=""
+          class="w-full max-w-[90vw] max-h-[90vh] object-contain rounded-md shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-transform duration-500"
+          loop
+          playsinline
+          controls
+        ></video>
+        <button
+          id="video-lightbox-close"
+          type="button"
+          aria-label="Close Video Lightbox"
+          class="absolute top-6 right-6 md:top-10 md:right-10 text-white/70 hover:text-white bg-slate-800/50 hover:bg-slate-700 w-12 h-12 rounded-md flex items-center justify-center transition-colors shadow-lg border border-slate-500 z-120"
+        >
+          <i class="fas fa-times text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <footer
+      class="bg-white dark:bg-slate-800 border-t border-gray-200 py-4 px-4 text-center transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto">
+        <p
+          class="text-gray-500 dark:text-gray-400 text-sm font-medium transition-colors duration-300"
+        >
+          &copy; <span id="year"></span> yosong.dev | All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- เรียกใช้ main.js แบบ Module -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
