@@ -1,8 +1,8 @@
 # yosong.dev | My VanillaJS Portfolio Website
 
-**Live Preview:** [https://www.yosong.dev](https://www.yosong.dev)
+**Live Preview:** [https://yosong.dev](https://yosong.dev)
 
-นี่คือโปรเจกต์เว็บพอร์ตโฟลิโอส่วนตัว ที่เริ่มต้นจากไอเดียเล็กๆ สู่การพัฒนาโครงสร้างโค้ดแบบเต็มรูปแบบ เพื่อแสดงเส้นทางการเรียนรู้และการเติบโตในสายงาน Full-Stack Developer
+นี่คือโปรเจกต์เว็บพอร์ตโฟลิโอส่วนตัว ที่เริ่มต้นจากไอเดียเล็กๆ สู่การพัฒนาโครงสร้างโค้ดแบบเต็มรูปแบบ เพื่อแสดงเส้นทางการเรียนรู้และการเติบโตในสายงาน Full Stack Developer
 
 ---
 
