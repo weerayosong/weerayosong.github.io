@@ -45,6 +45,8 @@ export const mini10 =
     "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784800443/mini10_wtoh41.png";
 export const mini11 =
     "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1784800444/mini11_kwnyw7.png";
+export const mini12 =
+    "https://res.cloudinary.com/s0vscy04/image/upload/q_auto,f_auto/v1787980930/mini12_voedib.png";
 
 // --- Certificates Images ---
 export const cert1 =

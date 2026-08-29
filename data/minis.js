@@ -10,6 +10,7 @@ import {
     mini9,
     mini10,
     mini11,
+    mini12,
 } from "./assets.js";
 
 export const miniProjectsData = [
@@ -102,5 +103,13 @@ export const miniProjectsData = [
         tags: ["HTML", "Tailwind CSS", "JavaScript"],
         githubLink: "https://github.com/weerayosong/keybong",
         previewLink: "https://keybong.vercel.app",
+    },
+    {
+        title: "Mini #12: Easy Expense Tracker | Python Web App with Flask",
+        desc: "Easy CRUD Web App with Python & Flask",
+        image: mini12,
+        tags: ["HTML", "CSS", "Python", "Flask"],
+        githubLink: "https://github.com/weerayosong/py-webapp,
+        previewLink: "https://github.com/weerayosong/py-webapp",
     },
 ];
