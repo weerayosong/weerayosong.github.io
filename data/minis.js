@@ -109,7 +109,7 @@ export const miniProjectsData = [
         desc: "Easy CRUD Web App with Python & Flask",
         image: mini12,
         tags: ["HTML", "CSS", "Python", "Flask"],
-        githubLink: "https://github.com/weerayosong/py-webapp,
+        githubLink: "https://github.com/weerayosong/py-webapp",
         previewLink: "https://github.com/weerayosong/py-webapp",
     },
 ];
